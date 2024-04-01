@@ -6,7 +6,7 @@
 
 `1° Semestre/2024`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto desenvolvido.
+Projeto Web desenvolvido para a organização e controle de estudos para estudantes de todos os níveis de ensino.
 
 ## Integrantes
 

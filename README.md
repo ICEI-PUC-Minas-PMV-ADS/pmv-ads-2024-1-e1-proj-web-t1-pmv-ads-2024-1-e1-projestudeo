@@ -6,6 +6,8 @@
 
 `1° Semestre/2024`
 
+![eStudeo -logo](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t1-pmv-ads-2024-1-e1-projestudeo/assets/164012068/131f79a3-bd7e-457d-b8c0-e9fa1032e224)
+
 Projeto Web desenvolvido para a organização e controle de estudos para estudantes de todos os níveis de ensino.
 
 ## Integrantes

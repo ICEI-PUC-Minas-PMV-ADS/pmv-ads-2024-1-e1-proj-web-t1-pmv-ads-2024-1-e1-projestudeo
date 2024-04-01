@@ -1,35 +1,38 @@
 # Introdução
 
-[Aqui a equipe deve criar um texto descritivo com a visão geral do problema abordado, apresentando o ambiente e as situações envolvidas no problema.]
+Diante das demandas diárias enfrentadas pelos estudantes, como prazos apertados e múltiplas responsabilidades, a gestão eficaz do tempo torna-se crucial para seu desempenho acadêmico. Nas palavras de Nasrullah e Saqib Khan (2015, p. 66): 
+
+"A gestão do tempo desempenha um papel vital na melhoria do desempenho acadêmico e nas conquistas dos alunos. Cada aluno deve ter habilidades de gerenciamento de tempo, o que inclui definir metas e prioridades, utilizando mecanismos de gestão e organização eficazes no uso do tempo." 
+
+Nesse contexto, os estudantes enfrentam o desafio de equilibrar suas diversas responsabilidades e obrigações acadêmicas diante da ausência de uma gestão adequada do tempo e organização dos estudos. Surge, assim, a necessidade de uma aplicação que os auxilie a organizar suas atividades acadêmicas e compromissos de forma mais eficaz. 
 
 ## Problema
-[Aqui a equipe deve fornecer uma descrição detalhada do problema a ser resolvido. Não é o momento adequado para abordar questões técnicas relacionadas ao desenvolvimento da aplicação. O objetivo é compreender e comunicar de maneira precisa qual é o desafio ou necessidade que motiva a criação da aplicação.]
-
-Este link pode ajudar a equipe a entender mais sobre definição do problema: [Objetivos, Problema de pesquisa e Justificativa.](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-
+O problema atacado por este projeto é a insuficiência de recursos disponíveis para estudantes, que possibilitem o gerenciamento de responsabilidades acadêmicas. Muitos estudantes, independentemente do nível de escolaridade, enfrentam um calendário rigoroso, conciliando as tarefas escolares com sua vida particular. A carência de um ambiente eficaz e descomplicado para priorizar e gerir as tarefas acadêmicas dificulta a otimização do tempo pelo estudante, que, diante deste cenário, se sente desmotivado e sobrecarregado. 
 
 ## Objetivos
 
-[Aqui a equipe deve realizar uma descrição detalhada dos objetivos do trabalho, ressaltando quais as questões principais do problema a serem resolvidas pelo projeto, não é a hora de apresentar requisitos detalhados.]
- 
-Este link pode ajudar a equipe a entender mais sobre definição dos objetivos: [Objetivos, Problema de pesquisa e Justificativa.](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
+O principal objetivo do projeto consiste na criação de uma aplicação destinada a otimizar o gerenciamento de tempo dos estudantes, visando direcionar seu foco ao aprendizado dentro do contexto acadêmico, ao mesmo tempo em que alivia a carga de responsabilidades associadas ao controle de horários de estudo e cumprimento de prazos acadêmicos, de modo a não comprometer sua vida pessoal e profissional. 
+
+
+Dentre os objetivos específicos, podemos ressaltar: 
+
+- Auxiliar os alunos na organização do material a ser estudado; 
+
+- Definir metas de conteúdo; 
+
+- Acompanhar prazos de entrega de trabalhos, avaliações, entre outros; 
+
+- Gerenciar horários de organização dos cursos/disciplinas. 
 
 ## Justificativa
 
-[Aqui a equipe deve descrever a importância ou a motivação para trabalhar com o problema definido. Indique as razões pelas quais a equipe escolheu o problema e definiu os objetivos.
+Atualmente, muitos estudantes enfrentam o desafio da escassez de tempo, devido à realização de diversas atividades além do próprio estudo, como trabalho ou outras responsabilidades. Essa realidade foi destacada em uma pesquisa conduzida pelo Ministério da Educação (MEC) em 2005. 
 
-Devem ser apresentados dados de fontes relevantes e confiáveis sobre o problema, inserindo-o como alvo de estudo. Sugere-se que a equipe utilize questionários, entrevistas e dados estatísticos, que devem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pela equipe.]
+Naquele ano, com o objetivo de avaliar a disponibilidade dos alunos do ensino superior, o MEC realizou uma pesquisa sobre os principais horários de estudo. A partir desse levantamento, o MEC identificou um total de 3.887.771 inscrições, sendo 2.270.653 destinadas ao período noturno e 1.617.118 ao diurno, resultando em um percentual de 58,4% dos alunos optando pelo ensino noturno. Essa análise sugere que a maioria das pessoas enfrenta desafios para conciliar as demandas diárias, optando assim pelo estudo noturno, que oferece maior flexibilidade para a maioria. 
 
-Este link pode ajudar a equipe a formular a justificativa: [Como montar a justificativa.](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Considerando que a maioria dos alunos contemporâneos ainda lida com desafios semelhantes de disponibilidade de tempo, nosso grupo concebeu a ideia de criar um site que os ajudará a organizar eficientemente suas agendas, facilitando assim o cumprimento de suas responsabilidades acadêmicas. 
 
 ## Público-Alvo
 
-[Aqui é necessário descrever os atores envolvidos no problema, destacando os diferentes perfis de usuários. O propósito é apresentar as características, necessidades, conhecimentos prévios e experiência com a tecnologia do público-alvo.
-
-Sugere-se que a equipe utilize questionários e/ou entrevistas a fim de conhecer os atores que compõem o público alvo.]
-
-Os links abaixo podem ajudar a equipe a conhecer um pouco mais sobre o público-alvo. 
-
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
+O público-alvo para uma aplicação web de controle de estudos pode variar dependendo dos recursos e funcionalidades específicas da aplicação. A aplicação atenderia aos estudantes de todos os níveis educacionais (ensino fundamental, médio, universitário e pós-graduação). Ao focar exclusivamente em estudantes, a aplicação pode ser personalizada para atender às necessidades específicas desse grupo demográfico, oferecendo recursos como a diversidade educacional, suas variações nas preferências de aprendizagem e na carga de estudos. O estudante precisa, então, de ferramentas que o ajude a organizar e gerenciar eficientemente suas tarefas, acompanhar o progresso das suas diferentes disciplinas e identificar áreas de melhoria para ajustar suas estratégias de aprendizagem. Previamente o estudante precisará de habilidades básicas de navegação para compreender a aplicação e disponibilidade ao acesso à tecnologia. 
 

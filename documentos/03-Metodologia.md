@@ -50,9 +50,9 @@ O editor de código foi escolhido porque ele possui uma integração com o siste
 
 Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
 
-| AMBIENTE                            | PLATAFORMA                         | LINK DE ACESSO                         |
-|-------------------------------------|------------------------------------|----------------------------------------|
-| Repositório de código fonte         | GitHub                             | [http://....](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t1-pmv-ads-2024-1-e1-projestudeo/edit/main/documentos/README.md)                            |
-| Documentos do projeto               | GitHub                             | [http://....  ](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t1-pmv-ads-2024-1-e1-projestudeo)                          |
-| Projeto de Interface                | Figma                              | [http://....](https://www.figma.com/file/ZlLjl6Nk3yMxZYYninuriX/Untitled?type=design&node-id=1%3A108&mode=design&t=AjBqIJTlj9tJbMfF-1)                            |
-| Gerenciamento do Projeto            | GitHub Projects                    | http://....                            |
+| AMBIENTE | PLATAFORMA |LINK DE ACESSO                 |
+|--------------------|--------------------------------------------------------------------------------|----------------------------------------|
+|Repositório de código fonte | GitHub | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t1-pmv-ads-2024-1-e1-projestudeo/edit/main/documentos/README.md  |
+|Documentos do projeto  | GitHub | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t1-pmv-ads-2024-1-e1-projestudeo  |
+|Projeto de interface | Figma | https://www.figma.com/file/ZlLjl6Nk3yMxZYYninuriX/Untitled?type=design&node-id=1%3A108&mode=design&t=AjBqIJTlj9tJbMfF-1 |
+|Gerenciamento do projeto  | GitHub Projects | http://... |

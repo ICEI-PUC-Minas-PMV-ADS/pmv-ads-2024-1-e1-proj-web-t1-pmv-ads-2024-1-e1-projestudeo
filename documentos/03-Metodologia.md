@@ -20,14 +20,19 @@ A equipe utiliza o Scrum como base para definição do processo de desenvolvimen
 
 ### Processo
 
-Para organização e distribuição das tarefas do projeto, a equipe está utilizando o Trello, estruturado com as seguintes listas:
+Para organização e distribuição das tarefas do projeto, a equipe está utilizando o GitHub, estruturado com as seguintes listas:
 - Backlog: recebe as tarefas a serem trabalhadas e representa o Product Backlog. Todas as atividades identificadas no decorrer do projeto também devem ser incorporadas a esta lista. 
 - To Do: Esta lista representa o Sprint Backlog. Este é o Sprint atual que estamos trabalhando. 
 - In progress: Quando uma tarefa tiver sido iniciada, ela é movida para cá. 
 - Done: nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontos para ser entregues ao usuário. Não há mais edições ou revisões necessárias, ele está agendado e pronto para a ação.
 
+  O quadro kanban do grupo no GitHub é apresentado, no estado atual, na figura abaixo:
+
+  ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t1-pmv-ads-2024-1-e1-projestudeo/assets/101116930/a5c927f1-64e3-4ede-8bb6-896c30c03de7)
+
+
 ### Etiquetas
-<p>As tarefas são, ainda, etiquetadas em função da natureza da atividade e seguem o seguinte esquema de cores/categorias:</p>
+<p>As tarefas são, ainda, etiquetadas em função da natureza da atividade e seguem o seguinte esquema de categorias:</p>
 
 <ul>
   <li>Bug (Erro no código)</li>
@@ -55,4 +60,4 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a 
 |Repositório de código fonte | GitHub | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t1-pmv-ads-2024-1-e1-projestudeo/blob/main/README.md  |
 |Documentos do projeto  | GitHub | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t1-pmv-ads-2024-1-e1-projestudeo  |
 |Projeto de interface | Figma | https://www.figma.com/file/ZlLjl6Nk3yMxZYYninuriX/Untitled?type=design&node-id=1%3A108&mode=design&t=AjBqIJTlj9tJbMfF-1 |
-|Gerenciamento do projeto  | GitHub Projects | http://... |
+|Gerenciamento do projeto  | GitHub Projects | https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/1049/views/1 |

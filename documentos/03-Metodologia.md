@@ -61,4 +61,4 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a 
 |Repositório de código fonte | GitHub | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t1-pmv-ads-2024-1-e1-projestudeo/blob/main/README.md  |
 |Documentos do projeto  | GitHub | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t1-pmv-ads-2024-1-e1-projestudeo  |
 |Projeto de interface | Figma | https://www.figma.com/file/ZlLjl6Nk3yMxZYYninuriX/Untitled?type=design&node-id=1%3A108&mode=design&t=AjBqIJTlj9tJbMfF-1 |
-|Gerenciamento do projeto  | GitHub Projects | https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/1049/views/1 |
+|Gerenciamento do projeto  | GitHub Projects | https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/1049 |

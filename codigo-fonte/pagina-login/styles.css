@@ -11,7 +11,7 @@ body{
     min-height: 100vh;
     background: radial-gradient(#6281BD, #94E0C7);
     background-size: 400% 400%;
-    animation: gradient 30s ease infinite;
+    animation: gradient 20s ease infinite;
 }
 @keyframes gradient {
     0% {
@@ -67,10 +67,22 @@ body{
 }
 .input-box i{
     position: absolute;
-    left: 20px;
+    left: 25px;
     top: 30%;
     transform: translate(-50%);
     font-size: 20px;
+    padding-right: 8px;
+}
+#withBorder{
+    border-right: 1px solid #000;
+}
+.eye{
+    position: absolute;
+    right: 45px;
+    top: 30%;
+}
+#hide1{
+    display: none;
 }
 .wrapper .remember-forgot{
     display: flex;
@@ -79,11 +91,11 @@ body{
     margin: -15px 0 15px;
 }
 .remember-forgot label input{
-    accent-color: #fff;
+    accent-color: #000;
     margin-right: 3px;
 }
 .remember-forgot a{
-    color: #000000;
+    color: #0066cc;
     text-decoration: none;
 }
 .remember-forgot a:hover{
@@ -108,7 +120,7 @@ body{
     margin: 20px 0 15px;
 }
 .register-link p a{
-    color: #000;
+    color: #0066cc;
     text-decoration: none;
     font-weight: 600;
 }

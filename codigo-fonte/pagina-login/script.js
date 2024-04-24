@@ -1,5 +1,5 @@
 function myFunction(){
-    var x = document.getElementById("myInput");
+    var x = document.getElementById("password");
     var y = document.getElementById("showPassword");
     var z = document.getElementById("hidePassword");
     if(x.type === 'password'){

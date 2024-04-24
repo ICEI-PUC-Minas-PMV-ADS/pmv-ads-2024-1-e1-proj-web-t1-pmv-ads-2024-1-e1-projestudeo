@@ -14,11 +14,15 @@
         <h1>Seu cronograma de estudos</h1>
         <div class="input-box">
             <input type="email" placeholder="e-mail" required>
-            <i class='bx bxs-envelope'></i>
+            <i id="withBorder" class='bx bxs-envelope'></i>
         </div>
         <div class="input-box">
-            <input type="password" placeholder="senha" required>
-            <i class='bx bxs-lock-alt' ></i>
+            <input type="password" placeholder="senha" required id="myInput">
+            <i id="withBorder" class='bx bxs-lock-alt' ></i>
+            <span class="eye" onclick="myFunction()">
+            <i id="hide1" class='bx bxs-show' ></i>
+            <i id="hide2" class='bx bxs-hide' ></i>
+            </span>
         </div>
         <div class="remember-forgot">
             <label><input type="checkbox">Lembrar-me</label>
@@ -26,8 +30,9 @@
         </div>
         <button type="submit" class="btn">ENTRAR</button>
         <div class="register-link">
-        <p>Não possui conta? <a href="../pagina-cadastro/register.html">Criar conta</a></p>
+        <p>Não possui conta? <a href="#">Criar conta</a></p>
         </div>
+        <script src="script.js"></script>
     </form>
    </div>
 </body>

@@ -1,7 +1,7 @@
 function myFunction(){
     var x = document.getElementById("myInput");
-    var y = document.getElementById("hide1");
-    var z = document.getElementById("hide2");
+    var y = document.getElementById("showPassword");
+    var z = document.getElementById("hidePassword");
     if(x.type === 'password'){
         x.type = "text";
         y.style.display = "block";

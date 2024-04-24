@@ -9,7 +9,19 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(#6281BD, #94E0C7);
+    background: radial-gradient(#6281BD, #94E0C7);
+    background-size: 400% 400%;
+    animation: gradient 30s ease infinite;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {background-position: 0% 50%;
+    }
 }
 .wrapper{
     width: 420px;
@@ -24,6 +36,7 @@ body{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    filter:drop-shadow(0 0 5px rgba(0, 0, 0, .1));
 }
 .wrapper h1{
     font-size: 25px;
@@ -73,7 +86,7 @@ body{
     color: #000000;
     text-decoration: none;
 }
-.remember-forgot a:houver{
+.remember-forgot a:hover{
     text-decoration: underline;
 }
 .wrapper .btn{
@@ -101,4 +114,9 @@ body{
 }
 .register-link p a:hover{
     text-decoration: underline;
+}
+@media only screen and (max-width: 950px){
+    .wrapper{
+        width: 85%;
+    }
 }

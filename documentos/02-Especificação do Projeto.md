@@ -29,12 +29,12 @@
 
 |EU COMO... `ALUNO` | QUERO/PRECISO ... `DESEJO` | PARA ... `AFIM DE`|
 |--------------------|---------------------------|----------------------------------|
-| Aluno 01 | organizar minhas atividades acadêmicas | aperfeiçoar o tempo de estudo e organizar rotina.|
-| Aluno 02 | controlar progresso das matérias estudadas | marcar a conclusão da matéria ou retomada dos estudos a partir do último tópico / aula.|
-| Aluno 03 | monitorar datas através de calendário e lembretes | para evitar atraso nas entregas de tarefas.|
-| Aluno 04 | definir metas | melhorar o estudo em tópicos em que eu tenho dificuldades e direcionamento para meus esforços de aprendizado.|
-| Aluno 05 |um ambiente acadêmico customizável | para dar ao ambiente a minha própria personalidade.|
-| Aluno 06 | relatórios semanais | avaliar meu desempenho em cada disciplina.|
+| Aluno | organizar minhas atividades acadêmicas | aperfeiçoar o tempo de estudo e organizar rotina.|
+| Aluno | controlar progresso das matérias estudadas | marcar a conclusão da matéria ou retomada dos estudos a partir do último tópico / aula.|
+| Aluno | monitorar datas através de calendário e lembretes | para evitar atraso nas entregas de tarefas.|
+| Aluno | definir metas | melhorar o estudo em tópicos em que eu tenho dificuldades e direcionamento para meus esforços de aprendizado.|
+| Aluno |um ambiente acadêmico customizável | para dar ao ambiente a minha própria personalidade.|
+| Aluno | relatórios semanais | avaliar meu desempenho em cada disciplina.|
 ## Requisitos do Projeto
 
 ### Requisitos Funcionais

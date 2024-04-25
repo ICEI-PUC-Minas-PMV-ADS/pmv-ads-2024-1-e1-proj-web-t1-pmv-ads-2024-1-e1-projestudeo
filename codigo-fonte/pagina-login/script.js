@@ -1,7 +1,7 @@
-function myFunction(){
+function togglePassword(){
     var x = document.getElementById("password");
-    var y = document.getElementById("showPassword");
-    var z = document.getElementById("hidePassword");
+    var y = document.getElementById("openEye");
+    var z = document.getElementById("closedEye");
     if(x.type === 'password'){
         x.type = "text";
         y.style.display = "block";

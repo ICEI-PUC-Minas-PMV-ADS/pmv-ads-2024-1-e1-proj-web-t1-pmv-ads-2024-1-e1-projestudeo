@@ -63,6 +63,9 @@ body{
     color: #000000;
     padding: 0px 10px 0px 45px;
 }
+#password{
+    padding-right: 35px;
+}
 .input-box input::placeholder{
     color: #7F7F7F;
 }
@@ -96,6 +99,7 @@ body{
 .remember-forgot a{
     color: #0066cc;
     text-decoration: none;
+    text-align: right;
 }
 .remember-forgot a:hover{
     text-decoration: underline;

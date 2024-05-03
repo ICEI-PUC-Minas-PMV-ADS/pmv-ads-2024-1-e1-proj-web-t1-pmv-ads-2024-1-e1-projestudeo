@@ -1,40 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Título da página-->
     <title>eStudeo</title>
+    <!--CSS-->
     <link rel="stylesheet" href="styles.css">
+    <!--Icones-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--Fontes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="images/favicon.svg">
 </head>
 <body>
-   <div class="wrapper">
+    <!--Caixa principal-->
+    <div class="wrapper">
+    <!--Local dos dados-->
     <form action="">
+        <!--Logo-->
         <img src="images/estudeo_logo.svg" class="logo">
+        <!--Título-->
         <h1>Seu cronograma de estudos</h1>
-        <div class="input-box">
+        <!--Caixa de e-mail-->
+        <div class="inputBox">
             <input type="email" placeholder="e-mail" required>
+            <!--Ícone de e-mail-->
             <i id="withBorder" class='bx bxs-envelope'></i>
         </div>
-        <div class="input-box">
+        <!--Caixa de senha-->
+        <div class="inputBox">
             <input type="password" placeholder="senha" required id="password">
+            <!--Ícone de senha-->
             <i id="withBorder" class='bx bxs-lock-alt' ></i>
+            <!--Chamada da função mostrar/esconder senha-->
             <span class="eye" onclick="togglePassword()">
+            <!--Ícone do olho aberto-->    
             <i id="openEye" class='bx bxs-show' ></i>
+            <!--Ícone do olho fechado-->
             <i id="closedEye" class='bx bxs-hide' ></i>
             </span>
         </div>
-        <div class="remember-forgot">
+        <!--Lembrar-me-->
+        <div class="rememberForgot">
             <label><input type="checkbox">Lembrar-me</label>
+            <!--Esqueci minha senha-->
             <a href="#">Esqueci minha senha</a>
         </div>
+        <!--Botão Entrar-->
         <button type="submit" class="btn">ENTRAR</button>
-        <div class="register-link">
+         <!--Não possui conta? Criar conta-->
+        <div class="registerLink">
         <p>Não possui conta? <a href="#">Criar conta</a></p>
         </div>
+        <!--Javascript-->
         <script src="script.js"></script>
     </form>
    </div>

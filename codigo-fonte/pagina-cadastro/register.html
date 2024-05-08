@@ -1,51 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../pagina-login/styles.css">
-    <link rel="stylesheet" href="./register.css">
+    <link rel="stylesheet" href="Regsiter.css"> 
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Cadastro - eStudeo</title>
 
-</head>
+</head> 
 <body>
-    <div class="wrapper">
+    <div class="wrapper"> 
         <img src="../pagina-login/images/estudeo_logo.svg" class="logo">
-        <h1>Cadastre-se</h1>
+        <h1>Crie sua</h1>
         <div class="form-fields">
             <form action="">
                 <div class="input-box">
                     <input type="text" placeholder="Nome" required>
-                    <i class='bx bxs-envelope'></i>
+                    <i id="withBorder" class='bx bxs-user'></i>
                 </div>
                 <div class="input-box">
                     <input type="text" placeholder="Sobrenome" required>
-                    <i class='bx bxs-envelope'></i>
+                    <i id="withBorder" class='bx bxs-user'></i>
                 </div>
                 <div class="input-box">
                     <input type="text" placeholder="Data de nascimento "
                     onfocus="(this.type='date')">
-                    <i class='bx bxs-envelope'></i>
+                    <i id="withBorder" class='bx bxs-calendar'></i>
                 </div>
                 <div class="input-box">
                     <input type="email" placeholder="E-mail" required>
-                    <i class='bx bxs-envelope'></i>
+                    <i id="withBorder" class='bx bxs-envelope'></i>
                 </div>
                 <div class="input-box">
-                    <input type="password" placeholder="Senha" required>
-                    <i class='bx bxs-lock-alt' ></i>
+                    <input type="password" placeholder="senha" required id="myInput">
+                    <i id="withBorder" class='bx bxs-lock-alt' ></i>
+            <span class="eye" onclick="myFunction()">
+                    <i id="showPassword" class='bx bxs-show' ></i>
+                    <i id="hidePassword" class='bx bxs-hide' ></i>
+            </span>
                 </div>
                 <div class="input-box">
-                    <input type="password" placeholder="Confirmar senha" required>
-                    <i class='bx bxs-lock-alt' ></i>
+                    <input type="password" placeholder="Confirmar Senha" required id="myInput">
+                    <i id="withBorder" class='bx bxs-lock-alt' ></i>
+                    <span class="eye" onclick="myFunction()">
+                    <i id="showPassword" class='bx bxs-show' ></i>
+                    <i id="hidePassword" class='bx bxs-hide' ></i>
+                    </span>
                 </div>
             </form>
         </div>
         <div>
-            <button type="submit" class="btn">CADASTRAR</button>
+            <button type="submit" class="btn">CRIAR CONTA</button>
             <div class="register-link">
-            <p> <a href="../pagina-login/login.html" target="_self" rel="prev">Já possui conta?</a></p>
+            <p> <a href="../pagina-login/login.html" target="_self" rel="prev">Já possui conta</a></p>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

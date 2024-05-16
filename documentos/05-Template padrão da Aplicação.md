@@ -33,7 +33,8 @@ O design básico do website foi desenvolvido utilizando HTML como linguagem de m
   <li>Header - local onde estão dispostos o logo da aplicação web e navegação principal do site (menu da aplicação);</li>
   <li>Main - apresenta o conteúdo da tela;</li>
   <li>Footer - apresenta informações sobre os direitos autorais.</li>
-  <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t1-pmv-ads-2024-1-e1-projestudeo/assets/163934187/96ed6fb0-8c15-4775-8736-4630a14dfdb0" alt= Página Home Page>
+  <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t1-pmv-ads-2024-1-e1-projestudeo/assets/164437575/9cb63a23-9ee6-4df4-8527-25d758f4b7c7" alt= Página Home Page>
   Disponivel em: <a href="https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2024-1-e1-proj-web-t1-pmv-ads-2024-1-e1-projestudeo/codigo-fonte/pagina-home/home.html">Home Page</a>.
 </div>
+
 

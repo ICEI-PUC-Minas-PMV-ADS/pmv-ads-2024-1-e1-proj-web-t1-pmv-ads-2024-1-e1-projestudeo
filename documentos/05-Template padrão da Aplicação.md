@@ -34,6 +34,6 @@ O design básico do website foi desenvolvido utilizando HTML como linguagem de m
   <li>Main - apresenta o conteúdo da tela;</li>
   <li>Footer - apresenta informações sobre os direitos autorais.</li>
   <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t1-pmv-ads-2024-1-e1-projestudeo/assets/163934187/96ed6fb0-8c15-4775-8736-4630a14dfdb0" alt= Página Home Page>
-  Disponivel em: <a href="esperando o álvaro">Home Page</a>.
+  Disponivel em: <a href="https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2024-1-e1-proj-web-t1-pmv-ads-2024-1-e1-projestudeo/codigo-fonte/pagina-home/home.html">Home Page</a>.
 </div>
 

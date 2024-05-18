@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS-->
+    <link rel="stylesheet" href="styles.css"> 
+    <!--Icones-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="../images/favicon.svg" type="image/x-icon">
+      <!--Título da página-->
+    <title>Cadastro - eStudeo</title>
+
+</head> 
+<body>
+ <!--Caixa principal-->
+ <div class="wrapper"> 
+ <!--Logo-->
+<img src="../images/estudeo_logo.svg" class="logo">
+     <!--Título-->
+    <h1>Crie sua Conta</h1>
+    <div class="form-fields">
+         <!--Local dos dados-->
+        <form action="">
+
+            <!--Caixa de nome-->
+            <div class="input-box">
+                <input type="text" placeholder="Nome" required>
+                    <!--Ícone de nome-->
+                    <i id="withBorder" class='bx bxs-user'></i>
+            </div>
+                
+            <!--Caixa de Sobrenome-->
+            <div class="input-box">
+                <input type="text" placeholder="Sobrenome" required>
+                    <!--Ícone de Sobrenome-->
+                    <i id="withBorder" class='bx bxs-user'></i>
+            </div>
+
+            <!--Caixa de Data de nascimento-->
+            <div class="input-box">
+                <input type="text" placeholder="Data de nascimento "
+                onfocus="(this.type='date')">
+                    <!--Ícone de nascimento-->
+                    <i id="withBorder" class='bx bxs-calendar'></i>
+            </div>
+
+            <!--Caixa de e-mail-->
+            <div class="input-box">
+                <input type="email" placeholder="E-mail" required>
+                    <!--Ícone de e-mail-->
+                    <i id="withBorder" class='bx bxs-envelope'></i>
+            </div>
+            <!--Caixa de senha-->
+            <div class="input-box">
+                <input type="password" placeholder="Senha" required id="password">
+                     <!--Ícone de senha-->
+                    <i id="withBorder" class='bx bxs-lock-alt' ></i>
+                    <!--Chamada da função mostrar/esconder senha-->
+                    <span class="eye" onclick="togglePassword()">
+                        <!--Ícone do olho aberto--> 
+                    <i id="open" class='bx bxs-show' ></i>
+                        <!--Ícone do olho fechado-->
+                    <i id="closed" class='bx bxs-hide' ></i>
+                    </span>
+            </div>
+
+            <!--Caixa de Confirmar Senha-->
+            <div class="input-box">
+                <input type="password" placeholder="Confirmar senha" required id="Confirm">
+                <!--Ícone de senha-->
+                <i id="withBorder" class='bx bxs-lock-alt' ></i>
+                <!--Chamada da função mostrar/esconder senha-->
+                <span class="eye" onclick="togglePasswordOne()">
+                <!--Ícone do olho aberto-->    
+                <i id="show" class='bx bxs-show' ></i>
+                <!--Ícone do olho fechado-->
+                <i id="hide" class='bx bxs-hide' ></i>
+                </span>
+            </div>
+            </form>
+
+    </div>
+        <div>
+    <!--Botão Criar conta-->
+        <button type="submit" class="btn">CRIAR CONTA</button>
+        <!--botão/caminho tela de login--> 
+            <div class="register-link">
+            <p> <a href="../pagina-login/login.html" target="_self" rel="prev">Já possui conta</a></p>
+            </div>
+        </div>
+    <!--Javascript-->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Título da página-->
+    <title>eStudeo</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="styles.css">
+    <!--Icones-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="../images/favicon.svg">
+</head>
+<body>
+    <!--Caixa principal-->
+    <div class="wrapper">
+    <!--Local dos dados-->
+    <form action="">
+        <!--Logo-->   
+        <img src="../images/estudeo_logo.svg" class="logo">
+        <!--Título-->
+        <h1>Crie uma nova senha</h1>
+        <!--Caixa de e-mail-->
+        <div class="inputBox">
+            <input type="email" placeholder="e-mail" required>
+            <!--Ícone de e-mail-->
+            <i id="withBorder" class='bx bxs-envelope'></i>
+        </div>
+        <!--Caixa de senha-->
+        <div class="inputBox">
+            <input type="password" placeholder="senha" required id="password">
+            <!--Ícone de senha-->
+            <i id="withBorder" class='bx bxs-lock-alt' ></i>
+            <!--Chamada da função mostrar/esconder senha-->
+            <span class="eye" onclick="togglePassword()">
+            <!--Ícone do olho aberto-->    
+            <i id="showPassword" class='bx bxs-show' ></i>
+            <!--Ícone do olho fechado-->
+            <i id="hidePassword" class='bx bxs-hide' ></i>
+            </span>
+        </div>
+        <!--Caixa de confirmar senha-->
+        <div class="inputBox">
+            <input type="password" placeholder="confirmar senha" required id="passwordConfirmation">
+            <!--Ícone de senha-->
+            <i id="withBorder" class='bx bxs-lock-alt' ></i>
+            <!--Chamada da função mostrar/esconder senha-->
+            <span class="eye" onclick="togglePasswordConfirmation()">
+            <!--Ícone do olho aberto--> 
+            <i id="showPasswordConfirmation" class='bx bxs-show' ></i>
+            <!--Ícone do olho fechado-->
+            <i id="hidePasswordConfirmation" class='bx bxs-hide' ></i>
+            </span>
+        </div>
+        <!--Botão confirmar-->
+        <button type="submit" class="btn">CONFIRMAR</button>
+        <br><br><br>
+        <!--Voltar-->
+        <div class="back">
+            <p><a href="#">Voltar</a></p>
+        </div>
+        <!--Javascript-->
+        <script src="script.js"></script>
+    </form>
+</body>
+</html>

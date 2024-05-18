@@ -1,0 +1,267 @@
+/*Estilos universais*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+  }
+  /*Alinhamento dos objetos da header*/
+  .containerHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  /*Estilo do logo*/
+  .logo{
+    height: 50px;
+    display: flex;
+    margin-top: 8px;
+    margin-left: 40px;
+    filter:drop-shadow(0 0 10px rgba(0, 0, 0, 0.));
+  }
+  /*Nome do usuário*/
+  .nomeUsuario{
+    color: #0066cc;
+    margin-top: 8px;
+    margin-right: 8px;
+    margin-left: auto;
+    text-decoration: none;
+  }
+  /*Nome do usuário > sublinhar quando passar o mouse*/
+  .nomeUsuario:hover{
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+  }
+  /*Estilo do ícone do usuário*/
+  #iconeUsuario{
+    font-size: 35px;
+    color: #003399;
+    display: flex;
+    margin-top: 8px;
+    margin-right: 40px;
+  }
+  /*Estilo da navegação*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    margin-bottom: 40px;
+    align-items: center;
+    background: #003399;
+    padding: 20px;
+  }
+  /*Orientação dos itens da navegação*/
+  .nav-itens {
+    list-style: none;
+    display: flex;
+  }
+  /*Estilo da fonte da navegação*/
+  .nav-itens>li>a {
+    padding-left: 20px;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 25px;
+    cursor: pointer;
+    transition: 1s text;
+  }
+  /*Navegação > mudar cor quando passar o mouse*/
+  .nav-itens>li>a:hover {
+    color: #33CC99;
+  }
+  /*Definições de fundo + rodapé*/
+  main{
+    background: #fff;
+    min-height: calc(100vh - 100px);
+    padding-bottom: 100px;
+    position: relative;
+  }
+  /*Caixa principal*/
+.box {
+    margin-left: auto;
+    margin-right: auto;
+    width: 420px;
+    background: #f8f8f8;
+    color: #000000;
+    border-radius: 10px;
+    padding: 40px 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1); 
+  }
+  /*Remover linha da caixa principal*/
+  fieldset {
+    border: 0;
+  }
+  /*Estilo do título Cadastro de Disciplinas*/
+  legend{
+    border: 0; 
+    padding:2.2px ;
+    text-align: center;
+    font-size: 23px;
+  }
+  /*Posição dos textos das caixas*/
+.inputBox {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    margin: 20px 0;
+  }
+  /*Definições das caixas*/
+  .inputBox input{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border: none;
+    outline: none;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #000000;
+    padding: 0px 10px 0px 45px;
+  }
+  /*Definições das caixas*/
+  .labelInput{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+  }
+/*Cor dos textos de exemplo das caixas*/
+.inputBox input::placeholder{
+    color: #7F7F7F;
+  }
+  /*Posição dos ícones*/
+  .inputBox i{
+    position: absolute;
+    left: 25px;
+    top: 30%;
+    transform: translate(-50%);
+    font-size: 20px;
+    padding-right: 8px;
+  }
+  /*Barra de separação dos ícones e textos*/
+  #withBorder{
+    border-right: 1px solid #000;
+  }
+  /*Caixa principal Cores*/
+.wrapper{
+    width: 100%;
+    height: 150px;
+    background: #fff;
+    border-radius: 5px;
+    border: 2px solid #000;
+  }
+  /*Area do título da caixa de Cores*/
+.wrapper .title{
+    color: #000;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0px 10px 0px 17px;
+  }
+  /*Posição do ícone de Cores*/
+  .wrapper .iconTitle i{
+    position: relative;
+    left: 23px;
+    top: 30%;
+    transform: translate(-50%);
+    font-size: 20px;
+    padding-right: 8px;
+  }
+  /*Mantém o ícone da paleta na mesma linha do texto*/
+  .wrapper .iconTitle{
+    display: flex;
+    align-items: center;
+  }
+  /*Barra de separação do ícone da paleta e texto*/
+  #withColorPalette{
+    border-right: 1px solid #000;
+  }
+  /*Barra de separação título e seletor de cores*/
+ .wrapper .boxRadio{
+    padding: 5px 10px;;
+    border-top: 1px solid #000;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+ } 
+
+ /*Caixa principal de Adicionar Atividades*/
+ .boxAdcAtv{
+    width: 100%;
+    height: 110px;
+    background: #fff;
+    border-radius: 5px;
+    border: 2px solid #000;
+ }
+
+ /*Area do título da caixa de adicionar atividades*/
+ .boxAdcAtv .title{
+    color: #000;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0px 10px 0px 17px;
+ }
+
+ /*Posição do ícone de adicionar*/
+ .boxAdcAtv .iconTitle i{
+    position: relative;
+    left: 23px;
+    top: 30%;
+    transform: translate(-50%);
+    font-size: 20px;
+    padding-right: 8px;
+ }
+ /*Mantém o ícone de adicionar na mesma linha do texto*/
+ .boxAdcAtv .iconTitle{
+    display: flex;
+    align-items: center;
+ }
+ /*Barra de separação do ícone de adicionar e texto*/
+ #adcAtiv{
+    border-right: 1px solid #000;
+ }
+ /*Barra de separação com conteúdo dentro de adicionar atividades*/
+ .boxAdcAtv .boxRadio{
+    padding: 5px 10px;;
+    border-top: 1px solid #000;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ /*Estilos do botão de CRIAR*/
+ #submit{
+    width: 100%;
+    height: 45px;
+    background: #33CC99;
+    border: none;
+    outline: none;
+    border-radius: 28px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  /*Posicionamento do rodapé*/
+footer{
+    position: relative;
+  }
+  /*Definições e texto do rodapé*/
+  .infoFooter{
+    background-color: #003399;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+  /*Responsividade*/
+  @media only screen and (max-width: 950px){
+    .box{
+        width: 85%;
+    }
+  }

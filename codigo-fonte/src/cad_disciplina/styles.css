@@ -144,8 +144,8 @@ legend{
 /*Caixa principal Cores*/
 .wrapper{
   width: 100%;
-  height: 190px;
-  background: #fff;
+  height: 175px;
+  background: #ffffff;
   border-radius: 5px;
   border: 2px solid #000;
 }
@@ -177,7 +177,7 @@ legend{
 }
 /*Barra de separação título e seletor de cores*/
 .wrapper .boxRadio{
-  padding: 5px 10px;;
+  padding: 10px 1px;
   border-top: 1px solid #000;
   width: 95%;
   margin-left: auto;
@@ -188,14 +188,14 @@ legend{
 .preset-colors {
 display: flex;
 justify-content: space-between;
-margin-bottom: 20px;
+margin-bottom: 10px;
 }
 
 /*Caixas coloridas*/
 .color-swatch {
-width: 50px;
-height: 50px;
-border: 2.5px solid #000;
+width: 45px;
+height: 45px;
+border: 2px solid #000;
 cursor: pointer;
 border-radius: 5px;
 margin-left: auto;
@@ -219,24 +219,22 @@ align-items: center;
 border: 2px solid #000;
 border-radius: 5px;
 padding: 5px;
-background-color: #fff;
 }
 
 .selected-color-display {
 width: 40px;
 height: 40px;
-border-radius: 3px;
+border-radius: 5px;
 margin-right: 10px;
-border: 1px solid #000;
+border: 2px solid #000;
 }
 
 #colorInput {
 width: 100px;
 border: none;
 text-align: center;
-font-size: 18px;
+font-size: 16px;
 color: #000;
-outline: none;
 }
 
 /*Caixa principal de Adicionar Atividades*/

@@ -89,7 +89,7 @@ main{
 fieldset {
   border: 0;
 }
-/*Estilo do título Cadastro de Disciplinas*/
+/*Estilo do título Cadastro de disciplinas*/
 legend{
   border: 0; 
   padding:2.2px ;
@@ -183,14 +183,12 @@ legend{
   margin-left: auto;
   margin-right: auto;
 } 
-
 /*Seletor de cores*/
 .preset-colors {
 display: flex;
 justify-content: space-between;
 margin-bottom: 10px;
 }
-
 /*Caixas coloridas*/
 .color-swatch {
 width: 45px;
@@ -201,18 +199,17 @@ border-radius: 5px;
 margin-left: auto;
 margin-right: auto;
 }
-
+/*Efeito ao passar o mouse e ao selecionar uma cor no seletor de cores*/
 .color-swatch:hover,
 .color-swatch.selected {
 border-color: #000;
 }
-
 /*Especificações do botão seletor de cores*/
 .custom-color-container {
 display: flex;
 justify-content: center;
 }
-
+/*Estilo do contêiner de entrada de cor*/
 .color-input-wrapper {
 display: flex;
 align-items: center;
@@ -220,7 +217,7 @@ border: 2px solid #000;
 border-radius: 5px;
 padding: 5px;
 }
-
+/*Caixa de exibição da cor selecionada*/
 .selected-color-display {
 width: 40px;
 height: 40px;
@@ -228,7 +225,7 @@ border-radius: 5px;
 margin-right: 10px;
 border: 2px solid #000;
 }
-
+/*Campo de texto para código de cor hexadecimal*/
 #colorInput {
 width: 100px;
 border: none;
@@ -236,27 +233,24 @@ text-align: center;
 font-size: 16px;
 color: #000;
 }
-
 /*Caixa principal de Adicionar Atividades*/
-.boxAdcAtv{
+.add-activity-box{
   width: 100%;
-  height: 110px;
+  height: 100%;
   background: #fff;
   border-radius: 5px;
   border: 2px solid #000;
 }
-
 /*Area do título da caixa de adicionar atividades*/
-.boxAdcAtv .title{
+.add-activity-box .title{
   color: #000;
   line-height: 40px;
   font-size: 16px;
   font-weight: 500;
   padding: 0px 10px 0px 17px;
 }
-
 /*Posição do ícone de adicionar*/
-.boxAdcAtv .iconTitle i{
+.add-activity-box .iconTitle i{
   position: relative;
   left: 23px;
   top: 30%;
@@ -265,7 +259,7 @@ color: #000;
   padding-right: 8px;
 }
 /*Mantém o ícone de adicionar na mesma linha do texto*/
-.boxAdcAtv .iconTitle{
+.add-activity-box .iconTitle{
   display: flex;
   align-items: center;
 }
@@ -273,15 +267,83 @@ color: #000;
 #adcAtiv{
   border-right: 1px solid #000;
 }
-/*Barra de separação com conteúdo dentro de adicionar atividades*/
-.boxAdcAtv .boxRadio{
-  padding: 5px 10px;;
-  border-top: 1px solid #000;
+/*Estilo do ícone de adicionar atividade*/
+#plusIcon{
+  border-right: 5px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 10px;
+}
+/*Estilo dos itens de atividade*/
+.activity-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-bottom: 10px;
   width: 95%;
   margin-left: auto;
   margin-right: auto;
 }
-
+/*Estilo do texto das atividades*/
+.activity-item .text {
+  display: flex;
+  align-items: center;
+}
+/*Estilo do campo de texto das atividades*/
+.activity-item .text input[type="text"] {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  margin-right: 10px;
+  flex-grow: 1;
+}
+/*Estilo do checkbox das atividades*/
+.activity-item .text input[type="checkbox"] {
+  accent-color: #000;
+  margin-right: 10px;
+  cursor: pointer;
+  width: 13px;
+  height: 13px;
+}
+/*Estilo do menu das atividades*/
+.activity-item .menu {
+  position: relative;
+  align-items: center;
+  display: flex;
+}
+/*Estilo dos ícones do menu das atividades*/
+.activity-item .menu i {
+  cursor: pointer;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+/*Estilo das opções do menu das atividades*/
+.activity-item .menu-options {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+}
+/*Estilo das opções de links do menu das atividades*/
+.activity-item .menu-options a {
+  display: block;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+/*Estilo das opções do menu quando passar o mouse*/
+.activity-item .menu-options a:hover {
+  background: #f0f0f0;
+}
 /*Estilos do botão de CRIAR*/
 #submit{
   width: 100%;
@@ -296,7 +358,6 @@ color: #000;
   color: #fff;
   font-weight: 600;
 }
-
 /*Posicionamento do rodapé*/
 footer{
   position: relative;

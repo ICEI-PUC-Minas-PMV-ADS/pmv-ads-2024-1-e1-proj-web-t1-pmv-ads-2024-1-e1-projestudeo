@@ -17,10 +17,10 @@
   display: flex;
   margin-top: 8px;
   margin-left: 40px;
-  filter:drop-shadow(0 0 10px rgba(0, 0, 0, 0.));
+  filter:drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
 }
 /*Nome do usuário*/
-.nomeUsuario{
+.usuarioNome{
   color: #0066cc;
   margin-top: 8px;
   margin-right: 8px;
@@ -28,11 +28,11 @@
   text-decoration: none;
 }
 /*Nome do usuário > sublinhar quando passar o mouse*/
-.nomeUsuario:hover{
+.usuarioNome:hover{
   text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
 /*Estilo do ícone do usuário*/
-#iconeUsuario{
+#usuarioIcone{
   font-size: 35px;
   color: #003399;
   display: flex;
@@ -50,12 +50,12 @@ nav {
   padding: 20px;
 }
 /*Orientação dos itens da navegação*/
-.nav-itens {
+.itensNavegacao {
   list-style: none;
   display: flex;
 }
 /*Estilo da fonte da navegação*/
-.nav-itens>li>a {
+.itensNavegacao>li>a {
   padding-left: 20px;
   color: #fff;
   text-decoration: none;
@@ -64,7 +64,7 @@ nav {
   transition: 1s text;
 }
 /*Navegação > mudar cor quando passar o mouse*/
-.nav-itens>li>a:hover {
+.itensNavegacao>li>a:hover {
   color: #33CC99;
 }
 /*Definições de fundo + rodapé*/
@@ -75,7 +75,7 @@ main{
   position: relative;
 }
 /*Caixa principal*/
-.box {
+.boxPrincipal {
   margin-left: auto;
   margin-right: auto;
   width: 420px;
@@ -97,14 +97,14 @@ legend{
   font-size: 23px;
 }
 /*Posição dos textos das caixas*/
-.inputBox {
+.boxNomeMateria {
   position: relative;
   width: 100%;
   height: 45px;
   margin: 20px 0;
 }
 /*Definições das caixas*/
-.inputBox input{
+.boxNomeMateria input{
   width: 100%;
   height: 100%;
   background: #fff;
@@ -125,11 +125,11 @@ legend{
   transition: .5s;
 }
 /*Cor dos textos de exemplo das caixas*/
-.inputBox input::placeholder{
+.boxNomeMateria input::placeholder{
   color: #7F7F7F;
 }
 /*Posição dos ícones*/
-.inputBox i{
+.boxNomeMateria i{
   position: absolute;
   left: 25px;
   top: 30%;
@@ -138,11 +138,11 @@ legend{
   padding-right: 8px;
 }
 /*Barra de separação dos ícones e textos*/
-#withBorder{
+#barraIcone{
   border-right: 1px solid #000;
 }
 /*Caixa principal Cores*/
-.wrapper{
+.boxCorCaderno{
   width: 100%;
   height: 175px;
   background: #ffffff;
@@ -150,7 +150,7 @@ legend{
   border: 2px solid #000;
 }
 /*Area do título da caixa de Cores*/
-.wrapper .title{
+.boxCorCaderno .titulo{
   color: #000;
   line-height: 40px;
   font-size: 16px;
@@ -158,7 +158,7 @@ legend{
   padding: 0px 10px 0px 17px;
 }
 /*Posição do ícone de Cores*/
-.wrapper .iconTitle i{
+.boxCorCaderno .iconeTitulo i{
   position: relative;
   left: 23px;
   top: 30%;
@@ -167,16 +167,16 @@ legend{
   padding-right: 8px;
 }
 /*Mantém o ícone da paleta na mesma linha do texto*/
-.wrapper .iconTitle{
+.boxCorCaderno .iconeTitulo{
   display: flex;
   align-items: center;
 }
 /*Barra de separação do ícone da paleta e texto*/
-#withColorPalette{
+#barraIcone2{
   border-right: 1px solid #000;
 }
 /*Barra de separação título e seletor de cores*/
-.wrapper .boxRadio{
+.boxCorCaderno .containerCores{
   padding: 10px 1px;
   border-top: 1px solid #000;
   width: 95%;
@@ -184,13 +184,13 @@ legend{
   margin-right: auto;
 } 
 /*Seletor de cores*/
-.preset-colors {
+.wrapperCores {
 display: flex;
 justify-content: space-between;
 margin-bottom: 10px;
 }
 /*Caixas coloridas*/
-.color-swatch {
+.amostraCor {
 width: 45px;
 height: 45px;
 border: 2px solid #000;
@@ -200,17 +200,17 @@ margin-left: auto;
 margin-right: auto;
 }
 /*Efeito ao passar o mouse e ao selecionar uma cor no seletor de cores*/
-.color-swatch:hover,
-.color-swatch.selected {
+.amostraCor:hover,
+.amostraCor.selected {
 border-color: #000;
 }
 /*Especificações do botão seletor de cores*/
-.custom-color-container {
+.containerCorHexa {
 display: flex;
 justify-content: center;
 }
 /*Estilo do contêiner de entrada de cor*/
-.color-input-wrapper {
+.wrapperCorHexa {
 display: flex;
 align-items: center;
 border: 2px solid #000;
@@ -218,7 +218,7 @@ border-radius: 5px;
 padding: 5px;
 }
 /*Caixa de exibição da cor selecionada*/
-.selected-color-display {
+.corSelecionada {
 width: 40px;
 height: 40px;
 border-radius: 5px;
@@ -226,7 +226,7 @@ margin-right: 10px;
 border: 2px solid #000;
 }
 /*Campo de texto para código de cor hexadecimal*/
-#colorInput {
+#entradaCorHexa {
 width: 100px;
 border: none;
 text-align: center;
@@ -234,7 +234,7 @@ font-size: 16px;
 color: #000;
 }
 /*Caixa principal de Adicionar Atividades*/
-.add-activity-box{
+.containerAdicAtividade{
   width: 100%;
   height: 100%;
   background: #fff;
@@ -242,7 +242,7 @@ color: #000;
   border: 2px solid #000;
 }
 /*Area do título da caixa de adicionar atividades*/
-.add-activity-box .title{
+.boxAdicAtividade .titulo{
   color: #000;
   line-height: 40px;
   font-size: 16px;
@@ -250,7 +250,7 @@ color: #000;
   padding: 0px 10px 0px 17px;
 }
 /*Posição do ícone de adicionar*/
-.add-activity-box .iconTitle i{
+.boxAdicAtividade .iconeTitulo i{
   position: relative;
   left: 23px;
   top: 30%;
@@ -259,23 +259,23 @@ color: #000;
   padding-right: 8px;
 }
 /*Mantém o ícone de adicionar na mesma linha do texto*/
-.add-activity-box .iconTitle{
+.boxAdicAtividade .iconeTitulo{
   display: flex;
   align-items: center;
 }
 /*Barra de separação do ícone de adicionar e texto*/
-#adcAtiv{
+#barraIcone3{
   border-right: 1px solid #000;
 }
 /*Estilo do ícone de adicionar atividade*/
-#plusIcon{
+#iconeMais{
   border-right: 5px;
   cursor: pointer;
   margin-left: auto;
   margin-right: 10px;
 }
 /*Estilo dos itens de atividade*/
-.activity-item {
+.itemAtividade {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -288,12 +288,12 @@ color: #000;
   margin-right: auto;
 }
 /*Estilo do texto das atividades*/
-.activity-item .text {
+.itemAtividade .texto {
   display: flex;
   align-items: center;
 }
 /*Estilo do campo de texto das atividades*/
-.activity-item .text input[type="text"] {
+.itemAtividade .texto input[type="text"] {
   border: none;
   outline: none;
   font-size: 16px;
@@ -301,7 +301,7 @@ color: #000;
   flex-grow: 1;
 }
 /*Estilo do checkbox das atividades*/
-.activity-item .text input[type="checkbox"] {
+.itemAtividade .texto input[type="checkbox"] {
   accent-color: #000;
   margin-right: 10px;
   cursor: pointer;
@@ -309,13 +309,13 @@ color: #000;
   height: 13px;
 }
 /*Estilo do menu das atividades*/
-.activity-item .menu {
+.itemAtividade .menu {
   position: relative;
   align-items: center;
   display: flex;
 }
 /*Estilo dos ícones do menu das atividades*/
-.activity-item .menu i {
+.itemAtividade .menu i {
   cursor: pointer;
   font-size: 17px;
   display: flex;
@@ -324,7 +324,7 @@ color: #000;
   height: 100%;
 }
 /*Estilo das opções do menu das atividades*/
-.activity-item .menu-options {
+.itemAtividade .opcoesMenu {
   display: none;
   position: absolute;
   right: 0;
@@ -335,17 +335,17 @@ color: #000;
   box-shadow: 0 0 5px rgba(0, 0, 0, .1);
 }
 /*Estilo das opções de links do menu das atividades*/
-.activity-item .menu-options a {
+.itemAtividade .opcoesMenu a {
   display: block;
   padding: 5px 10px;
   cursor: pointer;
 }
 /*Estilo das opções do menu quando passar o mouse*/
-.activity-item .menu-options a:hover {
+.itemAtividade .opcoesMenu a:hover {
   background: #f0f0f0;
 }
 /*Estilos do botão de CRIAR*/
-#submit{
+#criarDisciplina{
   width: 100%;
   height: 45px;
   background: #33CC99;
@@ -363,7 +363,7 @@ footer{
   position: relative;
 }
 /*Definições e texto do rodapé*/
-.infoFooter{
+.rodape{
   background-color: #003399;
   color: #fff;
   font-size: 16px;
@@ -375,7 +375,7 @@ footer{
 }
 /*Responsividade*/
 @media only screen and (max-width: 950px){
-  .box{
+  .boxPrincipal{
       width: 85%;
   }
 }

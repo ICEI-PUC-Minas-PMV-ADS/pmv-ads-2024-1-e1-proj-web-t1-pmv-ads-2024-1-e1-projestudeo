@@ -230,7 +230,7 @@ font-size: 16px;
 color: #000;
 }
 /*Caixa principal de Adicionar Atividades*/
-.containerAdicAtividade{
+.boxAdicAtividade{
   width: 100%;
   height: 100%;
   background: #fff;
@@ -238,7 +238,7 @@ color: #000;
   border: 2px solid #000;
 }
 /*Area do título da caixa de adicionar atividades*/
-.boxAdicAtividade .titulo{
+.containerAdicAtividade .titulo{
   color: #000;
   line-height: 40px;
   font-size: 16px;
@@ -246,7 +246,7 @@ color: #000;
   padding: 0px 10px 0px 17px;
 }
 /*Posição do ícone de adicionar*/
-.boxAdicAtividade .iconeTitulo i{
+.containerAdicAtividade .iconeTitulo i{
   position: relative;
   left: 23px;
   top: 30%;
@@ -255,7 +255,7 @@ color: #000;
   padding-right: 8px;
 }
 /*Mantém o ícone de adicionar na mesma linha do texto*/
-.boxAdicAtividade .iconeTitulo{
+.containerAdicAtividade .iconeTitulo{
   display: flex;
   align-items: center;
 }

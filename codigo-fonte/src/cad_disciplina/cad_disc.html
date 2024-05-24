@@ -42,21 +42,21 @@
             <fieldset>
             <!--Título-->
             <legend><b>Cadastro de disciplinas</b></legend>
-            <!--Caixa do nome da matéria-->
+            <!--Box nome da matéria-->
             <div class="boxNomeMateria">
                 <input type="text" placeholder="Nome da matéria" id="nomeMateria" class="campoNomeMateria" required>
                 <!--Ícone de caderno-->
                 <i id="barraIcone" class='bx bxs-book'></i>
             </div>  
-            <!--Caixa seleção de cores-->    
+            <!--Box definir cor do caderno-->    
             <div class="boxCorCaderno">
-                <!--Ícone e título para seleção de cores--> 
+                <!--Ícone e título para cor do caderno--> 
                 <div class="iconeTitulo">
-                <!--Ícone de cores-->
+                <!--Ícone da paleta-->
                 <i id="barraIcone" class='bx bxs-palette'></i>
                 <div class="titulo">Definir cor do caderno</div>
                 </div>
-                <!--Adicionar o Seletor de Cores-->
+                <!--Box amostra de cores-->
                 <div class="containerCores">
                 <div class="wrapperCores">
                     <div class="amostraCor selected" data-color="#0066CC" style="background-color: #0066CC;"></div>
@@ -66,7 +66,7 @@
                     <div class="amostraCor" data-color="#FF0000" style="background-color: #FF0000;"></div>
                     <div class="amostraCor" data-color="#FFD700" style="background-color: #FFD700;"></div>
                 </div>
-                <!--Input para definir a cor manualmente-->
+                <!--Entrada cor hexadecimal-->
                 <div class="containerCorHexa">
                     <div class="wrapperCorHexa">
                         <div class="corSelecionada" id="corSelecionada"></div>
@@ -79,12 +79,12 @@
             <!--Caixa de adicionar atividades-->
             <div class="boxAdicAtividade">
                 <div class="containerAdicAtividade">
-                    <!--Ícone e título para adicionar atividades--> 
+                    <!--Ícone e título adicionar atividades--> 
                     <div class="iconeTitulo">
-                    <!--Ícone de adicionar-->
+                    <!--Ícone caderno-->
                     <i id="barraIcone" class='bx bxs-notepad'></i>
                     <div class="titulo">Adicionar atividades</div>
-                    <!--Ícone de adicionar nova atividade-->
+                    <!--Ícone mais-->
                     <i id="iconeMais" class='bx bxs-plus-square' onclick="adicionarAtividade()"></i>
                     </div>
                      <!--Lista de atividades-->
@@ -94,7 +94,7 @@
                 </div>
             </div>
             <br>
-            <!--Botão de criar nova disciplina-->
+            <!--Botão criar-->
             <input type="submit" value="CRIAR" name="criarDisciplina" id="criarDisciplina">
             </fieldset>
             </form>

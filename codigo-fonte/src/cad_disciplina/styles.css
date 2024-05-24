@@ -6,7 +6,7 @@
   font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 /*Alinhamento dos objetos da header*/
-.containerHeader{
+.containerCabecalho{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -171,10 +171,6 @@ legend{
   display: flex;
   align-items: center;
 }
-/*Barra de separação do ícone da paleta e texto*/
-#barraIcone2{
-  border-right: 1px solid #000;
-}
 /*Barra de separação título e seletor de cores*/
 .boxCorCaderno .containerCores{
   padding: 10px 1px;
@@ -262,10 +258,6 @@ color: #000;
 .boxAdicAtividade .iconeTitulo{
   display: flex;
   align-items: center;
-}
-/*Barra de separação do ícone de adicionar e texto*/
-#barraIcone3{
-  border-right: 1px solid #000;
 }
 /*Estilo do ícone de adicionar atividade*/
 #iconeMais{

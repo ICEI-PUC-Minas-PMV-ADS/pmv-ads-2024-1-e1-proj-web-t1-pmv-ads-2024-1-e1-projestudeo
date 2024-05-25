@@ -6,7 +6,7 @@
   font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 /*Alinhamento dos objetos da header*/
-.containerHeader{
+.containerCabecalho{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +20,7 @@
   filter:drop-shadow(0 0 10px rgba(0, 0, 0, 0.));
 }
 /*Nome do usuário*/
-.nomeUsuario{
+.usuarioNome{
   color: #0066cc;
   margin-top: 8px;
   margin-right: 8px;
@@ -28,11 +28,11 @@
   text-decoration: none;
 }
 /*Nome do usuário > sublinhar quando passar o mouse*/
-.nomeUsuario:hover{
+.usuarioNome:hover{
   text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
 /*Estilo do ícone do usuário*/
-#iconeUsuario{
+#usuarioIcone{
   font-size: 35px;
   color: #003399;
   display: flex;
@@ -50,12 +50,12 @@ nav {
   padding: 20px;
 }
 /*Orientação dos itens da navegação*/
-.nav-itens {
+.itensNavegacao {
   list-style: none;
   display: flex;
 }
 /*Estilo da fonte da navegação*/
-.nav-itens>li>a {
+.itensNavegacao>li>a {
   padding-left: 20px;
   color: #fff;
   text-decoration: none;
@@ -64,7 +64,7 @@ nav {
   transition: 1s text;
 }
 /*Navegação > mudar cor quando passar o mouse*/
-.nav-itens>li>a:hover {
+.itensNavegacao>li>a:hover {
   color: #33CC99;
 }
 /*Definições de fundo + rodapé*/
@@ -76,8 +76,8 @@ main{
   display: flex;
   justify-content: center;
 }
-/*Caixa principal*/
-.box {
+/*Box principal*/
+.boxPrincipal {
   margin-left: auto;
   margin-right: auto;
   width: 70%;
@@ -90,26 +90,26 @@ main{
   display: flex;
   flex-direction: column;
 }
-/*Remover linha da caixa principal*/
+/*Remover linha box principal*/
 fieldset {
   border: 0;
 }
-/*Estilo do título Cadastro de disciplinas*/
+/*Estilo do título Nome da Disciplina*/
 legend{
   border: 0; 
   padding:2.2px ;
   text-align: center;
   font-size: 23px;
 }
-/*Posição dos textos das caixas*/
-.inputBox {
+/*Posição textos box Alterar Nome da Matéria*/
+.boxAltNomeMateria {
   position: relative;
   width: 100%;
   height: 45px;
   margin: 20px 0;
 }
-/*Definições das caixas*/
-.inputBox input{
+/*Definições box Alterar Nome da Matéria*/
+.boxAltNomeMateria input{
   flex: 1;
   width: 398px;
   height: 100%;
@@ -122,20 +122,12 @@ legend{
   color: #000000;
   padding: 0px 10px 0px 45px;
 }
-/*Definições das caixas*/
-.labelInput{
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  pointer-events: none;
-  transition: .5s;
-}
-/*Cor dos textos de exemplo das caixas*/
-.inputBox input::placeholder{
+/*Cor texto exemplo Alterar Nome da Matéria*/
+.boxAltNomeMateria input::placeholder{
   color: #7F7F7F;
 }
-/*Posição dos ícones*/
-.inputBox i{
+/*Posição ícone Alterar Nome da Matéria*/
+.boxAltNomeMateria i{
   position: absolute;
   left: 25px;
   top: 30%;
@@ -143,14 +135,12 @@ legend{
   font-size: 20px;
   padding-right: 8px;
 }
-/*Barra de separação dos ícones e textos*/
-#withBorder{
+/*Barra de separação dos ícones para textos*/
+#barraIcone{
   border-right: 1px solid #000;
 }
-
-/*CAIXA DE CORES E SELETOR*/
-/*Caixa principal Cores*/
-.wrapper{
+/*Box principal Alterar Cores*/
+.boxCorCaderno{
   flex: 1;
   width: 398px;
   height: 175px;
@@ -158,16 +148,16 @@ legend{
   border-radius: 5px;
   border: 2px solid #000;
 }
-/*Area do título da caixa de Cores*/
-.wrapper .title{
+/*Area do título de Cores*/
+.boxCorCaderno .titulo{
   color: #000;
   line-height: 40px;
   font-size: 16px;
   font-weight: 500;
   padding: 0px 10px 0px 17px;
 }
-/*Posição do ícone de Cores*/
-.wrapper .iconTitle i{
+/*Posição e definição do ícone de Cores*/
+.boxCorCaderno .iconeTitulo i{
   position: relative;
   left: 23px;
   top: 30%;
@@ -175,31 +165,31 @@ legend{
   font-size: 20px;
   padding-right: 8px;
 }
-/*Mantém o ícone da paleta na mesma linha do texto*/
-.wrapper .iconTitle{
+/*Posição box cores e título Definir cor do caderno*/
+.boxCorCaderno .iconeTitulo{
   display: flex;
   align-items: center;
 }
 /*Barra de separação do ícone da paleta e texto*/
-#withColorPalette{
+#barraPaletaCores{
   border-right: 1px solid #000;
 }
-/*Barra de separação título e seletor de cores*/
-.wrapper .boxRadio{
+/*Barra de separação título e cores*/
+.boxCorCaderno .containerCores{
   padding: 10px 1px;
   border-top: 1px solid #000;
   width: 95%;
   margin-left: auto;
   margin-right: auto;
 } 
-/*Seletor de cores*/
-.preset-colors {
+/*Estilo e posição cores*/
+.wrapperCores {
 display: flex;
 justify-content: space-between;
 margin-bottom: 10px;
 }
-/*Caixas coloridas*/
-.color-swatch {
+/*Amostra de cores*/
+.amostraCor {
 width: 45px;
 height: 45px;
 border: 2px solid #000;
@@ -208,44 +198,37 @@ border-radius: 5px;
 margin-left: auto;
 margin-right: auto;
 }
-/*Efeito ao passar o mouse e ao selecionar uma cor no seletor de cores*/
-.color-swatch:hover,
-.color-swatch.selected {
-border-color: #000;
-}
-/*Especificações do botão seletor de cores*/
-.custom-color-container {
+/*Especificações do box cor hexadecimal*/
+.containerCorHexa {
 display: flex;
 justify-content: center;
 }
-/*Estilo do contêiner de entrada de cor*/
-.color-input-wrapper {
+/*Estilo do box cor hexadecial*/
+.wrapperCorHexa {
 display: flex;
 align-items: center;
 border: 2px solid #000;
 border-radius: 5px;
 padding: 5px;
 }
-/*Caixa de exibição da cor selecionada*/
-.selected-color-display {
+/*Exibição da cor hexadecial selecionada*/
+.corSelecionada {
 width: 40px;
 height: 40px;
 border-radius: 5px;
 margin-right: 10px;
 border: 2px solid #000;
 }
-/*Campo de texto para código de cor hexadecimal*/
-#colorInput {
+/*Definições texto cor hexadecimal*/
+#entradaCorHexa {
 width: 100px;
 border: none;
 text-align: center;
 font-size: 16px;
 color: #000;
 }
-
-/*CAIXA DE ADICIONAR ATIVIDADES*/
-/*Caixa principal de Adicionar Atividades*/
-.add-activity-box{
+/*Box Adicionar Atividades*/
+.containerAdicAtividade{
   flex: 1;
   width: 398px;
   height: 100%;
@@ -253,16 +236,16 @@ color: #000;
   border-radius: 5px;
   border: 2px solid #000;
 }
-/*Area do título da caixa de adicionar atividades*/
-.add-activity-box .title{
+/*Area do título adicionar atividades*/
+.containerAdicAtividade .titulo{
   color: #000;
   line-height: 40px;
   font-size: 16px;
   font-weight: 500;
   padding: 0px 10px 0px 17px;
 }
-/*Posição do ícone de adicionar*/
-.add-activity-box .iconTitle i{
+/*Posição dos ícones adicionar atividades*/
+.containerAdicAtividade .iconeTitulo i{
   position: relative;
   left: 23px;
   top: 30%;
@@ -271,23 +254,19 @@ color: #000;
   padding-right: 8px;
 }
 /*Mantém o ícone de adicionar na mesma linha do texto*/
-.add-activity-box .iconTitle{
+.containerAdicAtividade .iconeTitulo{
   display: flex;
   align-items: center;
 }
-/*Barra de separação do ícone de adicionar e texto*/
-#adcAtiv{
-  border-right: 1px solid #000;
-}
-/*Estilo do ícone de adicionar atividade*/
-#plusIcon{
+/*Estilo do ícone + de adicionar atividade*/
+#iconeMais{
   border-right: 5px;
   cursor: pointer;
   margin-left: auto;
   margin-right: 10px;
 }
-/*Estilo dos itens de atividade*/
-.activity-item {
+/*Estilo dos itens nome de atividade*/
+.itemAtividade {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -299,13 +278,13 @@ color: #000;
   margin-left: auto;
   margin-right: auto;
 }
-/*Estilo do texto das atividades*/
-.activity-item .text {
+/*Estilo do texto nome da atividade*/
+.itemAtividade .texto {
   display: flex;
   align-items: center;
 }
 /*Estilo do campo de texto das atividades*/
-.activity-item .text input[type="text"] {
+.itemAtividade .texto input[type="text"] {
   border: none;
   outline: none;
   font-size: 16px;
@@ -313,21 +292,15 @@ color: #000;
   flex-grow: 1;
 }
 /*Estilo do checkbox das atividades*/
-.activity-item .text input[type="checkbox"] {
+.itemAtividade .texto input[type="checkbox"] {
   accent-color: #000;
   margin-right: 10px;
   cursor: pointer;
   width: 13px;
   height: 13px;
 }
-/*Estilo do menu das atividades*/
-.activity-item .menu {
-  position: relative;
-  align-items: center;
-  display: flex;
-}
-/*Estilo dos ícones do menu das atividades*/
-.activity-item .menu i {
+/*Estilo da ação deletar*/
+.itemAtividade .acaoDeletar i {
   cursor: pointer;
   font-size: 17px;
   display: flex;
@@ -335,32 +308,8 @@ color: #000;
   justify-content: center;
   height: 100%;
 }
-/*Estilo das opções do menu das atividades*/
-.activity-item .menu-options {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 20px;
-  background: #fff;
-  border: 1px solid #000;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, .1);
-}
-/*Estilo das opções de links do menu das atividades*/
-.activity-item .menu-options a {
-  display: block;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-/*Estilo das opções do menu quando passar o mouse*/
-.activity-item .menu-options a:hover {
-  background: #f0f0f0;
-}
-
-
-/*CAIXA DE ANOTAÇÕES*/
-/*Caixa principal Anotações*/
-.boxAnotacoes{
+/*Box Anotações*/
+.boxAnotacao{
   float: right; 
   width: 800px;
   height: 500px;
@@ -369,8 +318,8 @@ color: #000;
   border: 2px solid #000;
 
 }
-/*Area do título da caixa de Anotações*/
-.boxAnotacoes .title{
+/*Area do título box de Anotações*/
+.boxAnotacao .titulo{
   color: #000;
   line-height: 40px;
   font-size: 16px;
@@ -378,7 +327,7 @@ color: #000;
   padding: 0px 10px 0px 17px;
 }
 /*Posição do ícone de Anotações*/
-.boxAnotacoes .iconTitle i{
+.boxAnotacao .iconeTitulo i{
   position: relative;
   left: 23px;
   top: 30%;
@@ -387,7 +336,7 @@ color: #000;
   padding-right: 8px;
 }
 /*Mantém o ícone de Anotações na mesma linha do texto*/
-.boxAnotacoes .iconTitle{
+.boxAnotacao .iconeTitulo{
   display: flex;
   align-items: center;
 }
@@ -396,28 +345,19 @@ color: #000;
   border-right: 1px solid #000;
 }
 /*Barra de separação título e seletor de cores*/
-.boxAnotacoes .boxRadio{
+.boxAnotacao .containerAnotacao{
   padding: 10px 1px;
   border-top: 1px solid #000;
   width: 95%;
   margin-left: auto;
   margin-right: auto;
 } 
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-
-
-
 /*Posicionamento do rodapé*/
 footer{
   position: relative;
 }
 /*Definições e texto do rodapé*/
-.infoFooter{
+.rodape{
   background-color: #003399;
   color: #fff;
   font-size: 16px;
@@ -429,7 +369,7 @@ footer{
 }
 /*Responsividade*/
 @media only screen and (max-width: 950px){
-  .box{
+  .boxPrincipal{
       width: 85%;
   }
 }

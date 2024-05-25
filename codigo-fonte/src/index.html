@@ -17,43 +17,43 @@
     <link rel="shortcut icon" href="images/favicon.svg">
 </head>
 <body>
-    <!--Caixa principal-->
-    <div class="wrapper">
+    <!--Box principal-->
+    <div class="boxPrincipal">
     <!--Local dos dados-->
     <form action="">
         <!--Logo-->
         <img src="images/estudeo_logo.svg" class="logo">
         <!--Título-->
         <h1>Seu cronograma de estudos</h1>
-        <!--Caixa de e-mail-->
-        <div class="inputBox">
+        <!--Box e-mail-->
+        <div class="boxElementos">
             <input type="email" placeholder="e-mail" required>
             <!--Ícone de e-mail-->
-            <i id="withBorder" class='bx bxs-envelope'></i>
+            <i id="barraIcone" class='bx bxs-envelope'></i>
         </div>
-        <!--Caixa de senha-->
-        <div class="inputBox">
-            <input type="password" placeholder="senha" required id="password">
+        <!--Box de senha-->
+        <div class="boxElementos">
+            <input type="password" placeholder="senha" required id="senha">
             <!--Ícone de senha-->
-            <i id="withBorder" class='bx bxs-lock-alt' ></i>
+            <i id="barraIcone" class='bx bxs-lock-alt'></i>
             <!--Chamada da função mostrar/esconder senha-->
-            <span class="eye" onclick="togglePassword()">
+            <span class="iconeOlho" onclick="togglePassword()">
             <!--Ícone do olho aberto-->    
-            <i id="openEye" class='bx bxs-show' ></i>
+            <i id="olhoAberto" class='bx bxs-show'></i>
             <!--Ícone do olho fechado-->
-            <i id="closedEye" class='bx bxs-hide' ></i>
+            <i id="olhoFechado" class='bx bxs-hide'></i>
             </span>
         </div>
         <!--Lembrar-me-->
-        <div class="rememberForgot">
+        <div class="lembrarEsqueci">
             <label><input type="checkbox">Lembrar-me</label>
             <!--Esqueci minha senha-->
             <a href="#">Esqueci minha senha</a>
         </div>
         <!--Botão Entrar-->
-        <button type="submit" class="btn">ENTRAR</button>
+        <button type="submit" class="Entrar">ENTRAR</button>
          <!--Não possui conta? Criar conta-->
-        <div class="registerLink">
+        <div class="criarConta">
         <p>Não possui conta? <a href="#">Criar conta</a></p>
         </div>
         <!--Javascript-->

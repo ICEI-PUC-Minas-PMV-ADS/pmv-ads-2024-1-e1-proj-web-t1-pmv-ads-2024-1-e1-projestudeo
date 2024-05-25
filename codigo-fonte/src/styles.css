@@ -23,11 +23,12 @@ body{
     50% {
         background-position: 100% 100%;
     }
-    100% {background-position: 0% 50%;
+    100% {
+        background-position: 0% 50%;
     }
 }
-/*Caixa principal*/
-.wrapper{
+/*Box principal*/
+.boxPrincipal{
     width: 420px;
     background: #fff;
     color: #000000;
@@ -35,31 +36,32 @@ body{
     padding: 40px 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
 }
-/*Estilo do logo*/
-.wrapper .logo{
+/*Estilo logo*/
+.boxPrincipal .logo{
     width: 180px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    filter:drop-shadow(0 0 10px rgba(0, 0, 0, 0.));
+    filter:drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
     padding-top: 0px;
 }
 /*Estilo e formatação do título*/
-.wrapper h1{
+.boxPrincipal h1{
     font-size: 23px;
     font-weight: 500;
     text-align: center;
     margin: 20px 0;
 }
-/*Tamanho das caixas e posição dos icones*/
-.wrapper .inputBox{
+/*Tamanho dos boxes e posição dos ícones*/
+.boxPrincipal .boxElementos{
     position: relative;
     width: 100%;
     height: 45px;
     margin: 20px 0;
 }
-/*Definições das caixas*/
-.inputBox input{
+
+/*Definições das boxes*/
+.boxElementos input{
     width: 100%;
     height: 100%;
     background: #fff;
@@ -71,16 +73,16 @@ body{
     color: #000000;
     padding: 0px 10px 0px 45px;
 }
-/*Limite da caixa de texto da senha*/
-#password{
+/* Limite do box de texto da senha*/
+#senha{
     padding-right: 35px;
 }
-/*Cor dos textos de exemplo das caixas*/
-.inputBox input::placeholder{
+/*Cor dos textos de exemplo dos boxes*/
+.boxElementos input::placeholder{
     color: #7F7F7F;
 }
 /*Posição dos ícones*/
-.inputBox i{
+.boxElementos i{
     position: absolute;
     left: 25px;
     top: 30%;
@@ -89,40 +91,40 @@ body{
     padding-right: 8px;
 }
 /*Barra de separação dos ícones e textos*/
-#withBorder{
+#barraIcone{
     border-right: 1px solid #000;
 }
 /*Posição dos ícones de senha*/
-.eye{
+.iconeOlho{
     position: absolute;
     right: 45px;
     top: 30%;
     cursor: pointer;
 }
 /*Estilos Lembrar-me Esqueci minha senha*/
-.wrapper .rememberForgot{
+.boxPrincipal .lembrarEsqueci{
     display: flex;
     justify-content: space-between;
     font-size: 14.5px;
     margin: -15px 0 15px;
 }
-/*Estilo da caixa de seleção do Lembrar-me*/
-.rememberForgot label input{
+/*Estilo box de seleção Lembrar-me*/
+.lembrarEsqueci label input{
     accent-color: #000;
     margin-right: 3px;
 }
 /*Estilos Esqueci minha senha*/
-.rememberForgot a{
+.lembrarEsqueci a{
     color: #0066cc;
     text-decoration: none;
     text-align: right;
 }
 /*Esqueci minha senha > sublinhar quando passar o mouse*/
-.rememberForgot a:hover{
+.lembrarEsqueci a:hover{
     text-decoration: underline;
 }
 /*Estilos botão ENTRAR*/
-.wrapper .btn{
+.boxPrincipal .Entrar{
     width: 100%;
     height: 45px;
     background: #33CC99;
@@ -136,24 +138,24 @@ body{
     font-weight: 600;
 }
 /*Estilos Não possui conta? Criar conta*/
-.wrapper .registerLink{
+.boxPrincipal .criarConta{
     font-size: 14.5px;
     text-align: center;
     margin: 20px 0 -10px;
 }
 /*Estilos e formatação Criar conta*/
-.registerLink p a{
+.criarConta p a{
     color: #0066cc;
     text-decoration: none;
     font-weight: 600;
 }
 /*Criar conta > sublinhar quando passar o mouse*/
-.registerLink p a:hover{
+.criarConta p a:hover{
     text-decoration: underline;
 }
 /*Responsividade*/
 @media only screen and (max-width: 950px){
-    .wrapper{
+    .boxPrincipal{
         width: 85%;
     }
 }

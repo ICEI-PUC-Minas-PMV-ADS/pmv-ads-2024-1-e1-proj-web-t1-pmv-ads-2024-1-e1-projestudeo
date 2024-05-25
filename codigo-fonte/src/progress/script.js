@@ -1,76 +1,66 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const colorSwatches = document.querySelectorAll('.color-swatch'); // Seleciona todos os elementos de cores predefinidas
-    const colorInput = document.getElementById('colorInput'); // Seleciona o input para entrada de cor manual
-    const selectedColorDisplay = document.getElementById('selectedColorDisplay'); // Seleciona o elemento para exibir a cor selecionada
+    const amostrasCor = document.querySelectorAll('.amostraCor'); // Seleciona todos os elementos de cores predefinidas
+    const entradaCorHexa = document.getElementById('entradaCorHexa'); // Seleciona o input para entrada de cor manual
+    const corSelecionada = document.getElementById('corSelecionada'); // Seleciona o elemento para exibir a cor selecionada
 
     // Definir a cor padrão
-    const defaultColor = '#0066CC';
-    updateColor(defaultColor); // Atualiza a cor padrão ao carregar a página
+    const corPadrao = '#0066CC';
+    atualizarCor(corPadrao); // Atualiza a cor padrão ao carregar a página
 
-    // Adiciona um evento de clique para cada swatch de cor
-    colorSwatches.forEach(swatch => {
-        swatch.addEventListener('click', () => {
-            const color = swatch.getAttribute('data-color'); // Obtém a cor associada ao swatch
-            updateColor(color); // Atualiza a cor selecionada
-            colorSwatches.forEach(s => s.classList.remove('selected')); // Remove a classe 'selected' de todos os swatches
-            swatch.classList.add('selected'); // Adiciona a classe 'selected' ao swatch clicado
+    // Adiciona um evento de clique para cada amostra de cor
+    amostrasCor.forEach(amostra => {
+        amostra.addEventListener('click', () => {
+            const cor = amostra.getAttribute('data-color'); // Obtém a cor associada a amostra de cor
+            atualizarCor(cor); // Atualiza a cor selecionada
+            amostrasCor.forEach(a => a.classList.remove('selected')); // Remove a classe 'selected' de todas as amostras de cores
+            amostra.classList.add('selected'); // Adiciona a classe 'selected' a amostra de cor clicado
         });
     });
 
     // Adiciona um evento de entrada para o campo de entrada de cor manual
-    colorInput.addEventListener('input', () => {
-        const color = colorInput.value; // Obtém o valor da cor inserida manualmente
-        if (/^#([0-9A-F]{3}){1,2}$/i.test(color)) { // Verifica se o valor da cor é válido
-            updateColor(color); // Atualiza a cor selecionada
-            colorSwatches.forEach(s => s.classList.remove('selected')); // Remove a classe 'selected' de todos os swatches
+    entradaCorHexa.addEventListener('input', () => {
+        const cor = entradaCorHexa.value; // Obtém o valor da cor inserida manualmente
+        if (/^#([0-9A-F]{3}){1,2}$/i.test(cor)) { // Verifica se o valor da cor é válido
+            atualizarCor(cor); // Atualiza a cor selecionada
+            amostrasCor.forEach(a => a.classList.remove('selected')); // Remove a classe 'selected' de todas as amostras de cores
         }
     });
 
     // Função para atualizar a cor selecionada
-    function updateColor(color) {
-        colorInput.value = color; // Atualiza o valor do campo de entrada de cor
-        selectedColorDisplay.style.backgroundColor = color; // Atualiza a exibição da cor selecionada
+    function atualizarCor(cor) {
+        entradaCorHexa.value = cor; // Atualiza o valor do campo de entrada de cor
+        corSelecionada.style.backgroundColor = cor; // Atualiza a exibição da cor selecionada
     }
 });
 
 // Função para adicionar uma nova atividade
-function addActivity() {
-    const activityList = document.getElementById('activity-list'); // Seleciona a lista de atividades
+function adicionarAtividade() {
+    const listaAtividade = document.getElementById('listaAtividade'); // Seleciona a lista de atividades
 
-    const activityItem = document.createElement('div'); // Cria um novo elemento de atividade
-    activityItem.classList.add('activity-item'); // Adiciona a classe 'activity-item' ao elemento
+    const itemAtividade = document.createElement('div'); // Cria um novo elemento de atividade
+    itemAtividade.classList.add('itemAtividade'); // Adiciona a classe 'itemAtividade' ao elemento
 
-    // Cria o contêiner de texto da atividade com um checkbox e um campo de texto
-    const activityText = document.createElement('div');
-    activityText.classList.add('text');
-    activityText.innerHTML = `<input type="checkbox"><input type="text" placeholder="Nome da atividade">`;
+    // Cria o container de texto da atividade com um checkbox e um campo de texto
+    const textoAtividade = document.createElement('div');
+    textoAtividade.classList.add('texto');
+    textoAtividade.innerHTML = `<input type="checkbox"><input type="text" placeholder="Nome da atividade">`;
 
-    // Cria o menu com o ícone de lixeira para deletar a atividade
-    const menu = document.createElement('div');
-    menu.classList.add('menu');
-    menu.innerHTML = `
-        <i class='bx bx-trash-alt' onclick="deleteActivity(this)"></i>
+    // Cria o container para o ícone de lixeira, para deletar a atividade
+    const acaoDeletar = document.createElement('div');
+    acaoDeletar.classList.add('acaoDeletar');
+    acaoDeletar.innerHTML = `
+        <i class='bx bx-trash-alt' onclick="deletarAtividade(this)"></i>
     `;
 
-    // Adiciona os elementos de texto e menu ao item de atividade
-    activityItem.appendChild(activityText);
-    activityItem.appendChild(menu);
+    // Adiciona os elementos de texto e container de lixeira ao item de atividade
+    itemAtividade.appendChild(textoAtividade);
+    itemAtividade.appendChild(acaoDeletar);
     // Adiciona o item de atividade à lista de atividades
-    activityList.appendChild(activityItem);
-}
-
-// Função para alternar a exibição do menu de opções
-function toggleMenu(element) {
-    const menuOptions = element.nextElementSibling; // Seleciona o próximo elemento irmão (menu de opções)
-    if (menuOptions.style.display === 'block') {
-        menuOptions.style.display = 'none'; // Oculta o menu se estiver visível
-    } else {
-        menuOptions.style.display = 'block'; // Exibe o menu se estiver oculto
-    }
+    listaAtividade.appendChild(itemAtividade);
 }
 
 // Função para deletar uma atividade
-function deleteActivity(element) {
-    const activityItem = element.closest('.activity-item'); // Seleciona o item de atividade mais próximo
-    activityItem.remove(); // Remove o item de atividade da lista
+function deletarAtividade(element) {
+    const itemAtividade = element.closest('.itemAtividade'); // Seleciona o item de atividade mais próximo
+    itemAtividade.remove(); // Remove o item de atividade da lista
 }

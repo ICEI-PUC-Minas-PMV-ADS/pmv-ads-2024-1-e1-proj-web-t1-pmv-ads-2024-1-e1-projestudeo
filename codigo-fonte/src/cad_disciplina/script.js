@@ -12,8 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
         amostra.addEventListener('click', () => {
             const cor = amostra.getAttribute('data-color'); // Obtém a cor associada a amostra de cor
             atualizarCor(cor); // Atualiza a cor selecionada
-            amostrasCor.forEach(a => a.classList.remove('selected')); // Remove a classe 'selected' de todas as amostras de cores
-            amostra.classList.add('selected'); // Adiciona a classe 'selected' a amostra de cor clicado
         });
     });
 
@@ -22,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const cor = entradaCorHexa.value; // Obtém o valor da cor inserida manualmente
         if (/^#([0-9A-F]{3}){1,2}$/i.test(cor)) { // Verifica se o valor da cor é válido
             atualizarCor(cor); // Atualiza a cor selecionada
-            amostrasCor.forEach(a => a.classList.remove('selected')); // Remove a classe 'selected' de todas as amostras de cores
         }
     });
 

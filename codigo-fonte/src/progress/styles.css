@@ -1,45 +1,66 @@
-/*Estilos universais*/
-*{
+/* Estilos universais */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
-/*Alinhamento dos objetos da header*/
-.containerCabecalho{
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  justify-content: center;
+}
+
+/* Alinhamento dos objetos da header */
+.containerCabecalho {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-/*Estilo do logo*/
-.logo{
+
+/* Estilo do logo */
+.logo {
   height: 50px;
   display: flex;
   margin-top: 8px;
   margin-left: 40px;
-  filter:drop-shadow(0 0 10px rgba(0, 0, 0, 0.));
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0));
 }
-/*Nome do usuário*/
-.usuarioNome{
+
+/* Nome do usuário */
+.usuarioNome {
   color: #0066cc;
   margin-top: 8px;
   margin-right: 8px;
   margin-left: auto;
   text-decoration: none;
 }
-/*Nome do usuário > sublinhar quando passar o mouse*/
-.usuarioNome:hover{
+
+/* Nome do usuário > sublinhar quando passar o mouse */
+.usuarioNome:hover {
   text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
-/*Estilo do ícone do usuário*/
-#usuarioIcone{
+
+/* Estilo do ícone do usuário */
+#usuarioIcone {
   font-size: 35px;
   color: #003399;
   display: flex;
   margin-top: 8px;
   margin-right: 40px;
 }
-/*Estilo da navegação*/
+
+/* Estilo da navegação */
 nav {
   display: flex;
   justify-content: space-between;
@@ -49,13 +70,15 @@ nav {
   background: #003399;
   padding: 20px;
 }
-/*Orientação dos itens da navegação*/
+
+/* Orientação dos itens da navegação */
 .itensNavegacao {
   list-style: none;
   display: flex;
 }
-/*Estilo da fonte da navegação*/
-.itensNavegacao>li>a {
+
+/* Estilo da fonte da navegação */
+.itensNavegacao > li > a {
   padding-left: 20px;
   color: #fff;
   text-decoration: none;
@@ -63,55 +86,82 @@ nav {
   cursor: pointer;
   transition: 1s text;
 }
-/*Navegação > mudar cor quando passar o mouse*/
-.itensNavegacao>li>a:hover {
-  color: #33CC99;
+
+/* Navegação > mudar cor quando passar o mouse */
+.itensNavegacao > li > a:hover {
+  color: #33cc99;
 }
-/*Definições de fundo + rodapé*/
-main{
-  background: #fff;
-  min-height: calc(100vh - 100px);
-  padding-bottom: 100px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-/*Box principal*/
+
+/* Box principal */
 .boxPrincipal {
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
-  height: 100%;
-  background: #ffffff;
+  width: 1140px;
+  background: #f8f8f8;
   color: #000000;
   border-radius: 10px;
   padding: 40px 40px;
-  box-shadow: 0 0 0px rgba(0, 0, 0, .1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1); 
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
-/*Remover linha box principal*/
+
+/* Título Centralizado */
+.tituloCentralizado {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Remover linha box principal */
 fieldset {
   border: 0;
 }
-/*Estilo do título Nome da Disciplina*/
-legend{
-  border: 0; 
-  padding:2.2px ;
+
+/* Estilo do título Nome da Disciplina */
+legend {
+  border: 0;
+  padding: 2.2px;
   text-align: center;
   font-size: 23px;
 }
-/*Posição textos box Alterar Nome da Matéria*/
+
+/* Estilo do container flexível */
+.containerFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* Garante que os itens tenham a mesma altura */
+  width: 100%;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+/* Coluna Esquerda */
+.colunaEsquerda {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+/* Coluna Direita */
+.colunaDireita {
+  display: flex;
+  flex-direction: column;
+  flex: 2; /* Pode ser ajustado conforme necessário */
+}
+
+/* Posição textos box Alterar Nome da Matéria */
 .boxAltNomeMateria {
   position: relative;
   width: 100%;
   height: 45px;
-  margin: 20px 0;
 }
-/*Definições box Alterar Nome da Matéria*/
-.boxAltNomeMateria input{
+
+/* Definições box Alterar Nome da Matéria */
+.boxAltNomeMateria input {
   flex: 1;
-  width: 398px;
+  width: 100%;
   height: 100%;
   background: #fff;
   border: none;
@@ -122,12 +172,14 @@ legend{
   color: #000000;
   padding: 0px 10px 0px 45px;
 }
-/*Cor texto exemplo Alterar Nome da Matéria*/
-.boxAltNomeMateria input::placeholder{
-  color: #7F7F7F;
+
+/* Cor texto exemplo Alterar Nome da Matéria */
+.boxAltNomeMateria input::placeholder {
+  color: #7f7f7f;
 }
-/*Posição ícone Alterar Nome da Matéria*/
-.boxAltNomeMateria i{
+
+/* Posição ícone Alterar Nome da Matéria */
+.boxAltNomeMateria i {
   position: absolute;
   left: 25px;
   top: 30%;
@@ -135,29 +187,32 @@ legend{
   font-size: 20px;
   padding-right: 8px;
 }
-/*Barra de separação dos ícones para textos*/
-#barraIcone{
+
+/* Barra de separação dos ícones para textos */
+#barraIcone {
   border-right: 1px solid #000;
 }
-/*Box principal Alterar Cores*/
-.boxCorCaderno{
+
+/* Box principal Alterar Cores */
+.boxCorCaderno {
   flex: 1;
-  width: 398px;
-  height: 175px;
+  width: 100%;
   background: #ffffff;
   border-radius: 5px;
   border: 2px solid #000;
 }
-/*Area do título de Cores*/
-.boxCorCaderno .titulo{
+
+/* Área do título de Cores */
+.boxCorCaderno .titulo {
   color: #000;
   line-height: 40px;
   font-size: 16px;
   font-weight: 500;
   padding: 0px 10px 0px 17px;
 }
-/*Posição e definição do ícone de Cores*/
-.boxCorCaderno .iconeTitulo i{
+
+/* Posição e definição do ícone de Cores */
+.boxCorCaderno .iconeTitulo i {
   position: relative;
   left: 23px;
   top: 30%;
@@ -165,87 +220,93 @@ legend{
   font-size: 20px;
   padding-right: 8px;
 }
-/*Posição box cores e título Definir cor do caderno*/
-.boxCorCaderno .iconeTitulo{
+
+/* Posição box cores e título Definir cor do caderno */
+.boxCorCaderno .iconeTitulo {
   display: flex;
   align-items: center;
 }
-/*Barra de separação do ícone da paleta e texto*/
-#barraPaletaCores{
-  border-right: 1px solid #000;
-}
-/*Barra de separação título e cores*/
-.boxCorCaderno .containerCores{
+
+/* Barra de separação título e cores */
+.boxCorCaderno .containerCores {
   padding: 10px 1px;
   border-top: 1px solid #000;
   width: 95%;
   margin-left: auto;
   margin-right: auto;
-} 
-/*Estilo e posição cores*/
+}
+
+/* Estilo e posição cores */
 .wrapperCores {
-display: flex;
-justify-content: space-between;
-margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
-/*Amostra de cores*/
+
+/* Amostra de cores */
 .amostraCor {
-width: 45px;
-height: 45px;
-border: 2px solid #000;
-cursor: pointer;
-border-radius: 5px;
-margin-left: auto;
-margin-right: auto;
+  width: 45px;
+  height: 45px;
+  border: 2px solid #000;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
 }
-/*Especificações do box cor hexadecimal*/
+
+/* Especificações do box cor hexadecimal */
 .containerCorHexa {
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
 }
-/*Estilo do box cor hexadecial*/
+
+/* Estilo do box cor hexadecial */
 .wrapperCorHexa {
-display: flex;
-align-items: center;
-border: 2px solid #000;
-border-radius: 5px;
-padding: 5px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #000;
+  border-radius: 5px;
+  padding: 5px;
 }
-/*Exibição da cor hexadecial selecionada*/
+
+/* Exibição da cor hexadecial selecionada */
 .corSelecionada {
-width: 40px;
-height: 40px;
-border-radius: 5px;
-margin-right: 10px;
-border: 2px solid #000;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  margin-right: 10px;
+  border: 2px solid #000;
 }
-/*Definições texto cor hexadecimal*/
+
+/* Definições texto cor hexadecimal */
 #entradaCorHexa {
-width: 100px;
-border: none;
-text-align: center;
-font-size: 16px;
-color: #000;
+  width: 100px;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+  color: #000;
 }
-/*Box Adicionar Atividades*/
-.containerAdicAtividade{
+
+/* Box Adicionar Atividades */
+.containerAdicAtividade {
   flex: 1;
-  width: 398px;
-  height: 100%;
+  width: 100%;
   background: #fff;
   border-radius: 5px;
   border: 2px solid #000;
 }
-/*Area do título adicionar atividades*/
-.containerAdicAtividade .titulo{
+
+/* Área do título adicionar atividades */
+.containerAdicAtividade .titulo {
   color: #000;
   line-height: 40px;
   font-size: 16px;
   font-weight: 500;
   padding: 0px 10px 0px 17px;
 }
-/*Posição dos ícones adicionar atividades*/
-.containerAdicAtividade .iconeTitulo i{
+
+/* Posição dos ícones adicionar atividades */
+.containerAdicAtividade .iconeTitulo i {
   position: relative;
   left: 23px;
   top: 30%;
@@ -253,19 +314,22 @@ color: #000;
   font-size: 20px;
   padding-right: 8px;
 }
-/*Mantém o ícone de adicionar na mesma linha do texto*/
-.containerAdicAtividade .iconeTitulo{
+
+/* Mantém o ícone de adicionar na mesma linha do texto */
+.containerAdicAtividade .iconeTitulo {
   display: flex;
   align-items: center;
 }
-/*Estilo do ícone + de adicionar atividade*/
-#iconeMais{
+
+/* Estilo do ícone + de adicionar atividade */
+#iconeMais {
   border-right: 5px;
   cursor: pointer;
   margin-left: auto;
   margin-right: 10px;
 }
-/*Estilo dos itens nome de atividade*/
+
+/* Estilo dos itens nome de atividade */
 .itemAtividade {
   display: flex;
   justify-content: space-between;
@@ -278,12 +342,14 @@ color: #000;
   margin-left: auto;
   margin-right: auto;
 }
-/*Estilo do texto nome da atividade*/
+
+/* Estilo do texto nome da atividade */
 .itemAtividade .texto {
   display: flex;
   align-items: center;
 }
-/*Estilo do campo de texto das atividades*/
+
+/* Estilo do campo de texto das atividades */
 .itemAtividade .texto input[type="text"] {
   border: none;
   outline: none;
@@ -291,7 +357,8 @@ color: #000;
   margin-right: 10px;
   flex-grow: 1;
 }
-/*Estilo do checkbox das atividades*/
+
+/* Estilo do checkbox das atividades */
 .itemAtividade .texto input[type="checkbox"] {
   accent-color: #000;
   margin-right: 10px;
@@ -299,7 +366,8 @@ color: #000;
   width: 13px;
   height: 13px;
 }
-/*Estilo da ação deletar*/
+
+/* Estilo da ação deletar */
 .itemAtividade .acaoDeletar i {
   cursor: pointer;
   font-size: 17px;
@@ -308,68 +376,108 @@ color: #000;
   justify-content: center;
   height: 100%;
 }
-/*Box Anotações*/
-.boxAnotacao{
-  float: right; 
-  width: 800px;
-  height: 500px;
+
+/* Box Anotações */
+.boxAnotacao {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   background: #ffffff;
   border-radius: 5px;
   border: 2px solid #000;
-
 }
-/*Area do título box de Anotações*/
-.boxAnotacao .titulo{
+
+/* Área do título box de Anotações */
+.boxAnotacao .titulo {
   color: #000;
   line-height: 40px;
   font-size: 16px;
   font-weight: 500;
   padding: 0px 10px 0px 17px;
 }
-/*Posição do ícone de Anotações*/
-.boxAnotacao .iconeTitulo i{
+
+/* Posição do ícone de Anotações */
+.boxAnotacao .iconeTitulo i {
   position: relative;
   left: 23px;
-  top: 30%;
+  top: 3%;
   transform: translate(-50%);
   font-size: 20px;
   padding-right: 8px;
 }
-/*Mantém o ícone de Anotações na mesma linha do texto*/
-.boxAnotacao .iconeTitulo{
+
+/* Mantém o ícone de Anotações na mesma linha do texto */
+.boxAnotacao .iconeTitulo {
   display: flex;
   align-items: center;
 }
-/*Barra de separação do ícone de Anotações e texto*/
-#withEdit{
-  border-right: 1px solid #000;
-}
-/*Barra de separação título e seletor de cores*/
-.boxAnotacao .containerAnotacao{
+
+/* Barra de separação título e container de Anotações */
+.boxAnotacao .containerAnotacao {
   padding: 10px 1px;
   border-top: 1px solid #000;
   width: 95%;
   margin-left: auto;
   margin-right: auto;
-} 
-/*Posicionamento do rodapé*/
-footer{
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Para fazer o box crescer com o conteúdo */
 }
-/*Definições e texto do rodapé*/
-.rodape{
+
+.campoAnotacao {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #000;
+  padding: 10px;
+  font-size: 16px;
+  resize: none;
+  overflow-y: auto;
+  background: #fff;
+  flex-grow: 1;
+}
+
+/* Estilo personalizado para a barra de rolagem */
+.campoAnotacao::-webkit-scrollbar {
+  width: 15px; /* Largura da barra de rolagem */
+}
+
+.campoAnotacao::-webkit-scrollbar-track {
+  background: #f8f8f8; /* Cor do trilho */
+}
+
+.campoAnotacao::-webkit-scrollbar-thumb {
+  background: #999; /* Cor da barra de rolagem */
+  border: 2px solid #f1f1f1; /* Espaço entre a barra e o trilho */
+}
+
+.campoAnotacao::-webkit-scrollbar-thumb:hover {
+  background: #777; /* Cor da barra de rolagem ao passar o mouse */
+}
+
+/* Posicionamento do rodapé */
+footer {
   background-color: #003399;
   color: #fff;
   font-size: 16px;
   text-align: center;
   padding: 20px 0;
   width: 100%;
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  margin-top: 40px;
 }
-/*Responsividade*/
-@media only screen and (max-width: 950px){
-  .boxPrincipal{
-      width: 85%;
+
+/* Responsividade */
+@media only screen and (max-width: 1140px) {
+  .boxPrincipal {
+    width: 85%;
+    flex-direction: column;
   }
+  .containerFlex {
+    flex-direction: column;
+    gap: 0;
+  }
+  .colunaDireita {
+    margin-top: 20px;
+  }
+}
 }

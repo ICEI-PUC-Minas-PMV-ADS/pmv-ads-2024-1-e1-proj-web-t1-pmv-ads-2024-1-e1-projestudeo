@@ -1,35 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const amostrasCor = document.querySelectorAll('.amostraCor'); // Seleciona todos os elementos de cores predefinidas
-    const entradaCorHexa = document.getElementById('entradaCorHexa'); // Seleciona o input para entrada de cor manual
-    const corSelecionada = document.getElementById('corSelecionada'); // Seleciona o elemento para exibir a cor selecionada
+    const amostrasCor = document.querySelectorAll('.amostraCor');
+    const entradaCorHexa = document.getElementById('entradaCorHexa');
+    const corSelecionada = document.getElementById('corSelecionada');
 
-    // Definir a cor padrão
     const corPadrao = '#0066CC';
-    atualizarCor(corPadrao); // Atualiza a cor padrão ao carregar a página
+    atualizarCor(corPadrao);
 
-    // Adiciona um evento de clique para cada amostra de cor
     amostrasCor.forEach(amostra => {
         amostra.addEventListener('click', () => {
-            const cor = amostra.getAttribute('data-color'); // Obtém a cor associada a amostra de cor
-            atualizarCor(cor); // Atualiza a cor selecionada
-            amostrasCor.forEach(a => a.classList.remove('selected')); // Remove a classe 'selected' de todas as amostras de cores
-            amostra.classList.add('selected'); // Adiciona a classe 'selected' a amostra de cor clicado
+            const cor = amostra.getAttribute('data-color');
+            atualizarCor(cor);
         });
     });
 
-    // Adiciona um evento de entrada para o campo de entrada de cor manual
     entradaCorHexa.addEventListener('input', () => {
-        const cor = entradaCorHexa.value; // Obtém o valor da cor inserida manualmente
-        if (/^#([0-9A-F]{3}){1,2}$/i.test(cor)) { // Verifica se o valor da cor é válido
-            atualizarCor(cor); // Atualiza a cor selecionada
-            amostrasCor.forEach(a => a.classList.remove('selected')); // Remove a classe 'selected' de todas as amostras de cores
+        const cor = entradaCorHexa.value;
+        if (/^#([0-9A-F]{3}){1,2}$/i.test(cor)) {
+            atualizarCor(cor);
         }
     });
 
-    // Função para atualizar a cor selecionada
     function atualizarCor(cor) {
-        entradaCorHexa.value = cor; // Atualiza o valor do campo de entrada de cor
-        corSelecionada.style.backgroundColor = cor; // Atualiza a exibição da cor selecionada
+        entradaCorHexa.value = cor;
+        corSelecionada.style.backgroundColor = cor;
     }
 });
 

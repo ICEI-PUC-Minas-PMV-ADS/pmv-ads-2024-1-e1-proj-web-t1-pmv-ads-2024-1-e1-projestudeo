@@ -1,12 +1,13 @@
 /*Estilos universais*/
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
+
 /*Centralização dos objetos e degrade do fundo*/
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,6 +16,7 @@ body{
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
 }
+
 /*Animação do degrade do fundo*/
 @keyframes gradient {
     0% {
@@ -27,8 +29,9 @@ body{
         background-position: 0% 50%;
     }
 }
+
 /*Box principal*/
-.boxPrincipal{
+.boxPrincipal {
     width: 420px;
     background: #fff;
     color: #000000;
@@ -36,8 +39,9 @@ body{
     padding: 40px 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
 }
+
 /*Estilo do logo*/
-.boxPrincipal .logo{
+.boxPrincipal .logo {
     width: 180px;
     display: block;
     margin-left: auto;
@@ -45,22 +49,25 @@ body{
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, .1));
     padding-top: 0px;
 }
+
 /*Estilo e formatação do título*/
-.boxPrincipal h1{
+.boxPrincipal h1 {
     font-size: 23px;
     font-weight: 500;
     text-align: center;
     margin: 20px 0;
 }
+
 /*Tamanho das boxes e posição dos ícones*/
-.boxPrincipal .boxElementos{
+.boxPrincipal .boxElementos {
     position: relative;
     width: 100%;
     height: 45px;
     margin: 20px 0;
 }
+
 /*Definições das boxes*/
-.boxElementos input{
+.boxElementos input {
     width: 100%;
     height: 100%;
     background: #fff;
@@ -72,16 +79,19 @@ body{
     color: #000000;
     padding: 0px 10px 0px 45px;
 }
+
 /*Limite do box de texto da senha*/
-#senha, #confirmarSenha{
+#senha, #confirmarSenha {
     padding-right: 35px;
 }
+
 /*Cor dos textos de exemplo das boxes*/
-.boxElementos input::placeholder{
+.boxElementos input::placeholder {
     color: #7F7F7F;
 }
+
 /*Posição dos ícones*/
-.boxElementos i{
+.boxElementos i {
     position: absolute;
     left: 25px;
     top: 30%;
@@ -89,19 +99,22 @@ body{
     font-size: 20px;
     padding-right: 8px;
 }
+
 /*Barra de separação dos ícones e textos*/
-#barraIcone{
+#barraIcone {
     border-right: 1px solid #000;
 }
+
 /*Posição dos ícones de senha*/
-.iconeOlho{
+.iconeOlho {
     position: absolute;
     right: 45px;
     top: 30%;
     cursor: pointer;
 }
+
 /*Estilos botão CONFIRMAR*/
-.boxPrincipal .confirmar{
+.boxPrincipal .confirmar {
     width: 100%;
     height: 45px;
     background: #33CC99;
@@ -114,25 +127,29 @@ body{
     color: #ffffff;
     font-weight: 600;
 }
+
 /*Alinhamento Voltar*/
-.boxPrincipal .voltar{
+.boxPrincipal .voltar {
     font-size: 14.5px;
     text-align: center;
     margin: -20px 0 -10px;
 }
+
 /*Estilo Voltar*/
-.voltar p a{
+.voltar p a {
     color: #0006cc;
     text-decoration: none;
     font-weight: 600;
 }
+
 /*Efeito de sublinhar Voltar*/
-.voltar p a:hover{
+.voltar p a:hover {
     text-decoration: underline;
 }
+
 /*Responsividade*/
-@media only screen and (max-width: 950px){
-    .boxPrincipal{
+@media only screen and (max-width: 950px) {
+    .boxPrincipal {
         width: 85%;
     }
 }

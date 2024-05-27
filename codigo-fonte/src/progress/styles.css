@@ -21,7 +21,7 @@ main {
   justify-content: center;
 }
 
-/* Alinhamento dos objetos da header */
+/* Alinhamento dos objetos da cabecalho */
 .containerCabecalho {
   display: flex;
   justify-content: center;
@@ -48,7 +48,7 @@ main {
 
 /* Nome do usuário > sublinhar quando passar o mouse */
 .usuarioNome:hover {
-  text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+  text-decoration: underline;
 }
 
 /* Estilo do ícone do usuário */
@@ -130,7 +130,7 @@ legend {
 .containerFlex {
   display: flex;
   justify-content: space-between;
-  align-items: stretch; /* Garante que os itens tenham a mesma altura */
+  align-items: stretch;
   width: 100%;
   gap: 40px;
   margin-top: 20px;
@@ -148,7 +148,7 @@ legend {
 .colunaDireita {
   display: flex;
   flex-direction: column;
-  flex: 2; /* Pode ser ajustado conforme necessário */
+  flex: 2;
 }
 
 /* Posição textos box Alterar Nome da Matéria */
@@ -421,13 +421,13 @@ legend {
   margin-right: auto;
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* Para fazer o box crescer com o conteúdo */
+  flex-grow: 1;
 }
 
 .campoAnotacao {
   width: 100%;
   height: 100%;
-  border: 1px solid #000;
+  border: none;
   padding: 10px;
   font-size: 16px;
   resize: none;
@@ -436,25 +436,28 @@ legend {
   flex-grow: 1;
 }
 
-/* Estilo personalizado para a barra de rolagem */
+/* Estilo largura barra de rolagem */
 .campoAnotacao::-webkit-scrollbar {
-  width: 15px; /* Largura da barra de rolagem */
+  width: 15px;
 }
 
+/* Cor fundo barra de rolagem */
 .campoAnotacao::-webkit-scrollbar-track {
-  background: #f8f8f8; /* Cor do trilho */
+  background: #f8f8f8;
 }
 
+/* Cor barra de rolagem */
 .campoAnotacao::-webkit-scrollbar-thumb {
-  background: #999; /* Cor da barra de rolagem */
-  border: 2px solid #f1f1f1; /* Espaço entre a barra e o trilho */
+  background: #cacaca;
+  border: 2px solid #f1f1f1;
 }
 
+/* Cor barra de rolagem ao passar o mouse */
 .campoAnotacao::-webkit-scrollbar-thumb:hover {
-  background: #777; /* Cor da barra de rolagem ao passar o mouse */
+  background: #acacac;
 }
 
-/*Estilos do botão de CRIAR*/
+/* Estilos do botão de SALVAR */
 #salvar {
   width: 32%;
   height: 45px;
@@ -468,7 +471,6 @@ legend {
   color: #fff;
   font-weight: 600;
   margin-top: 20px;
-  
 }
 
 /* Posicionamento do rodapé */

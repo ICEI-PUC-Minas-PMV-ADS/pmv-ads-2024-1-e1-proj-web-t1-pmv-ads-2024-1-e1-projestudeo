@@ -23,11 +23,12 @@ body{
     50% {
         background-position: 100% 100%;
     }
-    100% {background-position: 0% 50%;
+    100% {
+        background-position: 0% 50%;
     }
 }
-/*Caixa principal*/
-.wrapper{
+/*Box principal*/
+.boxPrincipal{
     width: 420px;
     background: #fff;
     color: #000000;
@@ -36,30 +37,30 @@ body{
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
 }
 /*Estilo do logo*/
-.wrapper .logo{
+.boxPrincipal .logo{
     width: 180px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    filter:drop-shadow(0 0 10px rgba(0, 0, 0, .1));
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, .1));
     padding-top: 0px;
 }
 /*Estilo e formatação do título*/
-.wrapper h1{
+.boxPrincipal h1{
     font-size: 25px;
     font-weight: 500;
     text-align: center;
     margin: 30px 0;
 }
-/*Tamanho das caixas e posição dos icones*/
-.wrapper .input-box{
+/*Tamanho box e posição dos icones*/
+.boxPrincipal .boxElementos{
     position: relative;
     width: 100%;
     height: 45px;
     margin: 20px 0;
 }
-/*Definições das caixas*/
-.input-box input{
+/*Definições box*/
+.boxElementos input{
     width: 100%;
     height: 100%;
     background: #fff;
@@ -71,16 +72,16 @@ body{
     color: #000000;
     padding: 0px 10px 0px 45px;
 }
-/*Limite da caixa de texto da senha*/
-#password{
+/*Limite box de texto da senha*/
+#senha, #confSenha{
     padding-right: 35px;
 }
-/*Cor dos textos de exemplo das caixas*/
-.input-box input::placeholder{
+/*Cor dos textos de exemplo dos boxes*/
+.boxElementos input::placeholder{
     color: #7F7F7F;
 }
 /*Posição dos ícones*/
-.input-box i{
+.boxElementos i{
     position: absolute;
     left: 25px;
     top: 30%;
@@ -89,17 +90,17 @@ body{
     padding-right: 8px;
 }
 /*Barra de separação dos ícones e textos*/
-#withBorder{
+#barraIcone{
     border-right: 1px solid #000;
 }
 /*Posição dos ícones de senha*/
-.eye{
+.iconeOlho{
     position: absolute;
     right: 45px;
     top: 30%;
 }
 /*Estilos botão CRIAR CONTA*/
-.wrapper .btn{
+.boxPrincipal .criarConta{
     width: 100%;
     height: 45px;
     background: #33CC99;
@@ -113,28 +114,28 @@ body{
     font-weight: 600;
 }
 /*Estilos e formatação Já possui conta*/
-.wrapper .register-link{
+.boxPrincipal .jaPossuiConta{
     font-size: 14.5px;
     text-align: center;
     margin: 20px 0 15px;
 }
 /*Estilos e formatação Já possui conta*/
-.register-link p a{
+.jaPossuiConta p a{
     color: #0066cc;
     text-decoration: none;
     font-weight: 600;
 }
 /*Já possui conta irá sublinhar quando passar o mouse*/
-.register-link p a:hover{
+.jaPossuiConta p a:hover{
     text-decoration: underline;
 }
 /* Reponsividade do site */
 @media only screen and (max-width: 950px){
-    .wrapper{
+    .boxPrincipal{
         width: 85%;
     }
 }
 /*distanciamento do topo da pagina*/
-.wrapper {
+.boxPrincipal {
     margin-top: 2rem;
 }

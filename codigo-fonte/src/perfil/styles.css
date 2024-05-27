@@ -1,44 +1,65 @@
 /*Estilos universais*/
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
+
+/* Corpo e layout principal */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
 /*Alinhamento dos objetos da header*/
-.containerHeader{
+.containerCabecalho {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 /*Estilo do logo*/
-.logo{
+.logo {
   height: 50px;
   display: flex;
   margin-top: 8px;
   margin-left: 40px;
-  filter:drop-shadow(0 0 10px rgba(0, 0, 0, 0.));
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0));
 }
+
 /*Nome do usuário*/
-.nomeUsuario{
+.usuarioNome {
   color: #0066cc;
   margin-top: 8px;
   margin-right: 8px;
   margin-left: auto;
   text-decoration: none;
 }
+
 /*Nome do usuário > sublinhar quando passar o mouse*/
-.nomeUsuario:hover{
-  text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+.usuarioNome:hover {
+  text-decoration: underline;
 }
+
 /*Estilo do ícone do usuário*/
-#iconeUsuario{
+#usuarioIcone {
   font-size: 35px;
   color: #003399;
   display: flex;
   margin-top: 8px;
   margin-right: 40px;
 }
+
 /*Estilo da navegação*/
 nav {
   display: flex;
@@ -49,13 +70,15 @@ nav {
   background: #003399;
   padding: 20px;
 }
+
 /*Orientação dos itens da navegação*/
-.nav-itens {
+.itensNavegacao {
   list-style: none;
   display: flex;
 }
+
 /*Estilo da fonte da navegação*/
-.nav-itens>li>a {
+.itensNavegacao > li > a {
   padding-left: 20px;
   color: #fff;
   text-decoration: none;
@@ -63,19 +86,20 @@ nav {
   cursor: pointer;
   transition: 1s text;
 }
+
 /*Navegação > mudar cor quando passar o mouse*/
-.nav-itens>li>a:hover {
+.itensNavegacao > li > a:hover {
   color: #33CC99;
 }
+
 /*Definições de fundo + rodapé*/
-main{
+main {
   background: #fff;
-  min-height: calc(100vh - 100px);
-  padding-bottom: 100px;
-  position: relative;
+  padding-bottom: 40px;
 }
-/*Caixa principal*/
-.box {
+
+/*Box principal*/
+.boxPrincipal {
   margin-left: auto;
   margin-right: auto;
   width: 420px;
@@ -83,28 +107,32 @@ main{
   color: #000000;
   border-radius: 10px;
   padding: 40px 40px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, .1); 
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
 }
-/*Remover linha da caixa principal*/
+
+/*Remover linha box principal*/
 fieldset {
   border: 0;
 }
+
 /*Estilo do título Perfil*/
-legend{
-  border: 0; 
-  padding:2.2px ;
+legend {
+  border: 0;
+  padding: 2.2px;
   text-align: center;
   font-size: 23px;
 }
+
 /*Posição dos textos das caixas*/
-.inputBox {
+.boxElementos {
   position: relative;
   width: 100%;
   height: 45px;
   margin: 20px 0;
 }
+
 /*Definições das caixas*/
-.inputBox input{
+.boxElementos input {
   width: 100%;
   height: 100%;
   background: #fff;
@@ -116,35 +144,31 @@ legend{
   color: #000000;
   padding: 0px 10px 0px 45px;
 }
-/*Definições das caixas*/
-.labelInput{
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  pointer-events: none;
-  transition: .5s;
-}
+
 /*Esconder a seta do campo de data*/
 input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
 }
+
 /*Caixa principal do gênero*/
-.wrapper{
+.boxGenero {
   width: 100%;
   background: #fff;
   border-radius: 5px;
   border: 2px solid #000;
 }
-/*Area do título da caixa do gênero*/
-.wrapper .title{
+
+/*Area do título box do gênero*/
+.boxGenero .title {
   color: #000;
   line-height: 40px;
   font-size: 16px;
   font-weight: 500;
   padding: 0px 10px 0px 17px;
 }
+
 /*Posição do ícone de gênero*/
-.wrapper .iconTitle i{
+.boxGenero .iconeTitulo i {
   position: relative;
   left: 23px;
   top: 30%;
@@ -152,17 +176,20 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-size: 20px;
   padding-right: 8px;
 }
-/*Mantém o ícone do gênero na mesma linha do texto*/
-.wrapper .iconTitle{
+
+/*Mantenha o ícone do gênero na mesma linha do texto*/
+.boxGenero .iconeTitulo {
   display: flex;
   align-items: center;
 }
-/*Barra de separação do ícone do genero e texto*/
-#withBorderGenero{
+
+/*Barra de separação do ícone do gênero e texto*/
+#barraIconeGenero {
   border-right: 1px solid #000;
 }
-/*Elementos principais dentro da caixa de gênero*/
-.wrapper .boxRadio{
+
+/*Elementos principais dentro box de gênero*/
+.boxGenero .radioEscolha {
   padding: 5px 10px;
   background: #fff;
   border-top: 1px solid #000;
@@ -170,8 +197,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   margin-left: auto;
   margin-right: auto;
 }
-/*Estilo da barra do radio dentro da caixa de gênero*/
-.wrapper .boxRadio label{
+
+/*Estilo da barra do radio dentro do box de gênero*/
+.boxGenero .radioEscolha label {
   display: flex;
   height: 35px;
   width: 100%;
@@ -183,15 +211,17 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: default;
   transition: all 0.3s ease;
 }
-/*Barra de radio quando clicado, dentro da caixa de gênero*/
-#option1:checked ~ .option1,
-#option2:checked ~ .option2,
-#option3:checked ~ .option3{
+
+/*Barra de radio quando clicado, dentro do box de gênero*/
+#opcao1:checked ~ .opcao1,
+#opcao2:checked ~ .opcao2,
+#opcao3:checked ~ .opcao3 {
   background: #000;
   border-color: #000;
 }
-/*Círculo de radio antes de clicar, dentro da caixa de gênero*/
-.wrapper .boxRadio label .dot{
+
+/*Círculo de radio antes de clicar, dentro do box de gênero*/
+.boxGenero .radioEscolha label .dot {
   height: 20px;
   width: 20px;
   background: #d9d9d9;
@@ -199,14 +229,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   position: relative;
   transition: all 0.3s ease;
 }
-/*Circulo externo de radio quando clicado, dentro da caixa de gênero*/
-#option1:checked ~ .option1 .dot,
-#option2:checked ~ .option2 .dot,
-#option3:checked ~ .option3 .dot{
+
+/*Circulo externo de radio quando clicado, dentro do box de gênero*/
+#opcao1:checked ~ .opcao1 .dot,
+#opcao2:checked ~ .opcao2 .dot,
+#opcao3:checked ~ .opcao3 .dot {
   background: #fff;
 }
-/*Ponto central de radio quando clicado, dentro da caixa de gênero*/
-.boxRadio label .dot::before{
+
+/*Ponto central de radio quando clicado, dentro do box de gênero*/
+.boxGenero .radioEscolha label .dot::before {
   position: absolute;
   content: "";
   top: 50%;
@@ -217,45 +249,53 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   border-radius: 50%;
   transition: all 0.3s ease;
 }
-/*Ponto central de radio quando clicado, dentro da caixa de gênero*/
-#option1:checked ~ .option1 .dot::before,
-#option2:checked ~ .option2 .dot::before,
-#option3:checked ~ .option3 .dot::before{
+
+/*Ponto central de radio quando clicado, dentro do box de gênero*/
+#opcao1:checked ~ .opcao1 .dot::before,
+#opcao2:checked ~ .opcao2 .dot::before,
+#opcao3:checked ~ .opcao3 .dot::before {
   background: #000;
   transform: translate(-50%, -50%) scale(1);
 }
-/*Texto da barra de radio, dentro da caixa de gênero*/
-.wrapper .boxRadio label .text{
+
+/*Texto da barra de radio, dentro do box de gênero*/
+.boxGenero .radioEscolha label .text {
   color: #7f7f7f;
   font-size: 16px;
   font-weight: 400;
   padding-left: 10px;
   transition: color 0.3s ease;
 }
-/*Texto da barra de radio quando clicado, dentro da caixa de gênero*/
-#option1:checked ~ .option1 .text,
-#option2:checked ~ .option2 .text,
-#option3:checked ~ .option3 .text{
+
+/*Texto da barra de radio quando clicado, dentro do box de gênero*/
+#opcao1:checked ~ .opcao1 .text,
+#opcao2:checked ~ .opcao2 .text,
+#opcao3:checked ~ .opcao3 .text {
   color: #fff;
 }
-/*Esconde os circulos de radio reais, dentro da caixa de gênero*/
-.wrapper .boxRadio input[type="radio"]{
+
+/*Esconde os circulos de radio reais, dentro do box de gênero*/
+.boxGenero .radioEscolha input[type="radio"] {
   display: none;
 }
-/*Limite da caixa de texto da senha*/
-#changePassword{
+
+/*Limite do box de texto da senha*/
+#alterarSenha {
   padding-right: 35px;
 }
-/*Limite da caixa de texto da senha*/
-#passwordConfirmation{
+
+/*Limite do box de texto da senha*/
+#confirmarAltSenha {
   padding-right: 35px;
 }
+
 /*Cor dos textos de exemplo das caixas*/
-.inputBox input::placeholder{
+.boxElementos input::placeholder {
   color: #7F7F7F;
 }
+
 /*Posição dos ícones*/
-.inputBox i{
+.boxElementos i {
   position: absolute;
   left: 25px;
   top: 30%;
@@ -263,19 +303,22 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-size: 20px;
   padding-right: 8px;
 }
+
 /*Barra de separação dos ícones e textos*/
-#withBorder{
+#barraIcone {
   border-right: 1px solid #000;
 }
+
 /*Posição dos ícones de senha*/
-.eye{
+.iconeOlho {
   position: absolute;
   right: 45px;
   top: 30%;
   cursor: pointer;
 }
+
 /*Estilos botão SALVAR*/
-#submit{
+#salvar {
   width: 100%;
   height: 45px;
   background: #33CC99;
@@ -288,24 +331,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   color: #fff;
   font-weight: 600;
 }
+
 /*Posicionamento do rodapé*/
-footer{
-  position: relative;
-}
-/*Definições e texto do rodapé*/
-.infoFooter{
+footer {
   background-color: #003399;
   color: #fff;
   font-size: 16px;
   text-align: center;
   padding: 20px 0;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-}
-/*Responsividade*/
-@media only screen and (max-width: 950px){
-  .box{
-      width: 85%;
-  }
 }

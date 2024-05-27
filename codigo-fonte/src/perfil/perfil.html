@@ -19,121 +19,120 @@
 <body>
     <header>
         <!--Cabeçalho-->
-        <div class="containerHeader">
-            <div class="logo"> <img src="../images/estudeo_logo.svg" alt=""></div>
-            <a href="#" class="nomeUsuario">Aqui aparecerá nome do usuário</a>
-            <i id="iconeUsuario" class='bx bxs-user-circle'></i>
-        </div>       
+        <div class="containerCabecalho">
+            <div class="logo"><img src="../images/estudeo_logo.svg" alt=""></div>
+            <a href="#" class="usuarioNome">Aqui aparecerá nome do usuário</a>
+            <i id="usuarioIcone" class='bx bxs-user-circle'></i>
+        </div>
     </header>
     <nav>
         <!--Navegação-->
         <div class="links">
-        <ul class="nav-itens">
-            <li><a href="">Página inicial</a></li>
-            <li><a href="">Cadastro de disciplinas</a></li>
-            <li><a href="">Lembretes</a></li>
-        </ul>
-       </div>
+            <ul class="itensNavegacao">
+                <li><a href="">Página inicial</a></li>
+                <li><a href="">Cadastro de disciplinas</a></li>
+                <li><a href="">Lembretes</a></li>
+            </ul>
+        </div>
     </nav>
     <main>
-    <!--Caixa principal-->
-    <div class="box">
-        <!--Local dos dados-->
-        <form action="/salvar_dados" method="post">
-        <fieldset>
-        <!--Título-->
-        <legend><b> Perfil</b></legend>
-        <!--Caixa do nome-->
-        <div class="inputBox">
-            <input type="text" placeholder="Nome" id="nome" class="inputUser" required>
-            <!--Ícone de nome-->
-            <i id="withBorder" class='bx bxs-user'></i>
-        </div>
-        <!--Caixa do sobrenome-->    
-        <div class="inputBox">
-            <input type="text" placeholder="Sobrenome" id="sobrenome" class="inputUser" required>
-            <!--Ícone de sobrenome-->
-            <i id="withBorder" class='bx bxs-user'></i>
-        </div>
-            <!--Caixa da data de nascimento-->
-            <div class="inputBox">
-            <input type="text" id="dateInput" placeholder="Data de nascimento" class="placeholder" required>
-            <!--Ícone de data de nascimento-->
-            <i id="withBorder" class='bx bxs-calendar'></i>       
-        </div>
-        <!--Caixa do e-mail-->    
-        <div class="inputBox">
-            <input type="text" placeholder="E-mail" id="e-mail" class="inputUser" required>
-            <!--Ícone de e-mail-->
-            <i id="withBorder" class='bx bxs-envelope'></i>
-        </div>
+        <!--Box principal-->
+        <div class="boxPrincipal">
+            <!--Local dos dados-->
+            <form action="/salvar_dados" method="post">
+                <fieldset>
+                    <!--Título-->
+                    <legend><b> Perfil</b></legend>
+                    <!--Box do nome-->
+                    <div class="boxElementos">
+                        <input type="text" placeholder="Nome" id="nome" class="campoElementos" required>
+                        <!--Ícone de nome-->
+                        <i id="barraIcone" class='bx bxs-user'></i>
+                    </div>
+                    <!--Box do sobrenome-->
+                    <div class="boxElementos">
+                        <input type="text" placeholder="Sobrenome" id="sobrenome" class="campoElementos" required>
+                        <!--Ícone de sobrenome-->
+                        <i id="barraIcone" class='bx bxs-user'></i>
+                    </div>
+                    <!--Box da data de nascimento-->
+                    <div class="boxElementos">
+                        <input type="text" id="campoData" placeholder="Data de nascimento" class="placeholder" required>
+                        <!--Ícone de data de nascimento-->
+                        <i id="barraIcone" class='bx bxs-calendar'></i>
+                    </div>
+                    <!--Box do e-mail-->
+                    <div class="boxElementos">
+                        <input type="text" placeholder="E-mail" id="e-mail" class="campoElementos" required>
+                        <!--Ícone de e-mail-->
+                        <i id="barraIcone" class='bx bxs-envelope'></i>
+                    </div>
 
-        <!--Caixa do gênero-->    
-        <div class="wrapper">
-            <!--Necessário criar esta classe envolvendo o ícone e título para configurar o estilo no CSS-->  
-            <div class="iconTitle">
-                <!--Ícone de gênero-->
-            <i id="withBorderGenero" class='bx bx-male-female'></i>
-            <div class="title">Gênero</div>
-            </div>
-            <div class="boxRadio">
-              <input type="radio" name="select" id="option1">
-              <input type="radio" name="select" id="option2">
-              <input type="radio" name="select" id="option3">
-              <label for="option1" class="option1">
-                <div class="dot"></div>
-                <div class="text">Masculino</div>
-              </label>
-              <label for="option2" class="option2">
-                <div class="dot"></div>
-                <div class="text">Feminino</div>
-              </label>
-              <label for="option3" class="option3">
-                <div class="dot"></div>
-                <div class="text">Outros</div>
-              </label>
-            </div>
+                    <!--Box do gênero-->
+                    <div class="boxGenero">
+                        <!--Necessário criar esta classe envolvendo o ícone e título para configurar o estilo no CSS-->
+                        <div class="iconeTitulo">
+                            <!--Ícone de gênero-->
+                            <i id="barraIconeGenero" class='bx bx-male-female'></i>
+                            <div class="title">Gênero</div>
+                        </div>
+                        <div class="radioEscolha">
+                            <input type="radio" name="selecionar" id="opcao1">
+                            <input type="radio" name="selecionar" id="opcao2">
+                            <input type="radio" name="selecionar" id="opcao3">
+                            <label for="opcao1" class="opcao1">
+                                <div class="dot"></div>
+                                <div class="text">Masculino</div>
+                            </label>
+                            <label for="opcao2" class="opcao2">
+                                <div class="dot"></div>
+                                <div class="text">Feminino</div>
+                            </label>
+                            <label for="opcao3" class="opcao3">
+                                <div class="dot"></div>
+                                <div class="text">Outros</div>
+                            </label>
+                        </div>
+                    </div>
+                    <!--Box de alterar senha-->
+                    <div class="boxElementos">
+                        <input type="password" placeholder="Alterar senha" required id="alterarSenha">
+                        <!--Ícone de alterar senha-->
+                        <i id="barraIcone" class='bx bxs-lock-alt'></i>
+                        <!--Chamada da função mostrar/esconder senha-->
+                        <span class="iconeOlho" onclick="alternarSenha()">
+                            <!--Ícone do olho aberto-->
+                            <i id="olhoAberto" class='bx bxs-show'></i>
+                            <!--Ícone do olho fechado-->
+                            <i id="olhoFechado" class='bx bxs-hide'></i>
+                        </span>
+                    </div>
+                    <!--Box de confirmar senha-->
+                    <div class="boxElementos">
+                        <input type="password" placeholder="Confirmar senha" id="confirmarAltSenha" class="campoElementos" required>
+                        <!--Ícone de confirmação de senha-->
+                        <i id="barraIcone" class='bx bxs-lock-alt'></i>
+                        <!--Chamada da função mostrar/esconder confirmação de senha-->
+                        <span class="iconeOlho" onclick="alternarConfSenha()">
+                            <!--Ícone do olho aberto-->
+                            <i id="confOlhoAberto" class='bx bxs-show'></i>
+                            <!--Ícone do olho fechado-->
+                            <i id="confOlhoFechado" class='bx bxs-hide'></i>
+                        </span>
+                    </div>
+                    <!--Botão Salvar-->
+                    <input type="submit" value="SALVAR" name="submit" id="salvar">
+                </fieldset>
+            </form>
         </div>
-            <!--Caixa de alterar senha-->
-        <div class="inputBox">
-            <input type="password" placeholder="Alterar senha" required id="changePassword">
-            <!--Ícone de alterar senha-->
-            <i id="withBorder" class='bx bxs-lock-alt' ></i>
-            <!--Chamada da função mostrar/esconder senha-->
-            <span class="eye" onclick="toggleChangePassword()">
-            <!--Ícone do olho aberto--> 
-            <i id="openEye" class='bx bxs-show' ></i>
-            <!--Ícone do olho fechado-->
-            <i id="closedEye" class='bx bxs-hide' ></i>
-            </span>
-        </div>
-        <!--Caixa de confirmar senha-->
-        <div class="inputBox">
-            <input type="password" placeholder="Confirmar senha" id="passwordConfirmation" class="inputUser" required>
-            <!--Ícone de confirmação de senha-->
-            <i id="withBorder" class='bx bxs-lock-alt' ></i>
-            <!--Chamada da função mostrar/esconder confirmação de senha-->
-            <span class="eye" onclick="togglePasswordConfirmation()">
-            <!--Ícone do olho aberto--> 
-            <i id="openEyeConfirmation" class='bx bxs-show' ></i>
-            <!--Ícone do olho fechado-->
-            <i id="closedEyeConfirmation" class='bx bxs-hide' ></i>
-            </span>
-        </div>
-        <!--Botão Salvar-->
-        <input type="submit" value="SALVAR" name="submit" id="submit">
-        </fieldset>
-        </form>
-    </div>
     </main>
     <footer>
         <!--Rodapé-->
-        <section class="infoFooter">
+        <section class="rodape">
             <p>© Copyright 2024 eStudeo - All Rights Reserved</p>
-            </div>
-            <!--Javascript-->
-            <script src="script.js"></script>
         </section>
     </footer>
+    <!--Javascript-->
+    <script src="script.js"></script>
 </body>
 </html>

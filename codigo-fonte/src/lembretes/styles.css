@@ -1,0 +1,288 @@
+/*Estilos universais*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+  }
+  /*Alinhamento dos objetos da header*/
+  .containerHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  /*Estilo do logo*/
+  .logo{
+    height: 50px;
+    display: flex;
+    margin-top: 8px;
+    margin-left: 40px;
+    filter:drop-shadow(0 0 10px rgba(0, 0, 0, 0.));
+  }
+  /*Nome do usuário*/
+  .nomeUsuario{
+    color: #0066cc;
+    margin-top: 8px;
+    margin-right: 8px;
+    margin-left: auto;
+    text-decoration: none;
+  }
+  /*Nome do usuário > sublinhar quando passar o mouse*/
+  .nomeUsuario:hover{
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+  }
+  /*Estilo do ícone do usuário*/
+  #iconeUsuario{
+    font-size: 35px;
+    color: #003399;
+    display: flex;
+    margin-top: 8px;
+    margin-right: 40px;
+  }
+  /*Estilo da navegação*/
+  nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    margin-bottom: 40px;
+    align-items: center;
+    background: #003399;
+    padding: 20px;
+  }
+  /*Orientação dos itens da navegação*/
+  .nav-itens {
+    list-style: none;
+    display: flex;
+  }
+  /*Estilo da fonte da navegação*/
+  .nav-itens>li>a {
+    padding-left: 20px;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 25px;
+    cursor: pointer;
+    transition: 1s text;
+  }
+  /*Navegação > mudar cor quando passar o mouse*/
+  .nav-itens>li>a:hover {
+    color: #33CC99;
+  }
+  /*Definições de fundo + rodapé*/
+  main{
+    background: #fff;
+    min-height: calc(100vh - 100px);
+    padding-bottom: 100px;
+    position: relative;
+  }
+
+ /*box lembretes*/
+ .boxPrincipal {
+  margin-left: auto;
+  margin-right: auto;
+  width: 420px;
+  background: #f8f8f8;
+  color: #000000;
+  border-radius: 10px;
+  padding: 40px 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1); 
+}
+fieldset {
+  border: 0;
+}
+
+/*Estilo do título Cadastro de disciplinas*/
+legend {
+  border: 0; 
+  padding: 2.2px;
+  text-align: center;
+  font-size: 23px;
+}
+  
+  /*Box Adicionar Atividades*/
+.boxAdicAtividade {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 5px;
+  border: 2px solid #000;
+  margin-top: 20px;
+
+}
+
+.input-task{
+  border: #000;
+  border-radius: 5px;
+  width: 265px;
+  height: 20px;
+  outline: none;
+  padding-left: 10px;
+
+}
+/*botao add lembrete*/
+.addTask{
+  background: none;
+  border: none;
+  padding-right: 14px;
+  border-radius: 5px;
+  height: 40px;
+  cursor: pointer;
+
+}
+/*lista lembrete*/
+.list-task {
+  width: 100%;
+  list-style: none;
+  margin-top: 5px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  
+}
+
+.task{
+  background-color: #fff;
+  display: flex;
+  width: 95%;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border: 2px solid #000;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #000000;
+  
+  
+}
+
+
+
+/*Area do título adicionar atividades*/
+.containerAdicAtividade .titulo {
+  color: #000;
+  background: none;
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0px 10px 0px 17px;
+}
+
+/*Posição dos ícones adicionar atividades*/
+.containerAdicAtividade .iconeTitulo i {
+  position: relative;
+  left: 23px;
+  top: 30%;
+  transform: translate(-50%);
+  font-size: 20px;
+  padding-right: 8px;
+  background: none;
+}
+
+/*Mantém o ícone de adicionar na mesma linha do texto*/
+.containerAdicAtividade .iconeTitulo {
+  display: flex;
+  align-items: center;
+}
+
+/*img check e trash*/
+div>ul>li>img{
+  height: 20px;
+
+}
+
+
+
+
+/*Estilo dos itens nome da atividade*/
+.itemAtividade {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Estilo do texto nome da atividade*/
+.itemAtividade .texto {
+  display: flex;
+  align-items: center;
+}
+
+/*Estilo do campo de texto das atividades*/
+.itemAtividade .texto input[type="text"] {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  margin-right: 10px;
+  flex-grow: 1;
+}
+
+/*Estilo do checkbox das atividades*/
+.itemAtividade .texto input[type="checkbox"] {
+  accent-color: #000;
+  margin-right: 10px;
+  cursor: pointer;
+  width: 13px;
+  height: 13px;
+}
+
+/*Estilo da ação deletar*/
+.itemAtividade .acaoDeletar i {
+  cursor: pointer;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#criarLembrete {
+  width: 100%;
+  height: 45px;
+  background: #33CC99;
+  border: none;
+  outline: none;
+  border-radius: 28px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+/*risco de concluido*/
+.done {
+  background-color: #8fac55;
+  text-decoration: line-through;
+}
+ 
+  /*Posicionamento do rodapé*/
+footer{
+    position: relative;
+  }
+  /*Definições e texto do rodapé*/
+  .infoFooter{
+    background-color: #003399;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+  /*Responsividade*/
+  @media only screen and (max-width: 950px){
+    .box{
+        width: 85%;
+    }
+  }

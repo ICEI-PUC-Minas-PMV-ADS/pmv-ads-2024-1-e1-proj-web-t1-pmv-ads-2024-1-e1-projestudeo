@@ -406,6 +406,37 @@ legend {
   padding-right: 8px;
 }
 
+/*Cronômetro*/
+
+.clock {
+position: relative;
+left: 422px;
+top: 3%;
+transform: translate(-50%);
+padding-right: 1px;
+font-size: 18px;
+}
+.buttons {
+  position: relative;  
+  left: 395px;
+  top: 3%;
+  transform: translate(-50%);
+  gap: 10px; /*Espaço entre os botões*/
+}
+button {
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:focus {
+  outline: none;  
+}
+button:active {
+  transform: scale(0.95);
+}
+
 /* Mantém o ícone de Anotações na mesma linha do texto */
 .boxAnotacao .iconeTitulo {
   display: flex;

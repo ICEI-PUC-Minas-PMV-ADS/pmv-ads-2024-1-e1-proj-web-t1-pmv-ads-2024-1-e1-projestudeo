@@ -15,6 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <!--Favicon-->
     <link rel="shortcut icon" href="../images/favicon.svg">
+    <!-- Link para a biblioteca de ícones Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <header>
@@ -93,6 +95,17 @@
                         <div class="iconeTitulo">
                             <i id="barraIcone" class='bx bxs-pencil'></i>
                             <div class="titulo">Anotações</div>
+                            <!--Cronômetro-->
+                            <div class="buttons">
+                                <button id="playButton">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                                <button id="pauseButton">
+                                    <i id="barraIcone" class="fas fa-pause"></i>
+                                </button>
+                            </div>
+
+                            <div class="clock" id="clock">00:00:00</div>
                         </div>
                         <div class="containerAnotacao">
                             <textarea class="campoAnotacao" placeholder="Escreva suas anotações aqui..."></textarea>                     

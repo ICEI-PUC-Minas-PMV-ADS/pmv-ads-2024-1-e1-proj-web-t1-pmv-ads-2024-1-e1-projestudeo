@@ -61,3 +61,44 @@ function deletarAtividade(element) {
     const itemAtividade = element.closest('.itemAtividade'); // Seleciona o item de atividade mais próximo
     itemAtividade.remove(); // Remove o item de atividade da lista
 }
+
+// Funções do cronômetro
+let timer;
+let isRunning = false;
+let seconds = 0;
+
+const clockElement = document.getElementById('clock');
+const playButton = document.getElementById('playButton');
+const pauseButton = document.getElementById('pauseButton');
+
+function updateClock() {
+    const hrs = String(Math.floor(seconds / 3600)).padStart(2, '0');
+    const mins = String(Math.floor((seconds % 3600) / 60)).padStart(2, '0');
+    const secs = String(seconds % 60).padStart(2, '0');
+    clockElement.textContent = `${hrs}:${mins}:${secs}`;
+}
+
+function startTimer() {
+    timer = setInterval(() => {
+        seconds++;
+        updateClock();
+    }, 1000);
+    isRunning = true;
+}
+
+function stopTimer() {
+    clearInterval(timer);
+    isRunning = false;
+}
+
+playButton.addEventListener('click', () => {
+    if (!isRunning) {
+        startTimer();
+    }
+});
+
+pauseButton.addEventListener('click', () => {
+    if (isRunning) {
+        stopTimer();
+    }
+});

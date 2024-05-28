@@ -27,9 +27,9 @@
     <!-- Nav Bar -->
     <nav>
         <ul>
-            <li><a href="#home">Página Inicial</a></li>
-            <li><a href="#disciplines">Cadastro de disciplinas</a></li>
-            <li><a href="#reminders">Lembretes</a></li>
+            <li><a href="../home/home.html">Página Inicial</a></li>
+            <li><a href="../cad_disciplina/cad_disc.html">Cadastro de disciplinas</a></li>
+            <li><a href="../lembretes/lembretes.html">Lembretes</a></li>
         </ul>
     </nav>
 
@@ -73,8 +73,34 @@
         <!-- Sidebar -->
         <aside>
             <!-- Calendario -->
-            <div class="calendar"><img src="images/cal.png" alt=""></div>
-
+            <div class="calendar-container">
+                <div class="calendar-tabs">
+                    <button class="tab-button active" id="data-tab">DATA</button>
+                    <button class="tab-button" id="hora-tab">HORA</button>
+                </div>
+                <div class="calendar-date">
+                    <span id="current-date"></span>
+                </div>
+                <div class="calendar-header">
+                    <div class="calendar-nav">
+                        <span class="nav-arrow" id="prev-month">&#9664;</span>
+                        <span class="calendar-month-year" id="month-year"></span>
+                        <span class="nav-arrow" id="next-month">&#9654;</span>
+                    </div>
+                </div>
+                <div class="calendar-body">
+                    <div class="calendar-days">
+                        <div>D</div>
+                        <div>S</div>
+                        <div>T</div>
+                        <div>Q</div>
+                        <div>Q</div>
+                        <div>S</div>
+                        <div>S</div>
+                    </div>
+                    <div class="calendar-dates" id="calendar-dates"></div>
+                </div>
+            </div>
             <!-- Lembretes -->
             <div class="reminders">
                 <h2>Lembretes</h2>
@@ -86,10 +112,11 @@
             </div>
         </aside>
     </div>
-
     <!-- Footer -->
     <footer>
         <p>Copyright ©2024 eStudeo - All Rights Reserved</p>
     </footer>
+    <!--Javascript-->
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
   // Simulação de atividades concluídas e total de atividades
-  const atividadesConcluidas = 10; // Número de atividades concluídas
-  const totalAtividades = 11; // Total de atividades
+  const atividadesConcluidas = 6; // Número de atividades concluídas
+  const totalAtividades = 10; // Total de atividades
 
   // Calcula a porcentagem de atividades concluídas
    const porcentagem = (atividadesConcluidas / totalAtividades) * 100;

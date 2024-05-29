@@ -5,6 +5,18 @@
   box-sizing: border-box;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
+html, body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1;
+}
 
 /* Alinhamento dos objetos da header */
 .containerHeader {
@@ -76,15 +88,6 @@ nav {
 .nav-itens > li > a:hover {
   color: #33CC99;
 }
-
-/* Definições de fundo + rodapé */
-main {
-  background: #fff;
-  min-height: calc(100vh - 100px);
-  padding-bottom: 100px;
-  position: relative;
-}
-
 /* Caixa principal */
 .box {
   margin-left: auto;
@@ -93,6 +96,7 @@ main {
   background: #f8f8f8;
   color: #000000;
   border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
   padding: 20px 20px;
   text-align: center;
   display: flex;
@@ -204,10 +208,19 @@ fieldset {
   height: 10px;
   background: black;
 }
+
 /* Posicionamento do rodapé */
 footer {
   position: relative;
+  background-color: #003399;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  margin-top: 40px;
 }
+
 /* Definições e texto do rodapé */
 .infoFooter {
   background-color: #003399;
@@ -219,6 +232,26 @@ footer {
   position: absolute;
   bottom: 0;
 }
+
+/*Alinhamento Voltar*/
+.back {
+  font-size: 14.5px;
+  text-align: center;
+  margin: -20px 0 -10px;
+}
+
+/*Estilo Voltar*/
+.back p a {
+  color: #0006cc;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/*Efeito de sublinhar Voltar*/
+.back p a:hover {
+  text-decoration: underline;
+}
+
 /* Responsividade */
 @media only screen and (max-width: 950px) {
   .box {

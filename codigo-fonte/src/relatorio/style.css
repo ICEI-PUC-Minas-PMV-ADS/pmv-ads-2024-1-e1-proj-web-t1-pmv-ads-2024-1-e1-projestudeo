@@ -5,21 +5,24 @@
   box-sizing: border-box;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
+
 html, body {
   height: 100%;
   margin: 0;
 }
+
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
+
 main {
   flex: 1;
 }
 
 /* Alinhamento dos objetos da header */
-.containerHeader {
+.containerCabecalho {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,7 +38,7 @@ main {
 }
 
 /* Nome do usuário */
-.nomeUsuario {
+.usuarioNome {
   color: #0066cc;
   margin-top: 8px;
   margin-right: 8px;
@@ -44,12 +47,12 @@ main {
 }
 
 /* Nome do usuário > sublinhar quando passar o mouse */
-.nomeUsuario:hover {
+.usuarioNome:hover {
   text-decoration: underline;
 }
 
 /* Estilo do ícone do usuário */
-#iconeUsuario {
+#usuarioIcone {
   font-size: 35px;
   color: #003399;
   display: flex;
@@ -69,13 +72,13 @@ nav {
 }
 
 /* Orientação dos itens da navegação */
-.nav-itens {
+.itensNavegacao {
   list-style: none;
   display: flex;
 }
 
 /* Estilo da fonte da navegação */
-.nav-itens > li > a {
+.itensNavegacao > li > a {
   padding-left: 20px;
   color: #fff;
   text-decoration: none;
@@ -85,11 +88,11 @@ nav {
 }
 
 /* Navegação > mudar cor quando passar o mouse */
-.nav-itens > li > a:hover {
+.itensNavegacao > li > a:hover {
   color: #33CC99;
 }
 /* Caixa principal */
-.box {
+.boxPrincipal {
   margin-left: auto;
   margin-right: auto;
   width: 420px;
@@ -97,7 +100,7 @@ nav {
   color: #000000;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-  padding: 20px 20px;
+  padding: 40px 40px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -109,24 +112,31 @@ fieldset {
   border: 0;
 }
 
-/* Contêiner para centralizar a barra de progresso */
-.progress-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
+/*Estilo do título Perfil*/
+legend {
+  border: 0;
+  padding: 2.2px;
+  text-align: center;
+  font-size: 23px;
+  margin: 0 0 20px;
 }
 
 /* Estiliza o contêiner da barra de progresso */
-.progress-container {
+.containerProgresso {
   width: 90%;
   background-color: #33CC99;
   border-radius: 10px;
   overflow: hidden;
+  margin: 20px 0 20px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 500;
 }
 
 /* Estiliza a barra de progresso interna */
-.progress-bar {
+.barraProgresso {
   height: 40px;
   background-color: #0066cc;
   width: 0;
@@ -134,43 +144,43 @@ fieldset {
 }
 
 /* Estiliza o texto da porcentagem */
-#progress-text {
+#textoProgresso {
   font-size: 14.5px;
-  margin-top: 10px;
 }
 
 /* Definições da legenda */
-.atividades {
+.containerLegenda {
   text-align: justify;
   display: flex;
   justify-content: space-between;
   align-items: center; /* Alinhar verticalmente os itens */
   width: 100%;
+  margin: 40px 0 20px;
 }
 
 /* Alinhar os quadrados com as frases */
-.tarefas {
+.tarefasConcluidas {
   width: 40px;
   height: 40px;
   background-color: #0066cc;
   border-radius: 10px;
   margin-right: 8px; /* Adicionar um espaço entre os quadrados */
 }
-.tarefas2 {
+.tarefasAConcluir {
   width: 40px;
   height: 40px;
   background-color: #33CC99;
   border-radius: 10px;
 }
 /* Contêiner para centralizar o indicador de tempo */
-.circle-wrapper {
+.wrapperCirculo {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0;
+  margin: 20px 0 40px;
 }
 /* Definições indicador de tempo */
-.circle {
+.circulo {
   position: relative;
   width: 200px;
   height: 200px;
@@ -181,7 +191,7 @@ fieldset {
   align-items: center;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
-.circle::before {
+.circulo::before {
   content: '';
   position: absolute;
   width: 140px;
@@ -189,12 +199,12 @@ fieldset {
   background-color: white;
   border-radius: 50%;
 }
-.circle .time {
+.circulo .hora {
   position: relative;
   font-size: 24px;
   font-weight: bold;
 }
-.tick-marks {
+.marcadoresHora {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -202,7 +212,7 @@ fieldset {
   justify-content: center;
   align-items: center;
 }
-.tick-mark {
+.marcadores {
   position: absolute;
   width: 2px;
   height: 10px;
@@ -222,7 +232,7 @@ footer {
 }
 
 /* Definições e texto do rodapé */
-.infoFooter {
+.rodape {
   background-color: #003399;
   color: #fff;
   font-size: 16px;
@@ -234,27 +244,26 @@ footer {
 }
 
 /*Alinhamento Voltar*/
-.back {
-  font-size: 14.5px;
+.voltar {
   text-align: center;
-  margin: -20px 0 -10px;
 }
 
 /*Estilo Voltar*/
-.back p a {
+.voltar p a {
   color: #0006cc;
   text-decoration: none;
   font-weight: 600;
+  font-size: 14.5px !important;
 }
 
 /*Efeito de sublinhar Voltar*/
-.back p a:hover {
+.voltar p a:hover {
   text-decoration: underline;
 }
 
 /* Responsividade */
 @media only screen and (max-width: 950px) {
-  .box {
+  .boxPrincipal {
       width: 85%;
   }
 }

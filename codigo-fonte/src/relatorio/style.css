@@ -19,16 +19,16 @@ body {
 
 main {
   flex: 1;
+  padding-bottom: 40px;
 }
 
-/* Alinhamento dos objetos da header */
+/* Cabeçalho */
 .containerCabecalho {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Estilo do logo */
 .logo {
   height: 50px;
   display: flex;
@@ -37,7 +37,6 @@ main {
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0));
 }
 
-/* Nome do usuário */
 .usuarioNome {
   color: #0066cc;
   margin-top: 8px;
@@ -46,12 +45,10 @@ main {
   text-decoration: none;
 }
 
-/* Nome do usuário > sublinhar quando passar o mouse */
 .usuarioNome:hover {
   text-decoration: underline;
 }
 
-/* Estilo do ícone do usuário */
 #usuarioIcone {
   font-size: 35px;
   color: #003399;
@@ -60,7 +57,7 @@ main {
   margin-right: 40px;
 }
 
-/* Estilo da navegação */
+/* Navegação */
 nav {
   display: flex;
   justify-content: space-between;
@@ -71,13 +68,11 @@ nav {
   padding: 20px;
 }
 
-/* Orientação dos itens da navegação */
 .itensNavegacao {
   list-style: none;
   display: flex;
 }
 
-/* Estilo da fonte da navegação */
 .itensNavegacao > li > a {
   padding-left: 20px;
   color: #fff;
@@ -87,10 +82,10 @@ nav {
   transition: 1s text;
 }
 
-/* Navegação > mudar cor quando passar o mouse */
 .itensNavegacao > li > a:hover {
   color: #33CC99;
 }
+
 /* Caixa principal */
 .boxPrincipal {
   margin-left: auto;
@@ -107,12 +102,11 @@ nav {
   align-items: center; /* Alinha os itens ao centro */
 }
 
-/* Remover linha da caixa principal */
 fieldset {
   border: 0;
 }
 
-/*Estilo do título Perfil*/
+/* Estilo do título */
 legend {
   border: 0;
   padding: 2.2px;
@@ -121,65 +115,20 @@ legend {
   margin: 0 0 20px;
 }
 
-/* Estiliza o contêiner da barra de progresso */
-.containerProgresso {
-  width: 90%;
-  background-color: #33CC99;
-  border-radius: 10px;
-  overflow: hidden;
-  margin: 20px 0 20px;
-}
-
+/* Conteúdo */
 p {
   font-size: 16px;
   font-weight: 500;
 }
 
-/* Estiliza a barra de progresso interna */
-.barraProgresso {
-  height: 40px;
-  background-color: #0066cc;
-  width: 0;
-  transition: width 0.5s ease-in-out;
-}
-
-/* Estiliza o texto da porcentagem */
-#textoProgresso {
-  font-size: 14.5px;
-}
-
-/* Definições da legenda */
-.containerLegenda {
-  text-align: justify;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* Alinhar verticalmente os itens */
-  width: 100%;
-  margin: 40px 0 20px;
-}
-
-/* Alinhar os quadrados com as frases */
-.tarefasConcluidas {
-  width: 40px;
-  height: 40px;
-  background-color: #0066cc;
-  border-radius: 10px;
-  margin-right: 8px; /* Adicionar um espaço entre os quadrados */
-}
-.tarefasAConcluir {
-  width: 40px;
-  height: 40px;
-  background-color: #33CC99;
-  border-radius: 10px;
-}
-/* Contêiner para centralizar o indicador de tempo */
+/* Indicador de tempo */
 .wrapperCirculo {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0 40px;
+  margin: 10px 0 20px;
 }
-/* Definições indicador de tempo */
+
 .circulo {
   position: relative;
   width: 200px;
@@ -191,6 +140,7 @@ p {
   align-items: center;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
+
 .circulo::before {
   content: '';
   position: absolute;
@@ -199,11 +149,13 @@ p {
   background-color: white;
   border-radius: 50%;
 }
+
 .circulo .hora {
   position: relative;
   font-size: 24px;
   font-weight: bold;
 }
+
 .marcadoresHora {
   position: absolute;
   width: 100%;
@@ -212,6 +164,7 @@ p {
   justify-content: center;
   align-items: center;
 }
+
 .marcadores {
   position: absolute;
   width: 2px;
@@ -219,36 +172,68 @@ p {
   background: black;
 }
 
-/* Posicionamento do rodapé */
-footer {
-  position: relative;
-  background-color: #003399;
-  color: #fff;
-  font-size: 16px;
-  text-align: center;
-  padding: 20px 0;
-  width: 100%;
-  margin-top: 40px;
+/* Barra de progresso */
+.containerProgresso {
+  width: 90%;
+  background-color: #33CC99;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px 0 10px;
 }
 
-/* Definições e texto do rodapé */
-.rodape {
-  background-color: #003399;
-  color: #fff;
-  font-size: 16px;
-  text-align: center;
-  padding: 20px 0;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
+.barraProgresso {
+  height: 40px;
+  background-color: #0066cc;
+  width: 0;
+  transition: width 0.5s ease-in-out;
 }
 
-/*Alinhamento Voltar*/
+#textoProgresso {
+  font-size: 14.5px;
+}
+
+/* Legenda */
+.containerLegenda {
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Alinhar verticalmente os itens */
+  width: 90%;
+  margin: 20px 0 20px;
+}
+
+.containerLegenda div {
+  display: flex;
+  align-items: center;
+}
+
+.tarefasConcluidas {
+  width: 40px;
+  height: 40px;
+  background-color: #0066cc;
+  border-radius: 10px;
+  margin-right: 8px; /* Adicionar um espaço entre os quadrados */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tarefasAConcluir {
+  width: 40px;
+  height: 40px;
+  background-color: #33CC99;
+  border-radius: 10px;
+  margin-right: 8px; /* Adicionar um espaço entre os quadrados */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Voltar */
 .voltar {
   text-align: center;
 }
 
-/*Estilo Voltar*/
 .voltar p a {
   color: #0006cc;
   text-decoration: none;
@@ -256,9 +241,17 @@ footer {
   font-size: 14.5px !important;
 }
 
-/*Efeito de sublinhar Voltar*/
 .voltar p a:hover {
   text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+  background-color: #003399;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  padding: 20px 0;
 }
 
 /* Responsividade */

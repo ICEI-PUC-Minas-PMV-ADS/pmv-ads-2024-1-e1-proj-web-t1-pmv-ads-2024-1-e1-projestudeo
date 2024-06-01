@@ -504,6 +504,27 @@ button:active {
   margin-top: 20px;
 }
 
+/*GERAR RELATÓRIO*/
+
+/*Estilos Gerar relatório*/
+.gerarRelatorio {
+  padding: 15px;
+  font-size: 16px;
+  text-align: center;
+}
+
+/*Estilos e formatação Gerar relatório*/
+.gerarRelatorio p a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+/*Gerar relatório irá sublinhas quando passar o mouse*/
+.gerarRelatorio p a:hover {
+  text-decoration: underline;
+}
+
 /* Posicionamento do rodapé */
 footer {
   background-color: #003399;

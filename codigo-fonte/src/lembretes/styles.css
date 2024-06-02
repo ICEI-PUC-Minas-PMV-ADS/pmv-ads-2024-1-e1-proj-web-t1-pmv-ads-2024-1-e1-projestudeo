@@ -1,82 +1,104 @@
 /*Estilos universais*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", Arial, Helvetica, sans-serif;
-  }
-  /*Alinhamento dos objetos da header*/
-  .containerHeader{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  /*Estilo do logo*/
-  .logo{
-    height: 50px;
-    display: flex;
-    margin-top: 8px;
-    margin-left: 40px;
-    filter:drop-shadow(0 0 10px rgba(0, 0, 0, 0.));
-  }
-  /*Nome do usuário*/
-  .nomeUsuario{
-    color: #0066cc;
-    margin-top: 8px;
-    margin-right: 8px;
-    margin-left: auto;
-    text-decoration: none;
-  }
-  /*Nome do usuário > sublinhar quando passar o mouse*/
-  .nomeUsuario:hover{
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
-  }
-  /*Estilo do ícone do usuário*/
-  #iconeUsuario{
-    font-size: 35px;
-    color: #003399;
-    display: flex;
-    margin-top: 8px;
-    margin-right: 40px;
-  }
-  /*Estilo da navegação*/
-  nav {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 8px;
-    margin-bottom: 40px;
-    align-items: center;
-    background: #003399;
-    padding: 20px;
-  }
-  /*Orientação dos itens da navegação*/
-  .nav-itens {
-    list-style: none;
-    display: flex;
-  }
-  /*Estilo da fonte da navegação*/
-  .nav-itens>li>a {
-    padding-left: 20px;
-    color: #fff;
-    text-decoration: none;
-    margin-right: 25px;
-    cursor: pointer;
-    transition: 1s text;
-  }
-  /*Navegação > mudar cor quando passar o mouse*/
-  .nav-itens>li>a:hover {
-    color: #33CC99;
-  }
-  /*Definições de fundo + rodapé*/
-  main{
-    background: #fff;
-    min-height: calc(100vh - 100px);
-    padding-bottom: 100px;
-    position: relative;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
 
- /*box lembretes*/
- .boxPrincipal {
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/*Alinhamento dos objetos da cabeçalho*/
+.containerCabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*Estilo do logo*/
+.logo {
+  height: 50px;
+  display: flex;
+  margin-top: 8px;
+  margin-left: 40px;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+}
+
+/*Nome do usuário*/
+.usuarioNome {
+  color: #0066cc;
+  margin-top: 8px;
+  margin-right: 8px;
+  margin-left: auto;
+  text-decoration: none;
+}
+
+/*Nome do usuário > sublinhar quando passar o mouse*/
+.usuarioNome:hover {
+  text-decoration: underline;
+}
+
+/*Estilo do ícone do usuário*/
+#usuarioIcone {
+  font-size: 35px;
+  color: #003399;
+  display: flex;
+  margin-top: 8px;
+  margin-right: 40px;
+}
+
+/*Estilo da navegação*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  margin-bottom: 40px;
+  align-items: center;
+  background: #003399;
+  padding: 20px;
+}
+
+/*Orientação dos itens da navegação*/
+.itensNavegacao {
+  list-style: none;
+  display: flex;
+}
+
+/*Estilo da fonte da navegação*/
+.itensNavegacao>li>a {
+  padding-left: 20px;
+  color: #fff;
+  text-decoration: none;
+  margin-right: 25px;
+  cursor: pointer;
+  transition: 1s text;
+}
+
+/*Navegação > mudar cor quando passar o mouse*/
+.itensNavegacao>li>a:hover {
+  color: #33CC99;
+}
+
+/* Título Centralizado */
+.tituloCentralizado {
+  margin-bottom: 20px;
+}
+
+/*Box principal*/
+.boxPrincipal {
   margin-left: auto;
   margin-right: auto;
   width: 420px;
@@ -86,6 +108,8 @@
   padding: 40px 40px;
   box-shadow: 0 0 10px rgba(0, 0, 0, .1); 
 }
+
+/*Remover linha do box principal*/
 fieldset {
   border: 0;
 }
@@ -97,107 +121,57 @@ legend {
   text-align: center;
   font-size: 23px;
 }
-  
-  /*Box Adicionar Atividades*/
-.boxAdicAtividade {
+
+/*Barra de separação dos ícones para textos*/
+#barraIcone {
+  border-right: 1px solid #000;
+}
+
+/*Box Adicionar Lembretes*/
+.boxAdicLembrete {
   width: 100%;
   height: 100%;
   background: #fff;
   border-radius: 5px;
   border: 2px solid #000;
   margin-top: 20px;
-
 }
 
-.input-task{
-  border: #000;
-  border-radius: 5px;
-  width: 265px;
-  height: 20px;
-  outline: none;
-  padding-left: 10px;
-
-}
-/*botao add lembrete*/
-.addTask{
-  background: none;
-  border: none;
-  padding-right: 14px;
-  border-radius: 5px;
-  height: 40px;
-  cursor: pointer;
-
-}
-/*lista lembrete*/
-.list-task {
-  width: 100%;
-  list-style: none;
-  margin-top: 5px;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  
-}
-
-.task{
-  background-color: #fff;
-  display: flex;
-  width: 95%;
-  height: 50px;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 10px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  border: 2px solid #000;
-  border-radius: 5px;
-  font-size: 16px;
-  color: #000000;
-  
-  
-}
-
-
-
-/*Area do título adicionar atividades*/
-.containerAdicAtividade .titulo {
+/*Area do título adicionar Lembretes*/
+.containerAdicLembrete .titulo {
   color: #000;
-  background: none;
   line-height: 40px;
   font-size: 16px;
   font-weight: 500;
   padding: 0px 10px 0px 17px;
 }
 
-/*Posição dos ícones adicionar atividades*/
-.containerAdicAtividade .iconeTitulo i {
+/*Posição dos ícones adicionar Lembretes*/
+.containerAdicLembrete .iconeTitulo i {
   position: relative;
   left: 23px;
   top: 30%;
   transform: translate(-50%);
   font-size: 20px;
   padding-right: 8px;
-  background: none;
 }
 
 /*Mantém o ícone de adicionar na mesma linha do texto*/
-.containerAdicAtividade .iconeTitulo {
+.containerAdicLembrete .iconeTitulo {
   display: flex;
   align-items: center;
 }
 
-/*img check e trash*/
-div>ul>li>img{
-  height: 20px;
-
+/*Estilo do ícone + de adicionar lembrete*/
+#iconeMais {
+  border-right: 5px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 10px;
 }
 
-
-
-
-/*Estilo dos itens nome da atividade*/
-.itemAtividade {
+/*Estilo dos itens nome da lembrete*/
+.itemLembrete {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -210,14 +184,14 @@ div>ul>li>img{
   margin-right: auto;
 }
 
-/*Estilo do texto nome da atividade*/
-.itemAtividade .texto {
+/*Estilo do texto nome da Lembrete*/
+.itemLembrete .texto {
   display: flex;
   align-items: center;
 }
 
-/*Estilo do campo de texto das atividades*/
-.itemAtividade .texto input[type="text"] {
+/*Estilo do campo de texto das Lembretes*/
+.itemLembrete .texto input[type="text"] {
   border: none;
   outline: none;
   font-size: 16px;
@@ -225,8 +199,8 @@ div>ul>li>img{
   flex-grow: 1;
 }
 
-/*Estilo do checkbox das atividades*/
-.itemAtividade .texto input[type="checkbox"] {
+/*Estilo do checkbox das Lembretes*/
+.itemLembrete .texto input[type="checkbox"] {
   accent-color: #000;
   margin-right: 10px;
   cursor: pointer;
@@ -235,7 +209,7 @@ div>ul>li>img{
 }
 
 /*Estilo da ação deletar*/
-.itemAtividade .acaoDeletar i {
+.itemLembrete .acaoDeletar i {
   cursor: pointer;
   font-size: 17px;
   display: flex;
@@ -244,7 +218,8 @@ div>ul>li>img{
   height: 100%;
 }
 
-#criarLembrete {
+/*Estilos do botão de CRIAR*/
+#salvar {
   width: 100%;
   height: 45px;
   background: #33CC99;
@@ -259,30 +234,21 @@ div>ul>li>img{
   margin-top: 20px;
 }
 
-/*risco de concluido*/
-.done {
-  background-color: #8fac55;
-  text-decoration: line-through;
+/*Posicionamento do rodapé*/
+footer {
+  background-color: #003399;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  position: relative;
+  margin-top: 40px;
 }
- 
-  /*Posicionamento do rodapé*/
-footer{
-    position: relative;
+
+/*Responsividade*/
+@media only screen and (max-width: 950px) {
+  .boxPrincipal {
+    width: 85%;
   }
-  /*Definições e texto do rodapé*/
-  .infoFooter{
-    background-color: #003399;
-    color: #fff;
-    font-size: 16px;
-    text-align: center;
-    padding: 20px 0;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-  }
-  /*Responsividade*/
-  @media only screen and (max-width: 950px){
-    .box{
-        width: 85%;
-    }
-  }
+}

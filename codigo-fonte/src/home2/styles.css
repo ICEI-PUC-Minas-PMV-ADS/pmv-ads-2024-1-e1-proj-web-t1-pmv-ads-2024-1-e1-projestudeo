@@ -1,0 +1,416 @@
+/* Estilos universais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  main {
+    flex: 1;
+    justify-content: center;
+  }
+  
+  /* Alinhamento dos objetos da cabecalho */
+  .containerCabecalho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Estilo do logo */
+  .logo {
+    height: 50px;
+    display: flex;
+    margin-top: 8px;
+    margin-left: 40px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0));
+  }
+  
+  /* Nome do usuário */
+  .usuarioNome {
+    color: #0066cc;
+    margin-top: 8px;
+    margin-right: 8px;
+    margin-left: auto;
+    text-decoration: none;
+  }
+  
+  /* Nome do usuário > sublinhar quando passar o mouse */
+  .usuarioNome:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilo do ícone do usuário */
+  #usuarioIcone {
+    font-size: 35px;
+    color: #003399;
+    display: flex;
+    margin-top: 8px;
+    margin-right: 40px;
+  }
+  
+  /* Estilo da navegação */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    margin-bottom: 40px;
+    align-items: center;
+    background: #003399;
+    padding: 20px;
+  }
+  
+  /* Orientação dos itens da navegação */
+  .itensNavegacao {
+    list-style: none;
+    display: flex;
+  }
+  
+  /* Estilo da fonte da navegação */
+  .itensNavegacao > li > a {
+    padding-left: 20px;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 25px;
+    cursor: pointer;
+    transition: 1s text;
+  }
+  
+  /* Navegação > mudar cor quando passar o mouse */
+  .itensNavegacao > li > a:hover {
+    color: #33cc99;
+  }
+  
+  /* Box principal */
+  .boxPrincipal {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1140px;
+    background: #f8f8f8;
+    color: #000000;
+    border-radius: 10px;
+    padding: 40px 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Título Centralizado */
+  .tituloCentralizado {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Remover linha box principal */
+  fieldset {
+    border: 0;
+  }
+  
+  /* Estilo do título Nome da Disciplina */
+  legend {
+    border: 0;
+    padding: 2.2px;
+    text-align: center;
+    font-size: 23px;
+  }
+  
+  /* Estilo do container flexível */
+  .containerFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    gap: 40px;
+    margin-top: 20px;
+  }
+  
+  /* Coluna Esquerda */
+  .colunaEsquerda {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 2;
+  }
+  
+  /* Coluna Direita */
+  .colunaDireita {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  /* Posição dos textos das caixas */
+  .search-bar {
+    align-self: flex-start;
+    position: sticky;
+    position: relative;
+    width: 100%;
+    height: 35px;
+    margin-bottom: 30px;
+  }
+  
+  /* Definições das caixas */
+  .search-bar input {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border: none;
+    outline: none;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #000000;
+    padding: 0px 10px 0px 45px;
+  }
+  
+  .discipline-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 100%; /* usa todo espaço disponível */
+  }
+  
+  .discipline {
+    height: 150px;
+    width: 200px;
+    border-radius: 5px; /* borda arredondada */
+    border: 2px solid #000;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .discipline-color {
+    flex: 1; /* cor fica em tudo menos o nome */
+  }
+  
+  .discipline-name {
+    background-color: #FFFFFF; /* Background do nome da disciplina */
+    color: #000; /* Cor do texto */
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .discipline-name:hover {
+    color: #33CC99
+  }
+  
+  /* Barra de separação dos ícones para textos */
+  #barraIcone {
+    border-right: 1px solid #000;
+  }
+  
+  .calendar-container {
+    width: 100%;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: #fff;
+    overflow: hidden;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .calendar-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    color: #fff;
+    border-radius: 0 0 8px 8px;
+    padding: 10px;
+    margin: 0;
+  }
+  
+  .calendar-nav {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    color: #1e3a8a;
+    border-radius: 0 0 8px 8px;
+    margin-top: 0;
+  }
+  
+  .nav-arrow {
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 1.2em;
+  }
+  
+  .calendar-date {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #33cc99;
+    color: #fff;
+  }
+  
+  .calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: bold;
+    color: #6b7280;
+  }
+  
+  .calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px; /* Reduzir o espaçamento entre os dias */
+  }
+  
+  .calendar-dates div {
+    width: 40px; /* Ajustar a largura para um tamanho fixo */
+    height: 40px; /* Ajustar a altura para um tamanho fixo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+    color: #000;
+    box-sizing: border-box;
+  }
+  
+  .calendar-dates div:hover {
+    background-color: #e5e7eb;
+  }
+  
+  .calendar-dates .today {
+    background-color: #4ade80;
+    border-radius: 0%;
+    color: #fff;
+  }
+  
+  .calendar-dates .other-month {
+    color: #a0aec0;
+  }
+  
+  /* Box Adicionar Lembretes */
+  .boxAdicLembrete {
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    border: 2px solid #000;
+    margin-top: 20px;
+  }
+  
+  /* Área do título adicionar Lembretes */
+  .containerAdicLembrete .titulo {
+    color: #000;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0px 10px 0px 17px;
+  }
+  
+  /* Posição dos ícones adicionar Lembretes */
+  .containerAdicLembrete .iconeTitulo i {
+    position: relative;
+    left: 23px;
+    top: 30%;
+    transform: translate(-50%);
+    font-size: 20px;
+    padding-right: 8px;
+  }
+  
+  /* Mantém o ícone de adicionar na mesma linha do texto */
+  .containerAdicLembrete .iconeTitulo {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Estilo do ícone + de adicionar lembrete */
+  #iconeMais {
+    border-right: 5px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 10px;
+  }
+  
+  /* Estilo dos itens nome do lembrete */
+  .itemLembrete {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Estilo do texto nome do Lembrete */
+  .itemLembrete .texto {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Estilo do campo de texto dos Lembretes */
+  .itemLembrete .texto input[type="text"] {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    margin-right: 10px;
+    flex-grow: 1;
+  }
+  
+  /* Estilo do checkbox dos Lembretes */
+  .itemLembrete .texto input[type="checkbox"] {
+    accent-color: #000;
+    margin-right: 10px;
+    cursor: pointer;
+    width: 13px;
+    height: 13px;
+  }
+  
+  /* Estilo da ação deletar */
+  .itemLembrete .acaoDeletar i {
+    cursor: pointer;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  /* Posicionamento do rodapé */
+  footer {
+    background-color: #003399;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    margin-top: 40px;
+  }
+  
+  /* Responsividade */
+  @media only screen and (max-width: 1140px) {
+    .boxPrincipal {
+        width: 87%;
+        flex-direction: column;
+    }
+    .containerFlex {
+        flex-direction: column;
+        gap: 0;
+    }
+    .colunaDireita {
+        margin-top: 20px;
+    }
+  }
+  

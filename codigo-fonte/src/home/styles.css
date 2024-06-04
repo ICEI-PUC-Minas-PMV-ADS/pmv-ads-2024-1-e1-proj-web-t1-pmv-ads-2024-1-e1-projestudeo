@@ -1,164 +1,140 @@
-/* Geral */
-*{
+/* Estilos universais */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
-/*Logo*/
-.logo{
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    justify-content: center;
+}
+
+/* Cabeçalho */
+.containerCabecalho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
     height: 50px;
     display: flex;
     margin-top: 8px;
     margin-left: 40px;
-    filter:drop-shadow(0 0 10px rgba(0, 0, 0, 0.));
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0));
 }
 
-/*Nome do usuário*/
-.user-info{
-    display: flex;
-    align-items: center;
+/* Nome do usuário */
+.usuarioNome {
     color: #0066cc;
     margin-top: 8px;
-    margin-right: 10px;
+    margin-right: 8px;
     margin-left: auto;
     text-decoration: none;
 }
 
-/*hover nome*/
-  .user-info:hover{
-    text-decoration: underline;
-}
-
-/*Estilo do ícone do usuário*/
-#iconeUsuario{
+/* Ícone do usuário */
+#usuarioIcone {
     font-size: 35px;
     color: #003399;
-    display: flex;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 8px;
     margin-right: 40px;
-    margin-left: 10px;
-
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* garante que o footer fique no final da página*/
-}
-header {
-    background-color: white;
-    color: black;
-    padding: 10px 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav, footer {
-    background-color: #003399; /* cor uniforme */
-    color: white;
-    padding: 10px 20px;
-}
-
+/* Navegação */
 nav {
     display: flex;
     justify-content: space-between;
     margin-top: 8px;
+    margin-bottom: 40px;
     align-items: center;
     background: #003399;
     padding: 20px;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+.itensNavegacao {
+    list-style: none;
     display: flex;
 }
 
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
+.itensNavegacao > li > a {
+    padding-left: 20px;
+    color: #fff;
     text-decoration: none;
-    color: white;
+    margin-right: 25px;
+    cursor: pointer;
+    transition: 1s text;
 }
 
-nav ul li a:hover {
-    color: #33CC99;
+.itensNavegacao > li > a:hover {
+    color: #33cc99;
 }
 
-footer {
-    text-align: center;
-    padding: 10px 0;
-    margin-top: auto;
-}
-
-.content {
-    display: flex;
-    justify-content: space-between;
-    flex-grow: 1;
-    padding: 20px;
-}
-
-main {
-    flex: 3;
+/* Box principal */
+.boxPrincipal {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1140px;
+    background: #f8f8f8;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* centralizar as disciplinas */
+    align-items: center;
+}
+
+.main-content {
+    display: flex;
     width: 100%;
 }
 
-/*Posição dos textos das caixas*/
-.search-bar {
-    align-self: flex-start;
-    position: sticky;
-    position: relative;
-    width: 25%;
-    height: 35px;
-    margin-bottom: 30px;
-  }
-  /*Definições das caixas*/
-  .search-bar input{
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    border: none;
-    outline: none;
-    border: 2px solid #000;
-    border-radius: 5px;
-    font-size: 16px;
-    color: #000000;
-    padding: 0px 10px 0px 45px;
-  }
+#withBorder {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: black;
+}
 
+/* Container de disciplinas */
 .discipline-container {
+    flex: 3;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
-    width: 100%; /* usa todo espaço disponível */
 }
 
 .discipline {
     height: 150px;
     width: 200px; 
-    border-radius: 8px; /* borda arredondada */
+    border-radius: 8px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
 }
 
 .discipline-color {
-    flex: 1; /* cor fica em tudo menos o nome */
+    flex: 1;
 }
 
 .discipline-name {
-    background-color: #FFFFFF; /* Background do nome da disciplina */
-    color: #333; /* Cor do texto */
+    background-color: #FFFFFF;
+    color: #333;
     text-align: center;
     padding: 5px 0;
     border: 1px solid #000000;
@@ -166,37 +142,15 @@ main {
 }
 
 .discipline-name:hover {
-    color: #33CC99
+    color: #33CC99;
 }
 
 aside {
     flex: 1;
-    padding-left: 20px; /* Espaço entre as disciplinas e o calendário e lembretes */
+    padding-left: 20%;
 }
 
-.reminders {
-    max-width: 280px;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    overflow: hidden;
-    margin-bottom: 10px;
-}
-
-@media (min-width: 768px) {
-    .content {
-        flex-direction: row;
-    }
-}
-
-/* Estilo e posição do ícone de pesquisa */
-#withBorder {
-    position: absolute;
-    left: 10px;
-    top: 50%; /* Centraliza verticalmente */
-    transform: translateY(-50%);
-    font-size: 20px;
-    color: black; /* Cor do ícone */
-}
+/* Calendário */
 .calendar-container {
     width: 300px;
     border: 1px solid #ccc;
@@ -310,3 +264,38 @@ aside {
     color: #a0aec0;
 }
 
+/* Lembretes */
+.reminders {
+    max-width: 280px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #003399;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    margin-top: 40px;
+}
+
+/* Responsividade */
+@media only screen and (max-width: 1140px) {
+    .boxPrincipal {
+        width: 87%;
+        flex-direction: column;
+    }
+    .containerFlex {
+        flex-direction: column;
+        gap: 0;
+    }
+    .colunaDireita {
+        margin-top: 20px;
+    }
+}

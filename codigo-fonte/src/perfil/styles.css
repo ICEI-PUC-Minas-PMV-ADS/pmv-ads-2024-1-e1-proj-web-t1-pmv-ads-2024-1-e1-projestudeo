@@ -46,16 +46,12 @@ main {
   text-decoration: none;
 }
 
-/*Nome do usuário > sublinhar quando passar o mouse*/
-.usuarioNome:hover {
-  text-decoration: underline;
-}
-
 /*Estilo do ícone do usuário*/
 #usuarioIcone {
   font-size: 35px;
   color: #003399;
-  display: flex;
+  display: inline-block; /* Garantir que o ícone se comporte como um elemento inline */
+  vertical-align: middle; /* Alinhar o ícone verticalmente ao meio */
   margin-top: 8px;
   margin-right: 40px;
 }

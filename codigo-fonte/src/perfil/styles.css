@@ -141,11 +141,6 @@ legend {
   padding: 0px 10px 0px 45px;
 }
 
-/*Esconder a seta do campo de data*/
-input[type="date"]::-webkit-calendar-picker-indicator {
-  display: none;
-}
-
 /*Caixa principal do gênero*/
 .boxGenero {
   width: 100%;

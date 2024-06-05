@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Título da página-->
+    <!-- Título da página -->
     <title>eStudeo</title>
-    <!--CSS-->
+    <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
-    <!--Icones-->
+    <!-- Ícones -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="../images/favicon.svg" type="image/x-icon">
-    <!--Fontes-->
+    <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <!--Cabeçalho-->
+        <!-- Cabeçalho -->
         <div class="containerCabecalho">
             <div class="logo"><img src="../images/estudeo_logo.svg" alt="Logo"></div>
             <span class="usuarioNome">João Fulano de Tal</span>
             <a href="../perfil/perfil.html"><i id="usuarioIcone" class='bx bxs-user-circle'></i></a>
-        </div> 
+        </div>
     </header>
     <nav>
-        <!--Navegação-->
+        <!-- Navegação -->
         <div class="links">
             <ul class="itensNavegacao">
                 <li><a href="../home/home.html">Página Inicial</a></li>
@@ -35,19 +35,19 @@
         </div>
     </nav>
     <main>
-        <!--Box Principal-->
+        <!-- Box Principal -->
         <div class="boxPrincipal">
-            <div class="main-content">
-                <div class="discipline-container">
-                <!-- Disciplinas serão carregadas aqui pelo JavaScript -->
+            <div class="containerFlex">
+                <!-- Coluna esquerda -->
+                <div class="colunaEsquerda">
+                    <div class="discipline-container">
+                        <!-- Disciplinas serão carregadas aqui pelo JavaScript -->
+                    </div>
                 </div>
-                <!--Sidebar-->
-                <aside>
-                    <!--Calendário-->
+                <!-- Coluna direita -->
+                <div class="colunaDireita">
+                    <!-- Calendário -->
                     <div class="calendar-container">
-                        <div class="calendar-tabs">
-                            <button class="tab-button active" id="data-tab">DATA</button>
-                        </div>
                         <div class="calendar-date">
                             <span id="current-date"></span>
                         </div>
@@ -71,16 +71,25 @@
                             <div class="calendar-dates" id="calendar-dates"></div>
                         </div>
                     </div>
-                    <!--Lembretes-->
-                    <div class="reminders">
-                        <h2>Lembretes</h2>
-                        <ul>
-                            <li>26/04/2024 - Prova de Inglês</li>
-                            <li>14/05/2024 - Reunião do grupo</li>
-                            <li>23/07/2024 - Avaliação final</li>
-                        </ul>
+                    <!-- Box adicionar lembretes -->
+                    <div class="boxAdicLembrete">
+                        <div class="containerAdicLembrete">
+                            <!-- Ícone e título adicionar lembretes -->
+                            <div class="iconeTitulo">
+                                <!-- Ícone caderno -->
+                                <i id="barraIcone" class='bx bxs-calendar-star'></i>
+                                <div class="titulo">Adicionar lembretes</div>
+                                <!-- Ícone mais -->
+                                <i id="iconeMais" class='bx bxs-plus-square' onclick="adicionarLembrete()"></i>
+                            </div>
+                            <!-- Lista de lembretes -->
+                            <div id="listaLembrete" class="listaLembrete">
+                                <!-- Lembretes serão adicionadas aqui dinamicamente -->
+                            </div>
+                        </div>
                     </div>
-                </aside>
+                </div>
+            </div>
         </div>
     </main>
     <footer>
@@ -88,7 +97,7 @@
             <p>© Copyright 2024 eStudeo - All Rights Reserved</p>
         </section>
     </footer>
-    <!--Javascript-->
+    <!-- Javascript -->
     <script src="script.js"></script>
 </body>
 </html>

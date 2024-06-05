@@ -1,3 +1,82 @@
+// Função para carregar as disciplinas do Local Storage e exibi-las
+function carregarDisciplinas() {
+    const disciplineContainer = document.querySelector('.discipline-container');
+
+    // Limpa o container de disciplinas
+    disciplineContainer.innerHTML = '';
+
+    // Recupera as disciplinas armazenadas no Local Storage
+    const disciplinas = JSON.parse(localStorage.getItem('disciplinas')) || [];
+    
+    // Itera sobre cada disciplina recuperada
+    disciplinas.forEach(disciplina => {
+        // Cria um elemento div para representar a disciplina
+        const disciplinaDiv = document.createElement('div');
+        // Adiciona a classe 'discipline' ao elemento
+        disciplinaDiv.classList.add('discipline');
+        // Define a cor de fundo da disciplina com a cor armazenada
+        disciplinaDiv.style.backgroundColor = disciplina.cor;
+
+        // Cria um elemento div para representar a cor da disciplina
+        const disciplinaCorDiv = document.createElement('div');
+        // Adiciona a classe 'discipline-color' ao elemento
+        disciplinaCorDiv.classList.add('discipline-color');
+
+        // Cria um elemento div para representar o nome da disciplina
+        const disciplinaNomeDiv = document.createElement('div');
+        // Adiciona a classe 'discipline-name' ao elemento
+        disciplinaNomeDiv.classList.add('discipline-name');
+        // Define o texto do elemento com o nome da disciplina armazenado
+        disciplinaNomeDiv.textContent = disciplina.nome;
+
+        // Cria o ícone de três pontinhos para abrir o menu de opções
+        const optionsIcon = document.createElement('i');
+        optionsIcon.classList.add('bx', 'bx-dots-horizontal-rounded', 'options-icon');
+        optionsIcon.onclick = (e) => {
+            e.stopPropagation();
+            const dropdownMenu = disciplinaDiv.querySelector('.dropdown-menu');
+            dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+        };
+
+        // Cria o menu dropdown
+        const dropdownMenu = document.createElement('div');
+        dropdownMenu.classList.add('dropdown-menu');
+        dropdownMenu.innerHTML = `<a onclick="deletarDisciplina('${disciplina.nome}')">Deletar</a>`;
+
+        // Adiciona o ícone de três pontinhos e o menu dropdown ao elemento disciplina
+        disciplinaDiv.appendChild(optionsIcon);
+        disciplinaDiv.appendChild(dropdownMenu);
+        // Adiciona o elemento 'disciplinaCorDiv' como filho de 'disciplinaDiv'
+        disciplinaDiv.appendChild(disciplinaCorDiv);
+        // Adiciona o elemento 'disciplinaNomeDiv' como filho de 'disciplinaDiv'
+        disciplinaDiv.appendChild(disciplinaNomeDiv);
+        // Adiciona o elemento 'disciplinaDiv' ao container de disciplinas
+        disciplineContainer.appendChild(disciplinaDiv);
+
+        // Fecha o dropdown ao clicar fora dele
+        document.addEventListener('click', () => {
+            dropdownMenu.style.display = 'none';
+        });
+    });
+}
+
+// Função para deletar uma disciplina
+function deletarDisciplina(nomeDisciplina) {
+    // Recupera as disciplinas armazenadas no Local Storage
+    let disciplinas = JSON.parse(localStorage.getItem('disciplinas')) || [];
+    // Filtra as disciplinas para remover a que tem o nome fornecido
+    disciplinas = disciplinas.filter(disciplina => disciplina.nome !== nomeDisciplina);
+    // Armazena novamente as disciplinas no Local Storage
+    localStorage.setItem('disciplinas', JSON.stringify(disciplinas));
+    // Recarrega as disciplinas para atualizar a exibição
+    carregarDisciplinas();
+}
+
+// Chama a função para carregar e exibir as disciplinas ao carregar a página
+document.addEventListener('DOMContentLoaded', () => {
+    carregarDisciplinas();
+});
+
 // Executa o código quando o conteúdo do documento foi completamente carregado e processado
 document.addEventListener("DOMContentLoaded", function() {
     // Arrays que contêm os nomes dos meses e dos dias da semana
@@ -67,47 +146,33 @@ document.addEventListener("DOMContentLoaded", function() {
     renderCalendar(currentDate);
 });
 
-// Executa o código quando o conteúdo do documento foi completamente carregado e processado
-document.addEventListener('DOMContentLoaded', () => {
-    // Seleciona o container onde as disciplinas serão inseridas
-    const disciplineContainer = document.querySelector('.discipline-container');
+// Função para adicionar uma nova lembrete
+function adicionarLembrete() {
+    const listaLembrete = document.getElementById('listaLembrete'); // Seleciona a lista de lembretes
 
-    // Função para carregar as disciplinas do Local Storage e exibi-las
-    function carregarDisciplinas() {
-        // Recupera as disciplinas armazenadas no Local Storage
-        // Se não houver disciplinas, inicializa com um array vazio
-        const disciplinas = JSON.parse(localStorage.getItem('disciplinas')) || [];
-        
-        // Itera sobre cada disciplina recuperada
-        disciplinas.forEach(disciplina => {
-            // Cria um elemento div para representar a disciplina
-            const disciplinaDiv = document.createElement('div');
-            // Adiciona a classe 'discipline' ao elemento
-            disciplinaDiv.classList.add('discipline');
-            // Define a cor de fundo da disciplina com a cor armazenada
-            disciplinaDiv.style.backgroundColor = disciplina.cor;
+    const itemLembrete = document.createElement('div'); // Cria um novo elemento de lembrete
+    itemLembrete.classList.add('itemLembrete'); // Adiciona a classe 'itemLembrete' ao elemento
 
-            // Cria um elemento div para representar a cor da disciplina
-            const disciplinaCorDiv = document.createElement('div');
-            // Adiciona a classe 'discipline-color' ao elemento
-            disciplinaCorDiv.classList.add('discipline-color');
+    // Cria o container de texto da lembrete com um checkbox e um campo de texto
+    const textoLembrete = document.createElement('div');
+    textoLembrete.classList.add('texto');
+    textoLembrete.innerHTML = `<input type="checkbox"><input type="text" placeholder="Nome do lembrete">`;
 
-            // Cria um elemento div para representar o nome da disciplina
-            const disciplinaNomeDiv = document.createElement('div');
-            // Adiciona a classe 'discipline-name' ao elemento
-            disciplinaNomeDiv.classList.add('discipline-name');
-            // Define o texto do elemento com o nome da disciplina armazenado
-            disciplinaNomeDiv.textContent = disciplina.nome;
+    // Cria o container para o ícone de lixeira, para deletar a lembrete
+    const acaoDeletar = document.createElement('div');
+    acaoDeletar.classList.add('acaoDeletar');
+    acaoDeletar.innerHTML = `<i class='bx bx-trash-alt' onclick="deletarLembrete(this)"></i>`;
 
-            // Adiciona o elemento 'disciplinaCorDiv' como filho de 'disciplinaDiv'
-            disciplinaDiv.appendChild(disciplinaCorDiv);
-            // Adiciona o elemento 'disciplinaNomeDiv' como filho de 'disciplinaDiv'
-            disciplinaDiv.appendChild(disciplinaNomeDiv);
-            // Adiciona o elemento 'disciplinaDiv' ao container de disciplinas
-            disciplineContainer.appendChild(disciplinaDiv);
-        });
-    }
+    // Adiciona os elementos de texto e container de lixeira ao item de lembrete
+    itemLembrete.appendChild(textoLembrete);
+    itemLembrete.appendChild(acaoDeletar);
 
-    // Chama a função para carregar e exibir as disciplinas ao carregar a página
-    carregarDisciplinas();
-});
+    // Adiciona o item de lembrete à lista de lembretes
+    listaLembrete.appendChild(itemLembrete);
+}
+
+// Função para deletar uma lembrete
+function deletarLembrete(elemento) {
+    const itemLembrete = elemento.closest('.itemLembrete'); // Seleciona o item de lembrete mais próximo
+    itemLembrete.remove(); // Remove o item de lembrete da lista
+}

@@ -70,6 +70,7 @@ let seconds = 0;
 const clockElement = document.getElementById('clock');
 const playButton = document.getElementById('playButton');
 const pauseButton = document.getElementById('pauseButton');
+const resetButton = document.getElementById('resetButton');
 
 function updateClock() {
     const hrs = String(Math.floor(seconds / 3600)).padStart(2, '0');
@@ -91,6 +92,12 @@ function stopTimer() {
     isRunning = false;
 }
 
+function resetTimer() {
+    stopTimer();
+    seconds = 0;
+    updateClock();
+}
+
 playButton.addEventListener('click', () => {
     if (!isRunning) {
         startTimer();
@@ -101,4 +108,8 @@ pauseButton.addEventListener('click', () => {
     if (isRunning) {
         stopTimer();
     }
+});
+
+resetButton.addEventListener('click', () => {
+    resetTimer();
 });

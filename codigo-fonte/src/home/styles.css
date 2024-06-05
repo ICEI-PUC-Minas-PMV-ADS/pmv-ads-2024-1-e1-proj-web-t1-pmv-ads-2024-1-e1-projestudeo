@@ -90,8 +90,12 @@ nav {
     margin-left: auto;
     margin-right: auto;
     width: 1140px;
+    max-width: 100%; /* Garante que o conteúdo não ultrapasse a largura do container */
     background: #f8f8f8;
+    color: #000000;
     border-radius: 10px;
+    padding: 40px 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -111,21 +115,85 @@ nav {
     color: black;
 }
 
-/* Container de disciplinas */
-.discipline-container {
-    flex: 3;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+/* Estilo do container flexível */
+.containerFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
     gap: 40px;
 }
 
+/* Coluna Esquerda */
+.colunaEsquerda {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 2;
+}
+
+/* Coluna Direita */
+.colunaDireita {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Container de disciplinas */
+.discipline-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 100%; /* usa todo espaço disponível */
+    margin: auto;
+}
+
 .discipline {
+    position: relative; /* Necessário para que o menu dropdown posicionado absolutamente funcione */
     height: 150px;
-    width: 200px; 
-    border-radius: 8px;
+    width: 200px;
+    border-radius: 5px; /* borda arredondada */
+    border: 2px solid #000;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+}
+
+.options-icon {
+    position: absolute;
+    top: 5px; /* Ajusta conforme necessário */
+    right: 5px; /* Ajusta conforme necessário */
+    font-size: 20px; /* Tamanho do ícone */
+    color: #000; /* Cor do ícone */
+    cursor: pointer; /* Cursor pointer para indicar que é clicável */
+    background-color: #fff; /* Adiciona uma faixa branca */
+    padding: 2px; /* Adiciona espaçamento ao redor do ícone */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra */
+}
+
+.dropdown-menu {
+    display: none; /* Oculta o menu por padrão */
+    position: absolute;
+    top: 25px; /* Ajusta conforme necessário */
+    right: 5px; /* Ajusta conforme necessário */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f1f1f1;
 }
 
 .discipline-color {
@@ -133,57 +201,28 @@ nav {
 }
 
 .discipline-name {
-    background-color: #FFFFFF;
-    color: #333;
+    background-color: #FFFFFF; /* Background do nome da disciplina */
+    color: #000; /* Cor do texto */
     text-align: center;
-    padding: 5px 0;
-    border: 1px solid #000000;
-    border-radius: 8px;
+    padding: 10px 0;
+    cursor: pointer;
 }
 
 .discipline-name:hover {
     color: #33CC99;
 }
 
-aside {
-    flex: 1;
-    padding-left: 20%;
-}
-
-/* Calendário */
 .calendar-container {
-    width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-family: 'Poppins', sans-serif;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    width: 340px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: #ffffff;
     overflow: hidden;
-}
-
-.calendar-tabs {
+    font-size: 16px;
     display: flex;
-    justify-content: space-around;
-    background-color: #1e3a8a;
-    border-radius: 8px 8px 0 0;
-    margin: 0;
-}
-
-.tab-button {
-    flex: 1;
-    padding: 10px;
-    color: #fff;
-    background-color: #4ade80;
-    border: none;
-    border-radius: 8px 8px 0 0;
-    cursor: pointer;
-    font-size: 1em;
-    margin: 0;
-}
-
-.tab-button.active {
-    background-color: #003399;
-    color: #fff;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .calendar-header {
@@ -192,16 +231,16 @@ aside {
     align-items: center;
     background-color: #fff;
     color: #fff;
-    border-radius: 0 0 8px 8px;
-    padding: 10px;
+    padding: 3px;
     margin: 0;
 }
 
 .calendar-nav {
     display: flex;
+    justify-content: space-between; /* Posiciona as setas nas extremidades */
     align-items: center;
     background-color: #fff;
-    color: #1e3a8a;
+    color: #003399;
     border-radius: 0 0 8px 8px;
     margin-top: 0;
 }
@@ -209,12 +248,6 @@ aside {
 .nav-arrow {
     cursor: pointer;
     margin: 0 10px;
-    font-size: 1.2em;
-}
-
-.calendar-month-year {
-    font-size: 1.2em;
-    font-weight: bold;
 }
 
 .calendar-date {
@@ -235,12 +268,12 @@ aside {
 .calendar-dates {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 3.5px;
+    gap: 2px; /* Reduzir o espaçamento entre os dias */
 }
 
 .calendar-dates div {
-    width: 40px;
-    height: 40px;
+    width: 40px; /* Ajustar a largura para um tamanho fixo */
+    height: 40px; /* Ajustar a altura para um tamanho fixo */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -248,6 +281,7 @@ aside {
     cursor: pointer;
     font-weight: bold;
     color: #000;
+    box-sizing: border-box;
 }
 
 .calendar-dates div:hover {
@@ -264,13 +298,96 @@ aside {
     color: #a0aec0;
 }
 
-/* Lembretes */
-.reminders {
-    max-width: 280px;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    overflow: hidden;
+/* Box Adicionar Lembretes */
+.boxAdicLembrete {
+    width: 340px;
+    background: #fff;
+    border-radius: 5px;
+    border: 2px solid #000;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Área do título adicionar Lembretes */
+.containerAdicLembrete .titulo {
+    color: #000;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0px 10px 0px 17px;
+}
+
+/* Posição dos ícones adicionar Lembretes */
+.containerAdicLembrete .iconeTitulo i {
+    position: relative;
+    left: 23px;
+    top: 30%;
+    transform: translate(-50%);
+    font-size: 20px;
+    padding-right: 8px;
+}
+
+/* Mantém o ícone de adicionar na mesma linha do texto */
+.containerAdicLembrete .iconeTitulo {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo do ícone + de adicionar lembrete */
+#iconeMais {
+    border-right: 5px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+/* Estilo dos itens nome do lembrete */
+.itemLembrete {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
     margin-bottom: 10px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilo do texto nome do Lembrete */
+.itemLembrete .texto {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo do campo de texto dos Lembretes */
+.itemLembrete .texto input[type="text"] {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    margin-right: 10px;
+    flex-grow: 1;
+}
+
+/* Estilo do checkbox dos Lembretes */
+.itemLembrete .texto input[type="checkbox"] {
+    accent-color: #000;
+    margin-right: 10px;
+    cursor: pointer;
+    width: 13px;
+    height: 13px;
+}
+
+/* Estilo da ação deletar */
+.itemLembrete .acaoDeletar i {
+    cursor: pointer;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 /* Rodapé */
@@ -286,16 +403,34 @@ footer {
 }
 
 /* Responsividade */
-@media only screen and (max-width: 1140px) {
-    .boxPrincipal {
-        width: 87%;
-        flex-direction: column;
+@media (max-width: 1140px) {
+    .discipline-container {
+        grid-template-columns: repeat(2, 1fr);
     }
+}
+
+/* Responsividade para calendário e lembretes */
+@media (max-width: 900px) {
+    .discipline-container {
+        grid-template-columns: repeat(1, 1fr); /* Ajusta para duas colunas quando a tela é menor que 900px */
+        justify-content: center; /* Centraliza as disciplinas horizontalmente */
+    }
+
+    .discipline {
+        justify-self: center; /* Centraliza cada disciplina individualmente */
+    }
+}
+
+@media (max-width: 660px) {
     .containerFlex {
         flex-direction: column;
-        gap: 0;
     }
+    
     .colunaDireita {
-        margin-top: 20px;
+        margin-top: 20px; /* Adiciona um espaçamento entre as colunas quando empilhadas */
+    }
+
+    .discipline-container {
+        grid-template-columns: 1fr; /* Ajusta para uma coluna quando a tela é menor que 660px */
     }
 }

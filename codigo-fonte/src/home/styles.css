@@ -14,6 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    min-width: 375px;
 }
 
 main {
@@ -213,7 +214,7 @@ nav {
 }
 
 .calendar-container {
-    width: 340px;
+    width: 330px;
     border: 2px solid #000;
     border-radius: 5px;
     background-color: #ffffff;
@@ -300,7 +301,7 @@ nav {
 
 /* Box Adicionar Lembretes */
 .boxAdicLembrete {
-    width: 340px;
+    width: 330px;
     background: #fff;
     border-radius: 5px;
     border: 2px solid #000;
@@ -360,15 +361,22 @@ nav {
 .itemLembrete .texto {
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 /* Estilo do campo de texto dos Lembretes */
-.itemLembrete .texto input[type="text"] {
+.itemLembrete .texto textarea {
     border: none;
     outline: none;
     font-size: 16px;
     margin-right: 10px;
     flex-grow: 1;
+    resize: none; /* Não permite redimensionamento manual */
+    overflow: hidden; /* Esconde o scroll */
+    height: 25px;
+    min-height: 25px; /* Altura mínima */
+    max-width: 100%; /* Limita a largura máxima */
+    width: 100%; /* Largura total */
 }
 
 /* Estilo do checkbox dos Lembretes */
@@ -432,5 +440,14 @@ footer {
 
     .discipline-container {
         grid-template-columns: 1fr; /* Ajusta para uma coluna quando a tela é menor que 660px */
+    }
+}
+
+@media (max-width: 410px) {
+    .calendar-container {
+        width: 295px;
+    }
+    .boxAdicLembrete {
+        width: 295px;
     }
 }

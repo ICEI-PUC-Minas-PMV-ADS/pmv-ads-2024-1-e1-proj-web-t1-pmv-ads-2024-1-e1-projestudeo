@@ -146,6 +146,12 @@ document.addEventListener("DOMContentLoaded", function() {
     renderCalendar(currentDate);
 });
 
+// Função para ajustar a altura do textarea
+function ajustarAlturaTextarea(textarea) {
+    textarea.style.height = 'auto'; // Redefine a altura para 'auto' para obter o scrollHeight correto
+    textarea.style.height = textarea.scrollHeight + 'px'; // Define a altura com base no scrollHeight
+}
+
 // Função para adicionar uma nova lembrete
 function adicionarLembrete() {
     const listaLembrete = document.getElementById('listaLembrete'); // Seleciona a lista de lembretes
@@ -156,7 +162,13 @@ function adicionarLembrete() {
     // Cria o container de texto da lembrete com um checkbox e um campo de texto
     const textoLembrete = document.createElement('div');
     textoLembrete.classList.add('texto');
-    textoLembrete.innerHTML = `<input type="checkbox"><input type="text" placeholder="Nome do lembrete">`;
+    const textarea = document.createElement('textarea');
+    textarea.placeholder = 'Nome do lembrete';
+    textarea.addEventListener('input', function() {
+        ajustarAlturaTextarea(this);
+    });
+    textoLembrete.innerHTML = `<input type="checkbox">`;
+    textoLembrete.appendChild(textarea);
 
     // Cria o container para o ícone de lixeira, para deletar a lembrete
     const acaoDeletar = document.createElement('div');

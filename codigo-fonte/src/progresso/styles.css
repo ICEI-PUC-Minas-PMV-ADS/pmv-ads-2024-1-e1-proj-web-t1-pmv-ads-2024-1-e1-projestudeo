@@ -406,7 +406,7 @@ legend {
 
 .clock {
 position: relative;
-left: 422px;
+left: 380px;
 top: 3%;
 transform: translate(-50%);
 padding-right: 1px;
@@ -414,7 +414,7 @@ font-size: 18px;
 }
 .buttons {
   position: relative;  
-  left: 395px;
+  left: 370px;
   top: 3%;
   transform: translate(-50%);
   gap: 10px; /*Espaço entre os botões*/

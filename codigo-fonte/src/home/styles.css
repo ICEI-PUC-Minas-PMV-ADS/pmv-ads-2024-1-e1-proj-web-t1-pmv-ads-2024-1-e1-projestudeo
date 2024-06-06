@@ -54,7 +54,17 @@ main {
     display: inline-block;
     vertical-align: middle;
     margin-top: 8px;
-    margin-right: 40px;
+    margin-right: 10px;
+}
+
+/* Ícone de logout */
+#iconeLogout {
+    font-size: 35px;
+    color: #003399;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 8px;
+    margin-right: 40px; /* Ajuste a margem direita conforme necessário */
 }
 
 /* Navegação */

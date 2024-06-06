@@ -41,3 +41,71 @@ function alternarConfSenha(){
         z.style.display = "block";
     }
 }
+document.addEventListener('DOMContentLoaded', function() {
+    // Carrega os dados do usuário do Local Storage
+    const usuario = JSON.parse(localStorage.getItem('usuario'));
+    
+    if (usuario) {
+        document.getElementById('nome').value = usuario.nome;
+        document.getElementById('sobrenome').value = usuario.sobrenome;
+        document.getElementById('dataNascimento').value = usuario.dataNascimento;
+        document.getElementById('email').value = usuario.email;
+
+        // Verifica se o gênero já está salvo no usuário e seleciona o radio button correspondente
+        if (usuario.genero) {
+            if (usuario.genero === 'Masculino') {
+                document.getElementById('opcao1').checked = true;
+            } else if (usuario.genero === 'Feminino') {
+                document.getElementById('opcao2').checked = true;
+            } else {
+                document.getElementById('opcao3').checked = true;
+            }
+        }
+    }
+
+    document.getElementById('salvar').addEventListener('click', function(e) {
+        e.preventDefault();
+
+        // Captura os valores atualizados dos campos do formulário
+        const nome = document.getElementById('nome').value;
+        const sobrenome = document.getElementById('sobrenome').value;
+        const dataNascimento = document.getElementById('dataNascimento').value;
+        const email = document.getElementById('email').value;
+        const senha = document.getElementById('senha').value;
+        const confSenha = document.getElementById('confSenha').value;
+
+        // Captura o gênero selecionado
+        let genero = '';
+        if (document.getElementById('opcao1').checked) {
+            genero = 'Masculino';
+        } else if (document.getElementById('opcao2').checked) {
+            genero = 'Feminino';
+        } else if (document.getElementById('opcao3').checked) {
+            genero = 'Outros';
+        }
+
+        // Verifica se a senha e a confirmação de senha são iguais, se foram preenchidas
+        if (senha && confSenha && senha !== confSenha) {
+            alert('As senhas não coincidem. Por favor, verifique.');
+            return;
+        }
+
+        // Atualiza o objeto usuário
+        usuario.nome = nome;
+        usuario.sobrenome = sobrenome;
+        usuario.dataNascimento = dataNascimento;
+        usuario.email = email;
+        usuario.genero = genero; // Adiciona ou atualiza o gênero
+
+        // Se a senha foi preenchida, atualiza a senha
+        if (senha) {
+            usuario.senha = senha;
+        }
+
+        // Armazena o usuário atualizado no Local Storage
+        localStorage.setItem('usuario', JSON.stringify(usuario));
+
+        // Exibe uma mensagem de sucesso
+        alert('Perfil atualizado com sucesso!');
+    });
+});

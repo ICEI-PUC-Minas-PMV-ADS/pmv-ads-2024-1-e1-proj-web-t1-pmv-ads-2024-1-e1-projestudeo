@@ -412,6 +412,10 @@ footer {
 
 /* Responsividade */
 @media (max-width: 1140px) {
+    .boxPrincipal {
+        width: 900px;
+    }
+    
     .discipline-container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -422,6 +426,11 @@ footer {
     .usuarioNome {
         visibility: hidden;
     }
+
+    .boxPrincipal {
+        width: 660px;
+    }
+
     .discipline-container {
         grid-template-columns: repeat(1, 1fr); /* Ajusta para duas colunas quando a tela é menor que 900px */
         justify-content: center; /* Centraliza as disciplinas horizontalmente */
@@ -433,12 +442,12 @@ footer {
 }
 
 @media (max-width: 660px) {
+    .boxPrincipal {
+        width: 410px;
+    }
+
     .containerFlex {
         flex-direction: column;
-    }
-    
-    .colunaDireita {
-        margin-top: 20px; /* Adiciona um espaçamento entre as colunas quando empilhadas */
     }
 
     .discipline-container {
@@ -447,6 +456,10 @@ footer {
 }
 
 @media (max-width: 410px) {
+    .boxPrincipal {
+        width: 375px;
+    }
+
     .calendar-container {
         width: 295px;
     }

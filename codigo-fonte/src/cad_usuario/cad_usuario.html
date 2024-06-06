@@ -25,38 +25,38 @@
         <h1>Crie sua Conta</h1>
         <div class="form-fields">
             <!--Local dos dados-->
-            <form action="">
+            <form id="formCadastro">
                 <!--Box de nome-->
                 <div class="boxElementos">
-                    <input type="text" placeholder="Nome" required>
+                    <input type="text" id="nome" placeholder="Nome" required>
                     <!--Ícone de nome-->
                     <i id="barraIcone" class='bx bxs-user'></i>
                 </div>
                 
                 <!--Box de Sobrenome-->
                 <div class="boxElementos">
-                    <input type="text" placeholder="Sobrenome" required>
+                    <input type="text" id="sobrenome" placeholder="Sobrenome" required>
                     <!--Ícone de Sobrenome-->
                     <i id="barraIcone" class='bx bxs-user'></i>
                 </div>
 
                 <!--Box de Data de nascimento-->
                 <div class="boxElementos">
-                    <input type="text" placeholder="Data de nascimento" onfocus="(this.type='date')">
+                    <input type="text" id="dataNascimento" placeholder="Data de nascimento" onfocus="(this.type='date')">
                     <!--Ícone de nascimento-->
                     <i id="barraIcone" class='bx bxs-calendar'></i>
                 </div>
 
                 <!--Box de e-mail-->
                 <div class="boxElementos">
-                    <input type="email" placeholder="E-mail" required>
+                    <input type="email" id="email" placeholder="E-mail" required>
                     <!--Ícone de e-mail-->
                     <i id="barraIcone" class='bx bxs-envelope'></i>
                 </div>
                 
                 <!--Box de senha-->
                 <div class="boxElementos">
-                    <input type="password" placeholder="Senha" required id="senha">
+                    <input type="password" id="senha" placeholder="Senha" required>
                     <!--Ícone de senha-->
                     <i id="barraIcone" class='bx bxs-lock-alt'></i>
                     <!--Chamada da função mostrar/esconder senha-->
@@ -70,7 +70,7 @@
 
                 <!--Box de Confirmar Senha-->
                 <div class="boxElementos">
-                    <input type="password" placeholder="Confirmar senha" required id="confSenha">
+                    <input type="password" id="confSenha" placeholder="Confirmar senha" required>
                     <!--Ícone de senha-->
                     <i id="barraIcone" class='bx bxs-lock-alt'></i>
                     <!--Chamada da função mostrar/esconder senha-->
@@ -81,15 +81,14 @@
                         <i id="confOlhoFechado" class='bx bxs-hide'></i>
                     </span>
                 </div>
+                <!--Botão Criar conta-->
+                <button type="submit" class="criarConta" id="criarConta">CRIAR CONTA</button>
             </form>
         </div>
-        <!--Botão Criar conta-->
-        <button type="submit" class="criarConta" id="criarConta">CRIAR CONTA</button>
         <!--Botão/caminho tela de login--> 
         <div class="jaPossuiConta">
             <p><a href="../index.html" target="_self" rel="prev">Já possui conta</a></p>
         </div>
-    </div>
     <!--Javascript-->
     <script src="script.js"></script>
 </body>

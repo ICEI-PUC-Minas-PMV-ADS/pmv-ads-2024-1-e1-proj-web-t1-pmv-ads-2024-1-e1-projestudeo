@@ -20,3 +20,23 @@ function alternarSenha(){
         z.style.display = "block";
     }
 }
+
+document.getElementById('formLogin').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Captura dos valores dos campos de login
+    const email = document.getElementById('loginEmail').value;
+    const senha = document.getElementById('loginSenha').value;
+
+    // Recupera os dados do usuário armazenado no Local Storage
+    const usuario = JSON.parse(localStorage.getItem('usuario'));
+
+    // Verifica se o usuário existe e se as credenciais são válidas
+    if (usuario && usuario.email === email && usuario.senha === senha) {
+        alert('Login bem-sucedido!');
+        // Redireciona para a página de perfil ou dashboard
+        window.location.href = './home/home.html';
+    } else {
+        alert('E-mail ou senha incorretos. Por favor, tente novamente.');
+    }
+});

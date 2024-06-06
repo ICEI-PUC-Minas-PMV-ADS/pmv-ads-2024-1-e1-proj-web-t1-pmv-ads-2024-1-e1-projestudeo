@@ -42,3 +42,37 @@ function alternarConfSenha(){
         z.style.display = "block";
     }
 }
+
+document.getElementById('formCadastro').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Captura dos valores dos campos do formulário
+    const nome = document.getElementById('nome').value;
+    const sobrenome = document.getElementById('sobrenome').value;
+    const dataNascimento = document.getElementById('dataNascimento').value;
+    const email = document.getElementById('email').value;
+    const senha = document.getElementById('senha').value;
+    const confSenha = document.getElementById('confSenha').value;
+
+    // Verifica se a senha e a confirmação de senha são iguais
+    if (senha !== confSenha) {
+        alert('As senhas não coincidem. Por favor, verifique.');
+        return;
+    }
+
+    // Cria o objeto usuário
+    const usuario = {
+        nome,
+        sobrenome,
+        dataNascimento,
+        email,
+        senha
+    };
+
+    // Armazena o usuário no Local Storage
+    localStorage.setItem('usuario', JSON.stringify(usuario));
+
+    // Redireciona para a página de login ou exibe uma mensagem de sucesso
+    alert('Conta criada com sucesso!');
+    window.location.href = '../index.html';
+});

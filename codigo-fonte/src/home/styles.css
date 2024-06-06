@@ -127,7 +127,6 @@ nav {
 
 /* Coluna Esquerda */
 .colunaEsquerda {
-    display: flex;
     flex-direction: column;
     gap: 20px;
     flex: 2;

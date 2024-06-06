@@ -373,10 +373,10 @@ nav {
     flex-grow: 1;
     resize: none; /* Não permite redimensionamento manual */
     overflow: hidden; /* Esconde o scroll */
-    height: 25px;
-    min-height: 25px; /* Altura mínima */
+    height: 25px; /* Altura inicial */
     max-width: 100%; /* Limita a largura máxima */
     width: 100%; /* Largura total */
+    box-sizing: border-box;
 }
 
 /* Estilo do checkbox dos Lembretes */
@@ -419,6 +419,9 @@ footer {
 
 /* Responsividade para calendário e lembretes */
 @media (max-width: 900px) {
+    .usuarioNome {
+        visibility: hidden;
+    }
     .discipline-container {
         grid-template-columns: repeat(1, 1fr); /* Ajusta para duas colunas quando a tela é menor que 900px */
         justify-content: center; /* Centraliza as disciplinas horizontalmente */

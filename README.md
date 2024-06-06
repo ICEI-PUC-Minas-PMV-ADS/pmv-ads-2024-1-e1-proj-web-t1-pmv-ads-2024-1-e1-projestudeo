@@ -17,7 +17,6 @@ Projeto Web desenvolvido para a organização e controle de estudos para estudan
 * Carolina Santos Félix
 * Gilson Rodrigo Rovina Gonçalves
 * Ryan Ramires de Araújo
-* Sabrina Almeida Mendes Prata
 
 ## Orientador
 

@@ -45,11 +45,13 @@
 | RF-02  |  A aplicação deve permitir que o usuário faça login em sua conta. | ALTA |
 | RF-03  |  A aplicação deve permitir que o usuário faça o cadastro de cursos e/ou disciplinas que está cursando em diferentes ‘cadernos’. | ALTA |
 | RF-04  |  A aplicação deve permitir que o usuário tenha controle do progresso de suas disciplinas. | ALTA |
-| RF-05  |  A aplicação deve oferecer ao usuário uma interface com calendário para cadastro de atividades com prazo de entrega. | ALTA |
-| RF-06  |  A aplicação deve oferecer ao usuário a possibilidade de definir horários de estudo com base nos cursos e/ou disciplinas que está cursando e configurar lembretes. | ALTA |
-| RF-07  |  A aplicação deverá gerar ao estudante relatórios semanais de tempo de estudo e prazos próximos.| MÉDIA |
-| RF-08  |  A aplicação deverá possibilitar ao estudante definir metas de estudo. | MÉDIA |
+| RF-05  |  A aplicação deve oferecer ao usuário uma interface com calendário para se atentar aos prazos de entrega. | ALTA |
+| RF-06  |  A aplicação deve oferecer ao usuário controle de tempo de estudo com base nos cursos e/ou disciplinas que está cursando. | ALTA |
+| RF-07  |  A aplicação deverá gerar ao estudante relatórios de tempo de estudo e status de atividades.| MÉDIA |
+| RF-08  |  A aplicação deverá possibilitar ao estudante redefinir sua senha. | MÉDIA |
 | RF-09  |  A aplicação deve permitir que o usuário customize os cadernos, mudando a cor, nome e etapas concluídas. | BAIXA |
+| RF-10  |  A aplicação deve permitir que o usuário crie lembretes. | BAIXA |
+| RF-11  |  A aplicação deve permitir que o tenha acesso ao seu perfil. | BAIXA |
 
 ### Requisitos não Funcionais
 

@@ -53,7 +53,17 @@ main {
   display: inline-block;
   vertical-align: middle;
   margin-top: 8px;
-  margin-right: 40px;
+  margin-right: 10px;
+}
+
+/* Ícone de logout */
+#iconeLogout {
+  font-size: 35px;
+  color: #003399;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 8px;
+  margin-right: 40px; /* Ajuste a margem direita conforme necessário */
 }
 
 /* Estilo da navegação */
@@ -106,7 +116,6 @@ nav {
 /* Título Centralizado */
 .tituloCentralizado {
   text-align: center;
-  margin-bottom: 20px;
 }
 
 /* Remover linha box principal */
@@ -150,7 +159,7 @@ legend {
 /* Posição textos box Alterar Nome da Matéria */
 .boxAltNomeMateria {
   position: relative;
-  width: 100%;
+  width: 340px;
   height: 45px;
 }
 
@@ -192,7 +201,7 @@ legend {
 /* Box principal Alterar Cores */
 .boxCorCaderno {
   flex: 1;
-  width: 100%;
+  width: 340px;
   background: #ffffff;
   border-radius: 5px;
   border: 2px solid #000;
@@ -284,9 +293,9 @@ legend {
 }
 
 /* Box Adicionar Atividades */
-.containerAdicAtividade {
+.boxAdicAtividade {
   flex: 1;
-  width: 100%;
+  width: 340px;
   background: #fff;
   border-radius: 5px;
   border: 2px solid #000;
@@ -376,6 +385,7 @@ legend {
 /* Box Anotações */
 .boxAnotacao {
   flex: 1;
+  width: 680px;
   display: flex;
   flex-direction: column;
   background: #ffffff;
@@ -406,18 +416,17 @@ legend {
 
 .clock {
 position: relative;
-left: 380px;
+left: 390px;
 top: 3%;
 transform: translate(-50%);
 padding-right: 1px;
-font-size: 18px;
 }
 .buttons {
   position: relative;  
-  left: 370px;
+  left: 385px;
   top: 3%;
   transform: translate(-50%);
-  gap: 10px; /*Espaço entre os botões*/
+  gap: 5px; /*Espaço entre os botões*/
 }
 button {
   background: none;
@@ -486,7 +495,7 @@ button:active {
 
 /* Estilos do botão de SALVAR */
 #salvar {
-  width: 32%;
+  width: 340px;
   height: 45px;
   background: #33CC99;
   border: none;
@@ -504,7 +513,7 @@ button:active {
 
 /*Estilos Gerar relatório*/
 .gerarRelatorio {
-  padding: 15px;
+  padding: 20px 0 0;
   font-size: 16px;
   text-align: center;
 }
@@ -536,14 +545,29 @@ footer {
 /* Responsividade */
 @media only screen and (max-width: 1140px) {
   .boxPrincipal {
-    width: 87%;
+    width: 420px;
     flex-direction: column;
   }
+
   .containerFlex {
     flex-direction: column;
     gap: 0;
   }
+
   .colunaDireita {
     margin-top: 20px;
   }
+  .boxAnotacao {
+    width: 340px;
+  }
+
+  .buttons {
+    left: 50px;
+    top: 3px;
+  }
+
+  .clock {
+    left: 55px;
+  }
+  
 }

@@ -18,7 +18,7 @@
     <!-- Link para a biblioteca de ícones Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
-<body>
+<body onload="carregarDadosSalvos()">
     <header>
         <!--Cabeçalho-->
         <div class="containerCabecalho">
@@ -86,7 +86,7 @@
                             </div>
                             <div id="listaAtividade" class="listaAtividade"></div>
                         </div>
-                    </div>
+                    </div>                    
                 </div>
                 <!--Coluna direita-->
                 <div class="colunaDireita">
@@ -117,7 +117,7 @@
                 </div>
             </div>
             <!--Botão criar-->
-            <input type="submit" value="SALVAR" name="salvar" id="salvar">
+            <input type="submit" value="SALVAR" name="salvar" id="salvar" onclick="salvarDados()" >
             <!--Gerar relatório-->
             <div class="gerarRelatorio">
                 <p><a href="../relatorio/relatorio.html">Gerar relatório</a></p>

@@ -6,7 +6,7 @@ Os resultados dos testes funcionais realizados na aplicação são descritos a s
 
 • CT-01 Teste de links da página de login
 
-https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t1-pmv-ads-2024-1-e1-projestudeo/assets/164012068/edc537f5-a47c-4e1e-93bd-d37b9bf5e63d
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t1-pmv-ads-2024-1-e1-projestudeo/assets/164012068/2d28c1bd-e765-4f66-b025-64ee32414fad
 
 • CT-02 Teste do Cadastro de usuário
 

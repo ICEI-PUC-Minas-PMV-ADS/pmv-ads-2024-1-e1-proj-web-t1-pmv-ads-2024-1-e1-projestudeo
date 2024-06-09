@@ -1,7 +1,7 @@
 //Chamada da função mostrar/esconder senha
 function alternarSenha(){
     //Procura um elemento HTML com o ID "senha" e armazena-o na variável x
-    var x = document.getElementById("senha");
+    var x = document.getElementById("loginSenha");
     //Procura elementos HTML com os IDs "olhoAberto" e "olhoFechado" e os armazena nas variáveis y e z
     var y = document.getElementById("olhoAberto");
     var z = document.getElementById("olhoFechado");

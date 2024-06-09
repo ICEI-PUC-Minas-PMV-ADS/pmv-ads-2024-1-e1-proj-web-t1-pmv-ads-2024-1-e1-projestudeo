@@ -1,3 +1,16 @@
+document.getElementById('iconeLogout').addEventListener('click', function() {
+    // Função de logout
+    realizarLogout();
+});
+
+function realizarLogout() {
+    // Limpe os dados de sessão ou local storage
+    localStorage.clear(); // Limpa todos os dados armazenados no localStorage
+
+    // Redirecione para a página de login (index.html)
+    window.location.href = '../index.html';
+}
+
 /*// Simulação de atividades concluídas e total de atividades
 const atividadesConcluidas = 6; // Número de atividades concluídas
 const totalAtividades = 10; // Total de atividades

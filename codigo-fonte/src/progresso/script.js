@@ -1,47 +1,11 @@
 document.getElementById('iconeLogout').addEventListener('click', function() {
-    // Função de logout
     realizarLogout();
 });
 
 function realizarLogout() {
-    // Limpe os dados de sessão ou local storage
-    localStorage.clear(); // Limpa todos os dados armazenados no localStorage
-
-    // Redirecione para a página de login (index.html)
+    localStorage.clear(); // Limpa todos os dados armazenados no Local Storage
     window.location.href = '../index.html';
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    const amostrasCor = document.querySelectorAll('.amostraCor'); // Seleciona todos os elementos de cores predefinidas
-    const entradaCorHexa = document.getElementById('entradaCorHexa'); // Seleciona o input para entrada de cor manual
-    const corSelecionada = document.getElementById('corSelecionada'); // Seleciona o elemento para exibir a cor selecionada
-
-    // Definir a cor padrão
-    const corPadrao = '#0066CC';
-    atualizarCor(corPadrao); // Atualiza a cor padrão ao carregar a página
-
-    // Adiciona um evento de clique para cada amostra de cor
-    amostrasCor.forEach(amostra => {
-        amostra.addEventListener('click', () => {
-            const cor = amostra.getAttribute('data-color'); // Obtém a cor associada a amostra de cor
-            atualizarCor(cor); // Atualiza a cor selecionada
-        });
-    });
-
-    // Adiciona um evento de entrada para o campo de entrada de cor manual
-    entradaCorHexa.addEventListener('input', () => {
-        const cor = entradaCorHexa.value; // Obtém o valor da cor inserida manualmente
-        if (/^#([0-9A-F]{3}){1,2}$/i.test(cor)) { // Verifica se o valor da cor é válido
-            atualizarCor(cor); // Atualiza a cor selecionada
-        }
-    });
-
-    // Função para atualizar a cor selecionada
-    function atualizarCor(cor) {
-        entradaCorHexa.value = cor; // Atualiza o valor do campo de entrada de cor
-        corSelecionada.style.backgroundColor = cor; // Atualiza a exibição da cor selecionada
-    }
-});
 
 // Função para adicionar uma nova atividade
 function adicionarAtividade() {
@@ -58,9 +22,7 @@ function adicionarAtividade() {
     // Cria o container para o ícone de lixeira, para deletar a atividade
     const acaoDeletar = document.createElement('div');
     acaoDeletar.classList.add('acaoDeletar');
-    acaoDeletar.innerHTML = `
-        <i class='bx bx-trash-alt' onclick="deletarAtividade(this)"></i>
-    `;
+    acaoDeletar.innerHTML = `<i class='bx bx-trash-alt' onclick="deletarAtividade(this)"></i>`;
 
     // Adiciona os elementos de texto e container de lixeira ao item de atividade
     itemAtividade.appendChild(textoAtividade);
@@ -70,15 +32,87 @@ function adicionarAtividade() {
 }
 
 // Função para deletar uma atividade
-function deletarAtividade(element) {
-    const itemAtividade = element.closest('.itemAtividade'); // Seleciona o item de atividade mais próximo
+function deletarAtividade(elemento) {
+    const itemAtividade = elemento.closest('.itemAtividade'); // Seleciona o item de atividade mais próximo
     itemAtividade.remove(); // Remove o item de atividade da lista
+}
+
+// Função para carregar os dados da disciplina específica
+function carregarDadosDisciplina(id) {
+    const disciplinas = JSON.parse(localStorage.getItem('disciplinas')) || [];
+    const disciplina = disciplinas.find(disc => disc.id === parseInt(id));
+
+    if (disciplina) {
+        document.querySelector('.tituloCentralizado fieldset legend').textContent = disciplina.nome;
+        document.getElementById('altNomeMateria').value = disciplina.nome;
+        atualizarCor(disciplina.cor);
+
+        // Carregar outras informações específicas da disciplina (anotações, atividades, etc.)
+        carregarAtividades(disciplina);
+        carregarAnotacoes(disciplina);
+        carregarTempo(disciplina.tempo || 0); // Carregar o tempo salvo
+    } else {
+        alert('Disciplina não encontrada!');
+    }
+}
+
+// Função para obter o ID da URL
+function obterIdDaUrl() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('id');
+}
+
+// Função para atualizar a cor selecionada
+function atualizarCor(cor) {
+    document.getElementById('entradaCorHexa').value = cor;
+    document.getElementById('corSelecionada').style.backgroundColor = cor;
+}
+
+// Função para carregar atividades salvas
+function carregarAtividades(disciplina) {
+    const listaAtividade = document.getElementById('listaAtividade');
+    listaAtividade.innerHTML = '';
+
+    if (disciplina.atividades) {
+        disciplina.atividades.forEach(atividade => {
+            const itemAtividade = document.createElement('div');
+            itemAtividade.classList.add('itemAtividade');
+
+            const textoAtividade = document.createElement('div');
+            textoAtividade.classList.add('texto');
+            textoAtividade.innerHTML = `<input type="checkbox" ${atividade.marcado ? 'checked' : ''}><input type="text" value="${atividade.texto}">`;
+
+            const acaoDeletar = document.createElement('div');
+            acaoDeletar.classList.add('acaoDeletar');
+            acaoDeletar.innerHTML = `<i class='bx bx-trash-alt' onclick="deletarAtividade(this)"></i>`;
+
+            itemAtividade.appendChild(textoAtividade);
+            itemAtividade.appendChild(acaoDeletar);
+            listaAtividade.appendChild(itemAtividade);
+        });
+    }
+}
+
+// Função para carregar anotações salvas
+function carregarAnotacoes(disciplina) {
+    const campoAnotacao = document.querySelector('.campoAnotacao');
+    if (disciplina.anotacoes) {
+        campoAnotacao.value = disciplina.anotacoes;
+    } else {
+        campoAnotacao.value = '';
+    }
+}
+
+// Função para carregar o tempo salvo
+function carregarTempo(tempoSalvo) {
+    seconds = tempoSalvo;
+    updateClock();
 }
 
 // Funções do cronômetro
 let timer;
 let isRunning = false;
-let seconds = localStorage.getItem('seconds') ? parseInt(localStorage.getItem('seconds')) : 0;
+let seconds = 0;
 
 const clockElement = document.getElementById('clock');
 const playButton = document.getElementById('playButton');
@@ -95,7 +129,6 @@ function updateClock() {
 function startTimer() {
     timer = setInterval(() => {
         seconds++;
-        localStorage.setItem('seconds', seconds); // Salva o valor atual dos segundos no localStorage
         updateClock();
     }, 1000);
     isRunning = true;
@@ -109,7 +142,6 @@ function stopTimer() {
 function resetTimer() {
     stopTimer();
     seconds = 0;
-    localStorage.setItem('seconds', seconds); // Reseta o valor dos segundos no localStorage
     updateClock();
 }
 
@@ -129,98 +161,76 @@ resetButton.addEventListener('click', () => {
     resetTimer();
 });
 
+// Função para salvar dados
 function salvarDados() {
-    // Obtendo dados relevantes 
-    const tempo = document.getElementById('clock').textContent;
-    const anotacao = document.querySelector('.campoAnotacao').value;
-    const nomeMateria = document.getElementById('altNomeMateria').value;
+    const id = obterIdDaUrl();
+    const disciplinas = JSON.parse(localStorage.getItem('disciplinas')) || [];
+    const disciplinaIndex = disciplinas.findIndex(disc => disc.id === parseInt(id));
 
-    // Obtendo as atividades 
-    const atividades = [];
-    const listaAtividade = document.querySelectorAll('.itemAtividade');
-    listaAtividade.forEach(item => {
-        const textoAtividade = item.querySelector('.texto input[type="text"]').value;
-        const marcado = item.querySelector('.texto input[type="checkbox"]').checked; // Verifica se está marcado
-        atividades.push({ texto: textoAtividade, marcado: marcado });
+    if (disciplinaIndex !== -1) {
+        const tempo = seconds;
+        const anotacao = document.querySelector('.campoAnotacao').value;
+        const nomeMateria = document.getElementById('altNomeMateria').value;
+
+        const atividades = [];
+        const listaAtividade = document.querySelectorAll('.itemAtividade');
+        listaAtividade.forEach(item => {
+            const textoAtividade = item.querySelector('.texto input[type="text"]').value;
+            const marcado = item.querySelector('.texto input[type="checkbox"]').checked; // Verifica se está marcado
+            atividades.push({ texto: textoAtividade, marcado: marcado });
+        });
+
+        disciplinas[disciplinaIndex] = {
+            ...disciplinas[disciplinaIndex],
+            nome: nomeMateria,
+            cor: document.getElementById('entradaCorHexa').value,
+            atividades: atividades,
+            anotacoes: anotacao,
+            tempo: tempo
+        };
+
+        localStorage.setItem('disciplinas', JSON.stringify(disciplinas));
+        alert('Dados salvos com sucesso!');
+        document.title = `${nomeMateria} - eStudeo`;
+        document.querySelector('.tituloCentralizado fieldset legend').textContent = nomeMateria;
+    } else {
+        alert('Disciplina não encontrada!');
+    }
+}
+
+// Evento DOMContentLoaded para carregar os dados da disciplina
+document.addEventListener('DOMContentLoaded', () => {
+    const id = obterIdDaUrl();
+    if (id) {
+        carregarDadosDisciplina(id);
+    }
+
+    // Configurar a seleção de cor
+    const amostrasCor = document.querySelectorAll('.amostraCor');
+    const entradaCorHexa = document.getElementById('entradaCorHexa');
+    const corSelecionada = document.getElementById('corSelecionada');
+
+    // Evento de clique para cada amostra de cor
+    amostrasCor.forEach(amostra => {
+        amostra.addEventListener('click', () => {
+            const cor = amostra.getAttribute('data-color');
+            atualizarCor(cor);
+        });
     });
 
-    // Criando um objeto com os dados obtidos
-    const dados = {
-        tempo: tempo,
-        anotacao: anotacao,
-        atividades: atividades
-    };
+    // Evento de entrada para o campo de entrada de cor manual
+    entradaCorHexa.addEventListener('input', () => {
+        const cor = entradaCorHexa.value;
+        if (/^#([0-9A-F]{3}){1,2}$/i.test(cor)) {
+            atualizarCor(cor);
+        }
+    });
+});
 
-    // Verificando se já existem arrays no localStorage 
-    let dadosArray = JSON.parse(localStorage.getItem('dadosArray')) || [];
-    let nomeMateriaArray = JSON.parse(localStorage.getItem('nomeMateriaArray')) || [];
-
-    // Adicionando os dados aos arrays correspondentes
-    dadosArray.push(dados);
-    nomeMateriaArray = [nomeMateria];
-
-    // Salvando os arrays atualizados de volta no localStorage
-    localStorage.setItem('dadosArray', JSON.stringify(dadosArray));
-    localStorage.setItem('nomeMateriaArray', JSON.stringify(nomeMateriaArray));
-
-    // Atualizando o título da página e o campo específico no HTML
-    document.title = `${nomeMateria} - eStudeo`;
-    document.querySelector('.tituloCentralizado fieldset legend').textContent = nomeMateria;
-
-    // Exibindo mensagem de confirmação
-    window.alert('Dados salvos com sucesso!');
-}
-
-function carregarDadosSalvos() {
-    // Verificando se já existem arrays no localStorage 
-    const dadosArray = JSON.parse(localStorage.getItem('dadosArray'));
-    const nomeMateriaArray = JSON.parse(localStorage.getItem('nomeMateriaArray'));
-
-    // Verificando se existem dados salvos
-    if (dadosArray && dadosArray.length > 0) {
-        const ultimoDados = dadosArray[dadosArray.length - 1];
-        document.getElementById('clock').textContent = ultimoDados.tempo;
-        document.querySelector('.campoAnotacao').value = ultimoDados.anotacao;
-
-        // Exibindo as atividades salvas
-        const listaAtividade = document.getElementById('listaAtividade');
-        listaAtividade.innerHTML = '';
-        ultimoDados.atividades.forEach(function(atividade) {
-            const itemAtividade = document.createElement('div');
-            itemAtividade.classList.add('itemAtividade');
-
-            const textoAtividade = document.createElement('div');
-            textoAtividade.classList.add('texto');
-            textoAtividade.innerHTML = `
-                <input type="checkbox" ${atividade.marcado ? 'checked' : ''}> <!-- Marca o checkbox se estiver marcado -->
-                <input type="text" value="${atividade.texto}">
-            `;
-
-            const acaoDeletar = document.createElement('div');
-            acaoDeletar.classList.add('acaoDeletar');
-            acaoDeletar.innerHTML = `
-                <i class='bx bx-trash-alt' onclick="deletarAtividade(this)"></i>
-            `;
-
-            itemAtividade.appendChild(textoAtividade);
-            itemAtividade.appendChild(acaoDeletar);
-            listaAtividade.appendChild(itemAtividade);
-        });
+// Carregar dados da disciplina ao carregar a página
+window.addEventListener('load', () => {
+    const id = obterIdDaUrl();
+    if (id) {
+        carregarDadosDisciplina(id);
     }
-
-    // Verificando se existe um nome de matéria salvo, caso contrário, definir como "Disciplina - 1"
-    let nomeMateria = '';
-    if (!nomeMateriaArray || nomeMateriaArray.length === 0) {
-        nomeMateria = 'Disciplina - 1';
-        localStorage.setItem('nomeMateriaArray', JSON.stringify([nomeMateria]));
-    } else {
-        nomeMateria = nomeMateriaArray[nomeMateriaArray.length - 1];
-    }
-
-    document.getElementById('altNomeMateria').value = nomeMateria;
-    document.title = `${nomeMateria} - eStudeo`;
-    document.querySelector('.tituloCentralizado fieldset legend').textContent = nomeMateria;
-}
-
-// Chamar a função para carregar os dados salvos quando a página for carregada
-window.addEventListener('load', carregarDadosSalvos);
+});

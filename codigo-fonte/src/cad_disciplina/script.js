@@ -10,6 +10,7 @@ function realizarLogout() {
     // Redirecione para a página de login (index.html)
     window.location.href = '../index.html';
 }
+
 document.addEventListener('DOMContentLoaded', () => {
     const amostrasCor = document.querySelectorAll('.amostraCor'); // Seleciona todos os elementos de cores predefinidas
     const entradaCorHexa = document.getElementById('entradaCorHexa'); // Seleciona o input para entrada de cor manual

@@ -68,7 +68,7 @@ body {
 
 /*Definições das boxes*/
 .boxElementos input {
-    width: 100%;
+    width: 340px;
     height: 100%;
     background: #fff;
     border: none;
@@ -81,7 +81,7 @@ body {
 }
 
 /* Limite do box de texto da senha*/
-#senha {
+#loginSenha {
     padding-right: 35px;
 }
 
@@ -141,7 +141,7 @@ body {
 
 /*Estilos botão ENTRAR*/
 .boxPrincipal .Entrar {
-    width: 100%;
+    width: 340px;
     height: 45px;
     background: #33CC99;
     border: none;
@@ -174,8 +174,17 @@ body {
 }
 
 /*Responsividade*/
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 420px) {
     .boxPrincipal {
-        width: 85%;
+      width: 375px;
     }
-}
+
+    .boxElementos input {
+        width: 295px;
+      }
+
+    #entrar {
+        width: 295px;
+    }
+
+  }

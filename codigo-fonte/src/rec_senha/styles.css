@@ -61,7 +61,7 @@ body {
 /*Tamanho das boxes e posição dos ícones*/
 .boxPrincipal .boxElementos {
     position: relative;
-    width: 100%;
+    width: 340px;
     height: 45px;
     margin: 20px 0;
 }
@@ -115,7 +115,7 @@ body {
 
 /*Estilos botão CONFIRMAR*/
 .boxPrincipal .confirmar {
-    width: 100%;
+    width: 340px;
     height: 45px;
     background: #33CC99;
     border: none;
@@ -148,8 +148,20 @@ body {
 }
 
 /*Responsividade*/
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 420px) {
     .boxPrincipal {
-        width: 85%;
+      width: 375px;
     }
-}
+
+    .boxElementos input {
+        width: 295px;
+      }
+
+    .iconeOlho {
+        right: 85px;
+    }
+
+    #confirmar {
+        width: 295px;
+    }
+  }

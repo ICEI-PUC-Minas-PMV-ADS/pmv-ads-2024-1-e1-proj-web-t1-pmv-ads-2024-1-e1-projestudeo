@@ -55,7 +55,7 @@ body{
 /*Tamanho box e posição dos icones*/
 .boxPrincipal .boxElementos{
     position: relative;
-    width: 100%;
+    width: 340px;
     height: 45px;
     margin: 20px 0;
 }
@@ -101,7 +101,7 @@ body{
 }
 /*Estilos botão CRIAR CONTA*/
 .boxPrincipal .criarConta{
-    width: 100%;
+    width: 340px;
     height: 45px;
     background: #33CC99;
     border: none;
@@ -129,13 +129,23 @@ body{
 .jaPossuiConta p a:hover{
     text-decoration: underline;
 }
-/* Reponsividade do site */
-@media only screen and (max-width: 950px){
-    .boxPrincipal{
-        width: 85%;
+
+/*Responsividade*/
+@media only screen and (max-width: 420px) {
+    .boxPrincipal {
+      width: 375px;
     }
-}
-/*distanciamento do topo da pagina*/
-.boxPrincipal {
-    margin-top: 2rem;
-}
+
+    .boxElementos input {
+        width: 295px;
+      }
+
+    .iconeOlho {
+        right: 85px;
+    }
+
+    #criarConta {
+        width: 295px;
+    }
+
+  }

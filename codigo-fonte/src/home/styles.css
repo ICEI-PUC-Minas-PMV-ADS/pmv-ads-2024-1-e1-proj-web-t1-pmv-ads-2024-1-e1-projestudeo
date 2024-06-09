@@ -45,6 +45,7 @@ main {
     margin-right: 8px;
     margin-left: auto;
     text-decoration: none;
+    visibility: hidden;
 }
 
 /* Ícone do usuário */
@@ -65,6 +66,7 @@ main {
     vertical-align: middle;
     margin-top: 8px;
     margin-right: 40px; /* Ajuste a margem direita conforme necessário */
+    cursor: pointer;
 }
 
 /* Navegação */
@@ -433,10 +435,6 @@ footer {
 
 /* Responsividade para calendário e lembretes */
 @media (max-width: 900px) {
-    .usuarioNome {
-        visibility: hidden;
-    }
-
     .boxPrincipal {
         width: 660px;
     }

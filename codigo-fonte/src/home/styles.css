@@ -45,6 +45,7 @@ main {
     margin-right: 8px;
     margin-left: auto;
     text-decoration: none;
+    visibility: hidden;
 }
 
 /* Ícone do usuário */
@@ -434,10 +435,6 @@ footer {
 
 /* Responsividade para calendário e lembretes */
 @media (max-width: 900px) {
-    .usuarioNome {
-        visibility: hidden;
-    }
-
     .boxPrincipal {
         width: 660px;
     }

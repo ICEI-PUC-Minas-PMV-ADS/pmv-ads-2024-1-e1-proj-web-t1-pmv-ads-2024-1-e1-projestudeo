@@ -14,6 +14,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  min-width: 375px;
 }
 
 main {
@@ -354,6 +355,7 @@ legend {
 .itemAtividade .texto {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 /* Estilo do campo de texto das atividades */
@@ -363,6 +365,7 @@ legend {
   font-size: 16px;
   margin-right: 10px;
   flex-grow: 1;
+
 }
 
 /* Estilo do checkbox das atividades */
@@ -518,6 +521,7 @@ button:active {
   padding: 20px 0 0;
   font-size: 16px;
   text-align: center;
+  display: none;
 }
 
 /*Estilos e formatação Gerar relatório*/
@@ -571,5 +575,47 @@ footer {
   .clock {
     left: 55px;
   }
+}
+
+@media (max-width: 420px) {
+  .boxPrincipal {
+    width: 375px;
+  }
+
+  .boxAltNomeMateria {
+    width: 295px;
+  }
+
+  .boxCorCaderno {
+    width: 295px;
+  }
+
+   /* Adicionando o estilo para reorganizar as cores */
+   .wrapperCores {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .boxAdicAtividade {
+    width: 295px;
+  }
+
+  .boxAnotacao {
+    width: 295px;
+}
+
+  .buttons {
+    left: 33px;
+    top: 3px;
+    font-size: 1px;
+  }
   
+  .clock {
+    left: 33px;
+    font-size: 13px;
+  }
+  
+  #salvar {
+    width: 295px;
+  }  
 }

@@ -1,4 +1,4 @@
-/*Estilos universais*/
+/* Estilos universais */
 * {
   margin: 0;
   padding: 0;
@@ -15,20 +15,21 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  min-width: 375px;
 }
 
 main {
   flex: 1;
 }
 
-/*Alinhamento dos objetos da cabeçalho*/
+/* Alinhamento dos objetos do cabeçalho */
 .containerCabecalho {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/*Estilo do logo*/
+/* Estilo do logo */
 .logo {
   height: 50px;
   display: flex;
@@ -37,7 +38,7 @@ main {
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
 }
 
-/*Nome do usuário*/
+/* Nome do usuário */
 .usuarioNome {
   color: #003399;
   margin-top: 8px;
@@ -47,7 +48,7 @@ main {
   visibility: hidden;
 }
 
-/*Estilo do ícone do usuário*/
+/* Estilo do ícone do usuário */
 #usuarioIcone {
   font-size: 35px;
   color: #003399;
@@ -64,11 +65,11 @@ main {
   display: inline-block;
   vertical-align: middle;
   margin-top: 8px;
-  margin-right: 40px; /* Ajuste a margem direita conforme necessário */
+  margin-right: 40px;
   cursor: pointer;
 }
 
-/*Estilo da navegação*/
+/* Estilo da navegação */
 nav {
   display: flex;
   justify-content: space-between;
@@ -79,14 +80,14 @@ nav {
   padding: 20px;
 }
 
-/*Orientação dos itens da navegação*/
+/* Orientação dos itens da navegação */
 .itensNavegacao {
   list-style: none;
   display: flex;
 }
 
-/*Estilo da fonte da navegação*/
-.itensNavegacao>li>a {
+/* Estilo da fonte da navegação */
+.itensNavegacao > li > a {
   padding-left: 20px;
   color: #fff;
   text-decoration: none;
@@ -95,8 +96,8 @@ nav {
   transition: 1s text;
 }
 
-/*Navegação > mudar cor quando passar o mouse*/
-.itensNavegacao>li>a:hover {
+/* Navegação - mudar cor quando passar o mouse */
+.itensNavegacao > li > a:hover {
   color: #33CC99;
 }
 
@@ -105,7 +106,7 @@ nav {
   margin-bottom: 20px;
 }
 
-/*Box principal*/
+/* Box principal */
 .boxPrincipal {
   margin-left: auto;
   margin-right: auto;
@@ -117,12 +118,12 @@ nav {
   box-shadow: 0 0 10px rgba(0, 0, 0, .1); 
 }
 
-/*Remover linha do box principal*/
+/* Remover linha do box principal */
 fieldset {
   border: 0;
 }
 
-/*Estilo do título Cadastro de disciplinas*/
+/* Estilo do título Cadastro de disciplinas */
 legend {
   border: 0; 
   padding: 2.2px;
@@ -130,15 +131,15 @@ legend {
   font-size: 23px;
 }
 
-/*Posição textos box Nome da Matéria*/
+/* Posição textos box Nome da Matéria */
 .boxNomeMateria {
   position: relative;
-  width: 100%;
+  width: 340px;
   height: 45px;
   margin-top: 40px;
 }
 
-/*Definições box Nome da Matéria*/
+/* Definições box Nome da Matéria */
 .boxNomeMateria input {
   width: 100%;
   height: 100%;
@@ -152,12 +153,12 @@ legend {
   padding: 0px 10px 0px 45px;
 }
 
-/*Cor texto exemplo Nome da Matéria*/
+/* Cor texto exemplo Nome da Matéria */
 .boxNomeMateria input::placeholder {
   color: #7F7F7F;
 }
 
-/*Posição ícone Nome da Matéria*/
+/* Posição ícone Nome da Matéria */
 .boxNomeMateria i {
   position: absolute;
   left: 25px;
@@ -167,14 +168,14 @@ legend {
   padding-right: 8px;
 }
 
-/*Barra de separação dos ícones para textos*/
+/* Barra de separação dos ícones para textos */
 #barraIcone {
   border-right: 1px solid #000;
 }
 
-/*Box principal Cores*/
+/* Box principal Cores */
 .boxCorCaderno {
-  width: 100%;
+  width: 340px;
   height: 175px;
   background: #ffffff;
   border-radius: 5px;
@@ -182,7 +183,7 @@ legend {
   margin-top: 20px;
 }
 
-/*Area do título de Cores*/
+/* Área do título de Cores */
 .boxCorCaderno .titulo {
   color: #000;
   line-height: 40px;
@@ -191,7 +192,7 @@ legend {
   padding: 0px 10px 0px 17px;
 }
 
-/*Posição e definição do ícone de Cores*/
+/* Posição e definição do ícone de Cores */
 .boxCorCaderno .iconeTitulo i {
   position: relative;
   left: 23px;
@@ -201,13 +202,13 @@ legend {
   padding-right: 8px;
 }
 
-/*Posição box cores e título Definir cor do caderno*/
+/* Posição box cores e título Definir cor do caderno */
 .boxCorCaderno .iconeTitulo {
   display: flex;
   align-items: center;
 }
 
-/*Barra de separação título e cores*/
+/* Barra de separação título e cores */
 .boxCorCaderno .containerCores {
   padding: 10px 1px;
   border-top: 1px solid #000;
@@ -216,14 +217,14 @@ legend {
   margin-right: auto;
 }
 
-/*Estilo e posição cores*/
+/* Estilo e posição cores */
 .wrapperCores {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
 }
 
-/*Amostra de cores*/
+/* Amostra de cores */
 .amostraCor {
   width: 45px;
   height: 45px;
@@ -234,13 +235,13 @@ legend {
   margin-right: auto;
 }
 
-/*Especificações do box cor hexadecimal*/
+/* Especificações do box cor hexadecimal */
 .containerCorHexa {
   display: flex;
   justify-content: center;
 }
 
-/*Estilo do box cor hexadecial*/
+/* Estilo do box cor hexadecimal */
 .wrapperCorHexa {
   display: flex;
   align-items: center;
@@ -249,7 +250,7 @@ legend {
   padding: 5px;
 }
 
-/*Exibição da cor hexadecial selecionada*/
+/* Exibição da cor hexadecimal selecionada */
 .corSelecionada {
   width: 40px;
   height: 40px;
@@ -258,7 +259,7 @@ legend {
   border: 2px solid #000;
 }
 
-/*Definições texto cor hexadecimal*/
+/* Definições texto cor hexadecimal */
 #entradaCorHexa {
   width: 100px;
   border: none;
@@ -267,9 +268,9 @@ legend {
   color: #000;
 }
 
-/*Box Adicionar Atividades*/
+/* Box Adicionar Atividades */
 .boxAdicAtividade {
-  width: 100%;
+  width: 340px;
   height: 100%;
   background: #fff;
   border-radius: 5px;
@@ -277,7 +278,7 @@ legend {
   margin-top: 20px;
 }
 
-/*Area do título adicionar atividades*/
+/* Área do título adicionar atividades */
 .containerAdicAtividade .titulo {
   color: #000;
   line-height: 40px;
@@ -286,7 +287,7 @@ legend {
   padding: 0px 10px 0px 17px;
 }
 
-/*Posição dos ícones adicionar atividades*/
+/* Posição dos ícones adicionar atividades */
 .containerAdicAtividade .iconeTitulo i {
   position: relative;
   left: 23px;
@@ -296,13 +297,13 @@ legend {
   padding-right: 8px;
 }
 
-/*Mantém o ícone de adicionar na mesma linha do texto*/
+/* Mantém o ícone de adicionar na mesma linha do texto */
 .containerAdicAtividade .iconeTitulo {
   display: flex;
   align-items: center;
 }
 
-/*Estilo do ícone + de adicionar atividade*/
+/* Estilo do ícone + de adicionar atividade */
 #iconeMais {
   border-right: 5px;
   cursor: pointer;
@@ -310,7 +311,7 @@ legend {
   margin-right: 10px;
 }
 
-/*Estilo dos itens nome da atividade*/
+/* Estilo dos itens nome da atividade */
 .itemAtividade {
   display: flex;
   justify-content: space-between;
@@ -324,13 +325,14 @@ legend {
   margin-right: auto;
 }
 
-/*Estilo do texto nome da atividade*/
+/* Estilo do texto nome da atividade */
 .itemAtividade .texto {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
-/*Estilo do campo de texto das atividades*/
+/* Estilo do campo de texto das atividades */
 .itemAtividade .texto input[type="text"] {
   border: none;
   outline: none;
@@ -339,7 +341,7 @@ legend {
   flex-grow: 1;
 }
 
-/*Estilo do checkbox das atividades*/
+/* Estilo do checkbox das atividades */
 .itemAtividade .texto input[type="checkbox"] {
   accent-color: #000;
   margin-right: 10px;
@@ -348,7 +350,7 @@ legend {
   height: 13px;
 }
 
-/*Estilo da ação deletar*/
+/* Estilo da ação deletar */
 .itemAtividade .acaoDeletar i {
   cursor: pointer;
   font-size: 17px;
@@ -358,9 +360,9 @@ legend {
   height: 100%;
 }
 
-/*Estilos do botão de CRIAR*/
+/* Estilos do botão de CRIAR */
 #criar {
-  width: 100%;
+  width: 340px;
   height: 45px;
   background: #33CC99;
   border: none;
@@ -374,7 +376,7 @@ legend {
   margin-top: 20px;
 }
 
-/*Posicionamento do rodapé*/
+/* Posicionamento do rodapé */
 footer {
   background-color: #003399;
   color: #fff;
@@ -386,9 +388,25 @@ footer {
   margin-top: 40px;
 }
 
-/*Responsividade*/
-@media only screen and (max-width: 950px) {
+/* Responsividade */
+@media only screen and (max-width: 420px) {
   .boxPrincipal {
-    width: 85%;
+    width: 375px;
+  }
+
+  .boxNomeMateria {
+    width: 295px;
+  }
+
+  .boxCorCaderno {
+    width: 295px;
+  }
+
+  .boxAdicAtividade {
+    width: 295px;
+  }
+
+  #criar {
+    width: 295px;
   }
 }

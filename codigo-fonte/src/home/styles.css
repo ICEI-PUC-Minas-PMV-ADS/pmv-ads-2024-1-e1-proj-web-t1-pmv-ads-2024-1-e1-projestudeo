@@ -65,6 +65,7 @@ main {
     vertical-align: middle;
     margin-top: 8px;
     margin-right: 40px; /* Ajuste a margem direita conforme necessário */
+    cursor: pointer;
 }
 
 /* Navegação */

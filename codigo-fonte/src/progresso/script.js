@@ -1,3 +1,16 @@
+document.getElementById('iconeLogout').addEventListener('click', function() {
+    // Função de logout
+    realizarLogout();
+});
+
+function realizarLogout() {
+    // Limpe os dados de sessão ou local storage
+    localStorage.clear(); // Limpa todos os dados armazenados no localStorage
+
+    // Redirecione para a página de login (index.html)
+    window.location.href = '../index.html';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const amostrasCor = document.querySelectorAll('.amostraCor'); // Seleciona todos os elementos de cores predefinidas
     const entradaCorHexa = document.getElementById('entradaCorHexa'); // Seleciona o input para entrada de cor manual

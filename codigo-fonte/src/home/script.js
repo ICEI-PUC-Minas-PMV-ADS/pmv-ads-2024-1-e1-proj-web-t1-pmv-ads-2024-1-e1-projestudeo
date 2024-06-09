@@ -22,12 +22,14 @@ function carregarDisciplinas() {
         // Adiciona a classe 'discipline-color' ao elemento
         disciplinaCorDiv.classList.add('discipline-color');
 
-        // Cria um elemento div para representar o nome da disciplina
-        const disciplinaNomeDiv = document.createElement('div');
-        // Adiciona a classe 'discipline-name' ao elemento
-        disciplinaNomeDiv.classList.add('discipline-name');
-        // Define o texto do elemento com o nome da disciplina armazenado
-        disciplinaNomeDiv.textContent = disciplina.nome;
+        // Cria um link para a página de progresso e envolve o nome da disciplina
+        const disciplinaNomeLink = document.createElement('a');
+        // Adiciona a classe 'discipline-name' ao link
+        disciplinaNomeLink.classList.add('discipline-name');
+        // Define o href do link
+        disciplinaNomeLink.href = '../progresso/progresso.html';
+        // Define o texto do link como o nome da disciplina
+        disciplinaNomeLink.textContent = disciplina.nome;
 
         // Cria o ícone de três pontinhos para abrir o menu de opções
         const optionsIcon = document.createElement('i');
@@ -48,8 +50,8 @@ function carregarDisciplinas() {
         disciplinaDiv.appendChild(dropdownMenu);
         // Adiciona o elemento 'disciplinaCorDiv' como filho de 'disciplinaDiv'
         disciplinaDiv.appendChild(disciplinaCorDiv);
-        // Adiciona o elemento 'disciplinaNomeDiv' como filho de 'disciplinaDiv'
-        disciplinaDiv.appendChild(disciplinaNomeDiv);
+        // Adiciona o link 'disciplinaNomeLink' como filho de 'disciplinaDiv'
+        disciplinaDiv.appendChild(disciplinaNomeLink);
         // Adiciona o elemento 'disciplinaDiv' ao container de disciplinas
         disciplineContainer.appendChild(disciplinaDiv);
 

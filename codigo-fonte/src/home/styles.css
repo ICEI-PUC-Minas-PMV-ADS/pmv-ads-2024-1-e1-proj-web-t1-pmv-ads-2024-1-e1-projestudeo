@@ -219,6 +219,7 @@ nav {
     text-align: center;
     padding: 10px 0;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .discipline-name:hover {

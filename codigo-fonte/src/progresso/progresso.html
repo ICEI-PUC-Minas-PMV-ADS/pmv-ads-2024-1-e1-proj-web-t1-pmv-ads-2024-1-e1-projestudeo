@@ -3,24 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Título da página-->
-    <title>Disciplina 1 - eStudeo</title>
-    <!--CSS-->
+    <title>Disciplina - eStudeo</title>
     <link rel="stylesheet" href="styles.css">
-    <!--Icones-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!--Fontes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <!--Favicon-->
     <link rel="shortcut icon" href="../images/favicon.svg">
-    <!-- Link para a biblioteca de ícones Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
-<body onload="carregarDadosSalvos()">
+<body>
     <header>
-        <!--Cabeçalho-->
         <div class="containerCabecalho">
             <div class="logo"><img src="../images/estudeo_logo.svg" alt="Logo"></div>
             <span class="usuarioNome">Aqui aparecerá nome do usuário</span>
@@ -29,7 +21,6 @@
         </div> 
     </header>
     <nav>
-        <!--Navegação-->
         <div class="links">
             <ul class="itensNavegacao">
                 <li><a href="../home/home.html">Home</a></li>
@@ -38,22 +29,18 @@
         </div>
     </nav>
     <main>
-        <!--Box Principal-->
         <div class="boxPrincipal">
             <div class="tituloCentralizado">
                 <fieldset>
-                    <legend><b>Disciplina 1</b></legend>
+                    <legend><b>Disciplina</b></legend>
                 </fieldset>
             </div>
             <div class="containerFlex">
-                <!--Coluna esquerda-->
                 <div class="colunaEsquerda">
-                    <!--Box para Alterar Nome da Matéria-->
                     <div class="boxAltNomeMateria">
                         <input type="text" placeholder="Alterar nome da matéria" id="altNomeMateria" class="campoAltNomeMateria" required>
                         <i id="barraIcone" class='bx bxs-book'></i>
                     </div>
-                    <!--Box para Alterar Cor do Caderno-->              
                     <div class="boxCorCaderno">
                         <div class="iconeTitulo">
                             <i id="barraIcone" class='bx bxs-palette'></i>
@@ -76,7 +63,6 @@
                             </div>    
                         </div>                
                     </div>
-                    <!--Box para Adicionar Atividades-->
                     <div class="boxAdicAtividade">
                         <div class="containerAdicAtividade">
                             <div class="iconeTitulo">
@@ -88,14 +74,11 @@
                         </div>
                     </div>                    
                 </div>
-                <!--Coluna direita-->
                 <div class="colunaDireita">
-                    <!--Box anotação-->
                     <div class="boxAnotacao">
                         <div class="iconeTitulo">
                             <i id="barraIcone" class='bx bxs-pencil'></i>
                             <div class="titulo">Anotações</div>
-                            <!--Cronômetro-->
                             <div class="buttons">
                                 <button id="playButton" style="color:#00A859;">
                                     <i class="bx bx-play-circle"></i>
@@ -107,7 +90,6 @@
                                     <i id="barraIcone" class="bx bx-stop-circle"></i>
                                 </button>
                             </div>
-
                             <div class="clock" id="clock">00:00:00</div>
                         </div>
                         <div class="containerAnotacao">
@@ -116,9 +98,7 @@
                     </div>
                 </div>
             </div>
-            <!--Botão criar-->
-            <input type="submit" value="SALVAR" name="salvar" id="salvar" onclick="salvarDados()" >
-            <!--Gerar relatório-->
+            <input type="submit" value="SALVAR" name="salvar" id="salvar" onclick="salvarDados()">
             <div class="gerarRelatorio">
                 <p><a href="../relatorio/relatorio.html">Gerar relatório</a></p>
             </div>
@@ -129,7 +109,6 @@
             <p>© Copyright 2024 eStudeo - All Rights Reserved</p>
         </section>
     </footer>
-    <!--Javascript-->
     <script src="script.js"></script>
 </body>
 </html>

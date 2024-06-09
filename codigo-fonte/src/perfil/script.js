@@ -1,3 +1,16 @@
+document.getElementById('iconeLogout').addEventListener('click', function() {
+    // Função de logout
+    realizarLogout();
+});
+
+function realizarLogout() {
+    // Limpe os dados de sessão ou local storage
+    localStorage.clear(); // Limpa todos os dados armazenados no localStorage
+
+    // Redirecione para a página de login (index.html)
+    window.location.href = '../index.html';
+}
+
 //Chamada da função mostrar/esconder alterar senha
 function alternarSenha(){
     //Procura um elemento HTML com o ID "alterarSenha" e armazena-o na variável x

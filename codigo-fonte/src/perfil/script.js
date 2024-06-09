@@ -14,7 +14,7 @@ function realizarLogout() {
 //Chamada da função mostrar/esconder alterar senha
 function alternarSenha(){
     //Procura um elemento HTML com o ID "alterarSenha" e armazena-o na variável x
-    var x = document.getElementById("alterarSenha");
+    var x = document.getElementById("senha");
     //Procuram elementos HTML com os IDs "olhoAberto" e "olhoFechado" e os armazenam nas variáveis y e z
     var y = document.getElementById("olhoAberto");
     var z = document.getElementById("olhoFechado");
@@ -36,7 +36,7 @@ function alternarSenha(){
 //Chamada da função mostrar/esconder confirmação de senha
 function alternarConfSenha(){
     //Procura um elemento HTML com o ID "confirmarAltSenha" e armazena-o na variável x
-    var x = document.getElementById("confirmarAltSenha");
+    var x = document.getElementById("confSenha");
     //Procuram elementos HTML com os IDs "confOlhoAberto" e "confOlhoFechado" e os armazenam nas variáveis y e z
     var y = document.getElementById("confOlhoAberto");
     var z = document.getElementById("confOlhoFechado");

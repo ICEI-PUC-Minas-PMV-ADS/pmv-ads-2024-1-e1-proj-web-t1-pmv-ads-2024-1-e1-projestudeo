@@ -15,6 +15,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  min-width: 375px;
 }
 
 main {
@@ -134,7 +135,7 @@ legend {
 /*Posição dos textos das caixas*/
 .boxElementos {
   position: relative;
-  width: 100%;
+  width: 340px;
   height: 45px;
   margin: 20px 0;
 }
@@ -155,7 +156,7 @@ legend {
 
 /*Caixa principal do gênero*/
 .boxGenero {
-  width: 100%;
+  width: 340px;
   background: #fff;
   border-radius: 5px;
   border: 2px solid #000;
@@ -322,7 +323,7 @@ legend {
 
 /*Estilos botão SALVAR*/
 #salvar {
-  width: 100%;
+  width: 340px;
   height: 45px;
   background: #33CC99;
   border: none;
@@ -342,4 +343,23 @@ footer {
   font-size: 16px;
   text-align: center;
   padding: 20px 0;
+}
+
+/* Responsividade */
+@media only screen and (max-width: 420px) {
+  .boxPrincipal {
+    width: 375px;
+  }
+
+  .boxElementos {
+    width: 295px;
+  }
+
+  .boxGenero {
+    width: 295px;
+  }
+
+  #salvar {
+    width: 295px;
+  }
 }

@@ -3,8 +3,37 @@ document.getElementById('iconeLogout').addEventListener('click', function() {
 });
 
 function realizarLogout() {
-    localStorage.clear(); // Limpa todos os dados armazenados no Local Storage
+    localStorage.clear();
     window.location.href = '../index.html';
+}
+
+// Função para obter o ID da URL
+function obterIdDaUrl() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('id');
+}
+
+// Função para carregar os dados da disciplina específica
+function carregarDadosDisciplina(id) {
+    const disciplinas = JSON.parse(localStorage.getItem('disciplinas')) || [];
+    const disciplina = disciplinas.find(disc => disc.id === parseInt(id));
+
+    if (disciplina) {
+        document.querySelector('.tituloCentralizado fieldset legend').textContent = disciplina.nome;
+        document.getElementById('altNomeMateria').value = disciplina.nome;
+        atualizarCor(disciplina.cor);
+
+        // Carregar outras informações específicas da disciplina (anotações, atividades, etc.)
+        carregarAtividades(disciplina);
+        carregarAnotacoes(disciplina);
+        carregarTempo(disciplina.tempo || 0); // Carregar o tempo salvo
+
+        // Atualizar o link para o relatório com o ID da disciplina
+        const linkRelatorio = document.getElementById('linkRelatorio');
+        linkRelatorio.href = `../relatorio/relatorio.html?id=${id}`;
+    } else {
+        alert('Disciplina não encontrada!');
+    }
 }
 
 // Função para adicionar uma nova atividade
@@ -35,31 +64,6 @@ function adicionarAtividade() {
 function deletarAtividade(elemento) {
     const itemAtividade = elemento.closest('.itemAtividade'); // Seleciona o item de atividade mais próximo
     itemAtividade.remove(); // Remove o item de atividade da lista
-}
-
-// Função para carregar os dados da disciplina específica
-function carregarDadosDisciplina(id) {
-    const disciplinas = JSON.parse(localStorage.getItem('disciplinas')) || [];
-    const disciplina = disciplinas.find(disc => disc.id === parseInt(id));
-
-    if (disciplina) {
-        document.querySelector('.tituloCentralizado fieldset legend').textContent = disciplina.nome;
-        document.getElementById('altNomeMateria').value = disciplina.nome;
-        atualizarCor(disciplina.cor);
-
-        // Carregar outras informações específicas da disciplina (anotações, atividades, etc.)
-        carregarAtividades(disciplina);
-        carregarAnotacoes(disciplina);
-        carregarTempo(disciplina.tempo || 0); // Carregar o tempo salvo
-    } else {
-        alert('Disciplina não encontrada!');
-    }
-}
-
-// Função para obter o ID da URL
-function obterIdDaUrl() {
-    const params = new URLSearchParams(window.location.search);
-    return params.get('id');
 }
 
 // Função para atualizar a cor selecionada

@@ -132,6 +132,7 @@ legend {
   padding: 2.2px;
   text-align: center;
   font-size: 23px;
+  font-weight: bold;
 }
 
 /* Estilo do container flexível */
@@ -521,7 +522,6 @@ button:active {
   padding: 20px 0 0;
   font-size: 16px;
   text-align: center;
-  display: none;
 }
 
 /*Estilos e formatação Gerar relatório*/

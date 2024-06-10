@@ -18,7 +18,7 @@ https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t1-pmv-ads-
 
 • CT-04: Verificar o funcionamento dos links da página Home
 
-https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t1-pmv-ads-2024-1-e1-projestudeo/assets/165861350/48d36931-0871-4007-a113-b0797e7b3c99
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t1-pmv-ads-2024-1-e1-projestudeo/assets/165861350/5c079be6-3ae6-4c8c-b3a0-3968d9462569
 
 • CT-05: Verificar o funcionamento da página Cadastro de Disciplinas
 

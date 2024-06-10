@@ -238,46 +238,6 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir:
  </tr>
 </table>
 
-<table>
- <tr>
-  <th>Caso de teste</th>
-  <th>Requisitos associados</th>
-  <th>Objetivo do teste</th>
-  <th>Passos</th>
-  <th>Critérios de êxito</th>
-  <th>Responsável</th>
- </tr>
- <tr>
-  <td>CT-08: Verificar funcionalidade da página de Relatórios</td>
-  <td>
-   <ul>
-    <li>RF-07:	A aplicação deverá gerar ao estudante relatórios de tempo de estudo e status de atividades.</li>
-   </ul>
-  </td>
-  <td>Verificar se a página de relatório está integrada a página de progresso.</td>
-  <td>
-   <ol>
-    <li>Acessar o navegador.</li>
-    <li>Informar o endereço do site.</li>
-    <li>Visualizar a página Home.</li>
-    <li>Clicar no cardeno da disciplina</li>
-    <li>Clicar em gerar relatório</li>
-   </ol>
-   </td>
-  <td>As informações armazenadas na página de Progresso de Disciplinas deverão migrar para a página de Relatório, informando ao usuário o tempo de estudo e as atividades realizadas e pendentes.</td>
-  <td>Álvaro</td>
- </tr>
-</table>
 
-<table>
- <tr>
-  <th>Caso de teste</th>
-  <th>Requisitos associados</th>
-  <th>Objetivo do teste</th>
-  <th>Passos</th>
-  <th>Critérios de êxito</th>
-  <th>Responsável</th>
- </tr>
- <tr>
  
 

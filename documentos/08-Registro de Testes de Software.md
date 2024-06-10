@@ -16,6 +16,18 @@ https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t1-pmv-ads-
 
 https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t1-pmv-ads-2024-1-e1-projestudeo/assets/164012068/ab483e4d-3168-497a-9bd2-a4ebefe650f1
 
+• CT-04: Verificar o funcionamento dos links da página Home
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t1-pmv-ads-2024-1-e1-projestudeo/assets/165861350/da0f084a-18f5-425e-9a58-3bef5902282d
+
+• CT-05: Verificar o funcionamento da página Cadastro de Disciplinas
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t1-pmv-ads-2024-1-e1-projestudeo/assets/165861350/507d5a02-2585-4dc2-95a6-6261cd1a24fe
+
+CT-06: Verificar a página de Progresso de Disciplina:
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t1-pmv-ads-2024-1-e1-projestudeo/assets/165861350/0bbf104f-d339-47de-a397-6b0765f42987
+
 • CT-07 Teste dos dados na página do perfil
 
 https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t1-pmv-ads-2024-1-e1-projestudeo/assets/164012068/eab0672c-458d-4ee2-aa16-198c430b8f69

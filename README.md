@@ -42,7 +42,7 @@ Projeto Web desenvolvido para a organização e controle de estudos para estudan
 
 # Hospedagem
 
-* Insira o endereço eletrônico público de acesso ao conteúdo publicado. 
+Clique aqui para acessar a aplicação web: [eStudeo](https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2022-1-e1-proj-web-t3-vida-de-estudante/src/paginaHome/index.html.)
 
 # Código-Fonte
 

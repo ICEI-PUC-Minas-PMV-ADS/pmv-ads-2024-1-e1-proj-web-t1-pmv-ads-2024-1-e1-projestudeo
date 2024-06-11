@@ -15,7 +15,7 @@ A metodologia ágil escolhida para o desenvolvimento deste projeto foi o SCRUM, 
 A equipe utiliza o Scrum como base para definição do processo de desenvolvimento.
 - Scrum Master: Álvaro Kumaira
 - Product Owner: Alberto Mario
-- Equipe de Desenvolvimento: Álvaro Kumaira, Alberto Mario, Carolina Félix, Gilson Rovina, Ryan Ramires, Sabrina Prata
+- Equipe de Desenvolvimento: Álvaro Kumaira, Alberto Mario, Carolina Félix, Gilson Rovina, Ryan Ramires
 - Equipe de Design: Carolina Félix, Gilson Rovina
 
 ### Processo

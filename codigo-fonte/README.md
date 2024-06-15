@@ -8,6 +8,9 @@ Nesse primeiro eixo do curso, para simplificar a utilização do Git e a organiz
 - Pasta src\home: home.html, style.css, script.js  - Desenvolvedor responsável: Álvaro.
 - Pasta src\progresso: progresso.html, style.css, script.js  - Desenvolvedor responsável: Alberto.
 - Pasta src\cad_usuario: cad_usuario.html, style.css, script.js  - Desenvolvedor responsável: Ryan.
+- Pasta src\cad_disciplina: cad_disciplina.html, style.css, script.js  - Desenvolvedor responsável: Alberto.
+- Pasta src\perfil: perfil.html, style.css, script.js - Desenvolvedor responsável: Gilson.
+- Pasta src\rec_senha: rec_senha.html, style.css, script.js - Desenvolvedora responsável: Carolina.
 
 ## Instalação do Site
 

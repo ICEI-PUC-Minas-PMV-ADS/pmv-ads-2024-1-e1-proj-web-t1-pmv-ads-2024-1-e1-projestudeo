@@ -18,6 +18,54 @@ O site em HTML/CSS/JS é um projeto estático, logo pode ser utilizado tanto em 
 
 ## Histórico de versões
 
-### [0.1.0] - DD/MM/AAAA
-#### Adicionado/Atualizado/Removido
-- Relação de artefatos ...
+### [0.1.0] - 23/04/2024
+#### Adicionado
+- Index: arquivos HTML, CSS, JS e imagens.
+
+### [0.1.0] - 24/04/2024
+#### Adicionado
+- Cadastro de usuário: arquivos HTML, CSS, JS e imagens.
+- Recuperar senha: arquivos HTML, CSS, JS e imagens.
+
+### [0.1.0] - 02/05/2024
+#### Adicionado
+- Perfil: arquivos HTML, CSS, JS e imagens.
+
+### [0.1.0] - 02/05/2024
+#### Adicionado
+- Cadastro de disciplinas: arquivos HTML, CSS, JS e imagens.
+
+### [0.1.0] - 12/05/2024
+#### Adicionado
+- Home: arquivos HTML, CSS, JS e imagens.
+
+### [0.1.0] - 23/05/2024
+#### Adicionado
+- Relatório: arquivos HTML, CSS, JS e imagens.
+- Progresso de disciplina: arquivos HTML, CSS, JS e imagens.
+
+### [0.1.0] - 28/05/2024
+#### Adicionado
+- Lembretes: arquivos HTML, CSS, JS e imagens.
+
+### [0.1.1] - 09/05/2024
+#### Atualizado
+- Index: arquivos HTML, CSS, JS e imagens.
+- Cadastro de usuário: arquivos HTML, CSS, JS e imagens.
+- Recuperar senha: arquivos HTML, CSS, JS e imagens.
+- Perfil: arquivos HTML, CSS, JS e imagens.
+- Cadastro de disciplinas: arquivos HTML, CSS, JS e imagens.
+- Home: arquivos HTML, CSS, JS e imagens.
+- Progresso de disciplina: arquivos HTML, CSS, JS e imagens.
+
+#### Removido
+- Lembretes: arquivos HTML, CSS, JS e imagens.
+- Relatório: arquivos HTML, CSS, JS e imagens.
+
+### [0.1.2] - 11/06/2024
+#### Adicionado
+- Reltório: arquivos HTML, CSS, JS e imagens.
+
+#### Atualizado
+- Reltório: arquivos HTML, CSS, JS e imagens.
+

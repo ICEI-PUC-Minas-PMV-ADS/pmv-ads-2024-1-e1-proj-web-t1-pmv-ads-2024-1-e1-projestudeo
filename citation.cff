@@ -1,0 +1,23 @@
+message: Please cite this software using these metadata.
+title: eStudeo
+authors:
+  - family-names: Mario Rodrigues de Souza
+    given-names: Alberto
+  - family-names: Natali Kumaira da Fonseca
+    given-names: Álvaro
+  - family-names: Santos Félix
+    given-names: Carolina 
+  - family-names: Rodrigo Rovina Gonçalves
+    given-names: Gilson
+  - family-names: Ramires de Araújo
+    given-names: Ryan
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Christina de Paiva Carvalho
+    given-names: Joyce
+keywords:
+  - Gestão
+  - Estudos
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t1-pmv-ads-2024-1-e1-projestudeo
+version: 1.0.0
+date-released: 2024-06-30

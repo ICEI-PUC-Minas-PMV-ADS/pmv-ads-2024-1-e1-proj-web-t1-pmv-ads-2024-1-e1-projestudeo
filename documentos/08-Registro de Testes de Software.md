@@ -42,4 +42,5 @@ https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t1-pmv-ads-
 
 • CT-08: Verificar funcionalidade da página de Relatórios
 
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t1-pmv-ads-2024-1-e1-projestudeo/assets/165861350/e7ce00c3-65ec-48f4-a907-7e806d69cb8a
 
